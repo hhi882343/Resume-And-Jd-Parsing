@@ -1,0 +1,18 @@
+{
+  "candidateName": "Executive Profile",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": "IT Architect",
+  "technologies": "IT Architect",
+  "totalExperience": "7+ years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_096_strictSkillsAndExperience_L707.txt",
+  "parser": "metaforge",
+  "role": "IT Architect"
+}

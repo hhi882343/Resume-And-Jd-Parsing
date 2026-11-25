@@ -1,0 +1,6 @@
+
+Dana White
+dana@example.com
+
+Projects
+- Built a machine learning model using Scikit-learn and XGBoost.

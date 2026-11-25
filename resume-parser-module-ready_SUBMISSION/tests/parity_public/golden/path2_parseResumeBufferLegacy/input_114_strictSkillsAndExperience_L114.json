@@ -1,0 +1,18 @@
+{
+  "candidateName": "Michael Brown",
+  "email": null,
+  "contactNumber": "5550001111",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Kubernetes, CI/CD",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_114_strictSkillsAndExperience_L114.txt",
+  "parser": "legacy",
+  "role": null
+}

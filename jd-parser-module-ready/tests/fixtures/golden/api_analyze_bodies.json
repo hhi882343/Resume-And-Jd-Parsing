@@ -1,0 +1,484 @@
+[
+  {
+    "id": "analyze-empty-string",
+    "description": "Empty rawJdText string returns 400",
+    "request_body": {
+      "rawJdText": ""
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Job description text is required"
+    }
+  },
+  {
+    "id": "analyze-whitespace-only",
+    "description": "Whitespace only rawJdText string returns 400",
+    "request_body": {
+      "rawJdText": "   \n\t  \r\n   "
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Job description text is required"
+    }
+  },
+  {
+    "id": "analyze-missing-raw-jd",
+    "description": "Missing rawJdText key returns 400",
+    "request_body": {},
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Job description text is required"
+    }
+  },
+  {
+    "id": "analyze-null-raw-jd",
+    "description": "null rawJdText value returns 400",
+    "request_body": {
+      "rawJdText": null
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Job description text is required"
+    }
+  },
+  {
+    "id": "analyze-number-raw-jd",
+    "description": "number rawJdText value returns 500 (.trim() TypeError)",
+    "request_body": {
+      "rawJdText": 42
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 500,
+    "expected_response": {
+      "error": "body?.rawJdText?.trim is not a function"
+    }
+  },
+  {
+    "id": "analyze-array-raw-jd",
+    "description": "array rawJdText value returns 500 (.trim() TypeError)",
+    "request_body": {
+      "rawJdText": [
+        "Python Engineer"
+      ]
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 500,
+    "expected_response": {
+      "error": "body?.rawJdText?.trim is not a function"
+    }
+  },
+  {
+    "id": "analyze-object-raw-jd",
+    "description": "object rawJdText value returns 500 (.trim() TypeError)",
+    "request_body": {
+      "rawJdText": {
+        "text": "Python Engineer"
+      }
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 500,
+    "expected_response": {
+      "error": "body?.rawJdText?.trim is not a function"
+    }
+  },
+  {
+    "id": "analyze-null-body",
+    "description": "null request body returns 400",
+    "request_body": null,
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Job description text is required"
+    }
+  },
+  {
+    "id": "analyze-array-body",
+    "description": "array request body returns 400",
+    "request_body": [],
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Job description text is required"
+    }
+  },
+  {
+    "id": "analyze-string-body",
+    "description": "string request body returns 400",
+    "request_body": "plain string request body",
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Job description text is required"
+    }
+  },
+  {
+    "id": "analyze-malformed-json",
+    "description": "malformed JSON body syntax returns 500",
+    "request_body": null,
+    "is_malformed": true,
+    "mock_rate_limit": false,
+    "expected_status": 500,
+    "expected_response": {
+      "error": "Unexpected token in JSON at position 0"
+    }
+  },
+  {
+    "id": "analyze-rate-limit-error",
+    "description": "LLM rate limit / 429 exhaustion error returns 429",
+    "request_body": {
+      "rawJdText": "Valid JD that encounters rate limit"
+    },
+    "is_malformed": false,
+    "mock_rate_limit": true,
+    "expected_status": 429,
+    "expected_response": {
+      "error": "API rate limit exceeded. The system is retrying with alternative providers. Please try again in a few moments.",
+      "details": "Gemini is temporarily busy or rate-limited. The system retries with backoff, tries alternate Gemini models, then falls back to other providers if configured.\n\nTo improve reliability:\n1. Set GEMINI_MODEL=gemini-2.5-flash-lite in .env.local (often less busy)\n2. Add SAMBANOVA_API_KEY or GROQ_API_KEY as fallback in .env.local\n3. Wait a minute and try again",
+      "isRateLimit": true
+    }
+  },
+  {
+    "id": "analyze-bom-nbsp-padded-jd",
+    "description": "BOM and NBSP padded JD analyzed successfully",
+    "request_body": {
+      "rawJdText": "﻿   Senior React Developer in New York   ﻿"
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 200,
+    "expected_response": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Single Requirement",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [],
+          "skills": [],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Single Requirement",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    }
+  },
+  {
+    "id": "analyze-llm-explicit-null-reward-keys",
+    "description": "LLM response explicitly returns null lastRewardScore and feedbackSaved",
+    "request_body": {
+      "rawJdText": "Explicit Null Last Reward Score in JD"
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 200,
+    "expected_response": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Single Requirement",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [],
+          "skills": [],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Single Requirement",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    }
+  },
+  {
+    "id": "analyze-llm-explicit-number-reward-keys",
+    "description": "LLM response explicitly returns numeric lastRewardScore",
+    "request_body": {
+      "rawJdText": "Explicit Number Last Reward Score in JD"
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 200,
+    "expected_response": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Single Requirement",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [],
+          "skills": [],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Single Requirement",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    }
+  },
+  {
+    "id": "analyze-llm-explicit-boolean-feedback-saved",
+    "description": "LLM response explicitly returns boolean feedbackSaved",
+    "request_body": {
+      "rawJdText": "Explicit Boolean Feedback Saved in JD"
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 200,
+    "expected_response": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Single Requirement",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [],
+          "skills": [],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Single Requirement",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    }
+  },
+  {
+    "id": "analyze-75kb-jd",
+    "description": "Large 75 KB text JD analyzed successfully",
+    "request_body": {
+      "rawJdText": "Staff Python Engineer in Austin, TX. Responsibilities: Building backend APIs and RL systems. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. Qualifications: 10+ years experience, Python, FastAPI, Docker, Kubernetes, AWS, microservices. "
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 200,
+    "expected_response": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Single Requirement",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [],
+          "skills": [],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Single Requirement",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    }
+  },
+  {
+    "id": "analyze-non-ascii-text",
+    "description": "Non-ASCII CJK and Japanese text in JD analyzed successfully",
+    "request_body": {
+      "rawJdText": "Senior Python Developer in Tokyo 東京. 日本語歓迎."
+    },
+    "is_malformed": false,
+    "mock_rate_limit": false,
+    "expected_status": 200,
+    "expected_response": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Single Requirement",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [],
+          "skills": [],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Single Requirement",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    }
+  }
+]

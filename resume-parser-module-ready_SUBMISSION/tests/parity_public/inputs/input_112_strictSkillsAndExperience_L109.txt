@@ -1,0 +1,14 @@
+
+Jane Doe
+Java Full Stack Developer
+jane.doe@example.com
++1 555-123-4567
+
+Summary
+Passionate Java Full Stack Developer with 5 years of experience.
+
+Skills
+Java, Spring Boot, SQL, React
+
+Experience
+Software Engineer at TechCorp

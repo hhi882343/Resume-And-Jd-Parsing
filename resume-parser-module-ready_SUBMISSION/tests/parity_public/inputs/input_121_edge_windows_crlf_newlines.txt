@@ -1,0 +1,7 @@
+Michael Brown
+DevOps Engineer
+Email: michael.brown@test.com
+Phone: +1 555-019-3322
+Total Experience: 8 years
+Skills: Docker, Kubernetes, AWS
+Education: B.Tech in IT

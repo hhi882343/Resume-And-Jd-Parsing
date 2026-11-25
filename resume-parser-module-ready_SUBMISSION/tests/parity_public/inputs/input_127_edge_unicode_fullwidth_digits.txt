@@ -1,0 +1,5 @@
+Kenji Sato
+Systems Architect
+Email: kenji@example.jp
+Total Experience: １０ years
+Skills: C++, Linux, Distributed Systems

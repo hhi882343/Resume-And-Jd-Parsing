@@ -1,0 +1,18 @@
+{
+  "candidateName": "Dana White",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Machine Learning, Scikit-learn, XGBoost",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_051_skillsExtractionEngine_L560.txt",
+  "parser": "legacy",
+  "role": null
+}

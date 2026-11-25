@@ -1,0 +1,8 @@
+
+Bob Data
+bob@example.com
+
+Technical Skills: Python, Pandas, NumPy
+
+Experience
+Data Analyst at Metrics Inc

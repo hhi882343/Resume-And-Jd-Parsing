@@ -1,0 +1,18 @@
+{
+  "candidateName": "Harish Sharma",
+  "email": "harish@gmail.com",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "6 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": "Bangalore, Karnataka",
+  "location": "Bangalore, Karnataka",
+  "sourceFile": "input_014_documentFormatExtraction_L13.txt",
+  "parser": "legacy",
+  "role": null
+}

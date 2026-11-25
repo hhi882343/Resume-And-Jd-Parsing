@@ -1,0 +1,3 @@
+
+Technical Skills
+Python, Java, C++, Go, Rust, Ruby, JavaScript, TypeScript, PHP, Swift, Kotlin, Scala

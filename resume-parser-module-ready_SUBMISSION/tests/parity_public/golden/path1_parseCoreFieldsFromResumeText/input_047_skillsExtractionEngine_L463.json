@@ -1,0 +1,17 @@
+{
+  "candidateName": "Bob",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Python, Pandas, NumPy",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": null
+}

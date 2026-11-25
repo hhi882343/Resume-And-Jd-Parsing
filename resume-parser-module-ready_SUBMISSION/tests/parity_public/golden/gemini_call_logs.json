@@ -1,0 +1,603 @@
+{
+  "metadata": {
+    "description": "Exhaustive instrumented Gemini API call logs covering all failure/success scenarios with exact request shapes, URLs, redacted headers, bodies, delays, and outputs",
+    "gemini_base": "https://generativelanguage.googleapis.com/v1beta",
+    "default_model": "gemini-2.5-flash-lite",
+    "default_fallback_models": [
+      "gemini-2.5-flash",
+      "gemini-2.0-flash",
+      "gemini-1.5-flash"
+    ]
+  },
+  "scenario_1_success": {
+    "description": "Standard resume parsed cleanly on attempt 0 with application/json",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "request_body": {
+          "contents": [
+            {
+              "role": "user",
+              "parts": [
+                {
+                  "text": "EXTRACTION_PROMPT_PREFIX ... Resume Content: Amit Kumar\namit.kumar@example.com\n+91 98765 43210\n..."
+                }
+              ]
+            }
+          ],
+          "generationConfig": {
+            "temperature": 0.1,
+            "maxOutputTokens": 4096,
+            "responseMimeType": "application/json"
+          }
+        },
+        "response_status": 200,
+        "response_body_raw": "{\n  \"full_name\": \"Amit Kumar\",\n  \"email\": \"amit.kumar@example.com\",\n  \"contact\": \"+91 98765 43210\",\n  \"linkedin\": \"https://linkedin.com/in/amitkumar\",\n  \"qualification\": \"B.Tech in Computer Science\",\n  \"skills\": [\"Python\", \"FastAPI\", \"Docker\", \"PostgreSQL\", \"AWS\"],\n  \"technology\": [\"Backend Developer\"],\n  \"role\": \"Backend Developer\",\n  \"total_experience\": \"4 years\",\n  \"location\": \"Bengaluru, India\"\n}"
+      }
+    ],
+    "final_output": {
+      "candidateName": "Amit Kumar",
+      "email": "amit.kumar@example.com",
+      "contactNumber": "+919876543210",
+      "linkedinUrl": "https://linkedin.com/in/amitkumar",
+      "highestQualification": "B.Tech in Computer Science",
+      "skillsRaw": "Python, FastAPI, Docker, PostgreSQL, AWS",
+      "technologiesRaw": "Backend Developer",
+      "technologies": "Backend Developer",
+      "role": "Backend Developer",
+      "totalExperience": "4 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": "Bengaluru, India",
+      "location": "Bengaluru, India",
+      "sourceFile": "amit.pdf",
+      "parser": "metaforge"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  },
+  "scenario_2_malformed_json_pass1_recovers_pass2": {
+    "description": "Pass 1 (useJsonMode=true) returns malformed JSON; Pass 2 (useJsonMode=false) recovers via markdown code fence",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "request_body": {
+          "contents": [
+            {
+              "role": "user",
+              "parts": [
+                {
+                  "text": "EXTRACTION_PROMPT ... Rahul Verma ..."
+                }
+              ]
+            }
+          ],
+          "generationConfig": {
+            "temperature": 0.1,
+            "maxOutputTokens": 4096,
+            "responseMimeType": "application/json"
+          }
+        },
+        "response_status": 200,
+        "response_body_raw": "I encountered an error formatting JSON: {\"full_name\": \"Rahul Verma\", \"skills\": [\"Java\", \"Spring\"",
+        "error": "No JSON found in response or unexpected end of JSON input"
+      },
+      {
+        "request_index": 1,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": false,
+        "mime_mode": null,
+        "delay_ms": 0,
+        "request_body": {
+          "contents": [
+            {
+              "role": "user",
+              "parts": [
+                {
+                  "text": "EXTRACTION_PROMPT ... Rahul Verma ..."
+                }
+              ]
+            }
+          ],
+          "generationConfig": {
+            "temperature": 0.1,
+            "maxOutputTokens": 4096
+          }
+        },
+        "response_status": 200,
+        "response_body_raw": "Here is the extracted resume JSON:\n```json\n{\n  \"full_name\": \"Rahul Verma\",\n  \"email\": \"rahul.verma@example.com\",\n  \"contact\": \"+91 91234 56789\",\n  \"linkedin\": null,\n  \"qualification\": \"B.E. Information Technology\",\n  \"skills\": [\"Java\", \"Spring Boot\", \"MySQL\"],\n  \"technology\": [\"Java Developer\"],\n  \"role\": \"Java Developer\",\n  \"total_experience\": \"3 years\",\n  \"location\": \"Pune, India\"\n}\n```"
+      }
+    ],
+    "final_output": {
+      "candidateName": "Rahul Verma",
+      "email": "rahul.verma@example.com",
+      "contactNumber": "+919123456789",
+      "linkedinUrl": null,
+      "highestQualification": "B.E. Information Technology",
+      "skillsRaw": "Java, Spring Boot, MySQL",
+      "technologiesRaw": "Java Developer",
+      "technologies": "Java Developer",
+      "role": "Java Developer",
+      "totalExperience": "3 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": "Pune, India",
+      "location": "Pune, India",
+      "sourceFile": "rahul.docx",
+      "parser": "metaforge"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  },
+  "scenario_2b_both_passes_malformed_fallback_to_keyword": {
+    "description": "Pass 1 and Pass 2 both return unparseable text. tryParse throws Error; parseResumeBuffer catches and falls back to parseResumeBufferLegacy (deterministic keyword parser)",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "response_status": 200,
+        "response_body_raw": "I am unable to parse this document.",
+        "error": "No JSON found in response"
+      },
+      {
+        "request_index": 1,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": false,
+        "mime_mode": null,
+        "delay_ms": 0,
+        "response_status": 200,
+        "response_body_raw": "Document appears corrupted or in an unknown language.",
+        "error": "No JSON found in response"
+      }
+    ],
+    "final_output": {
+      "candidateName": "Karan Mehra",
+      "email": "karan.mehra@example.com",
+      "contactNumber": "+919876543299",
+      "linkedinUrl": null,
+      "highestQualification": "B.Tech",
+      "skillsRaw": "Python, SQL, Linux",
+      "technologiesRaw": "Software Engineer",
+      "technologies": "Software Engineer",
+      "role": "Software Engineer",
+      "totalExperience": "2 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": null,
+      "location": null,
+      "sourceFile": "karan.txt",
+      "parser": "legacy"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  },
+  "scenario_3_markdown_fenced_json": {
+    "description": "Model returns markdown code fence inside JSON mode, extractJsonFromText strips fence cleanly",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "response_status": 200,
+        "response_body_raw": "```json\n{\n  \"full_name\": \"Priya Sharma\",\n  \"email\": \"priya.sharma@example.com\",\n  \"contact\": \"+91 98111 22233\",\n  \"linkedin\": \"https://linkedin.com/in/priyasharma\",\n  \"qualification\": \"M.Tech in Data Science\",\n  \"skills\": [\"Python\", \"PyTorch\", \"TensorFlow\", \"NLP\"],\n  \"technology\": [\"Machine Learning Engineer\"],\n  \"role\": \"Machine Learning Engineer\",\n  \"total_experience\": \"5 years\",\n  \"location\": \"Hyderabad, India\"\n}\n```"
+      }
+    ],
+    "final_output": {
+      "candidateName": "Priya Sharma",
+      "email": "priya.sharma@example.com",
+      "contactNumber": "+919811122233",
+      "linkedinUrl": "https://linkedin.com/in/priyasharma",
+      "highestQualification": "M.Tech in Data Science",
+      "skillsRaw": "Python, PyTorch, TensorFlow, NLP",
+      "technologiesRaw": "Machine Learning Engineer",
+      "technologies": "Machine Learning Engineer",
+      "role": "Machine Learning Engineer",
+      "totalExperience": "5 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": "Hyderabad, India",
+      "location": "Hyderabad, India",
+      "sourceFile": "priya.pdf",
+      "parser": "metaforge"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  },
+  "scenario_4_quota_429": {
+    "description": "429 RESOURCE_EXHAUSTED permanently suspends AI parsing for subsequent resumes; keyword fallback used",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "response_status": 429,
+        "response_body_raw": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}",
+        "error": "Gemini API quota exceeded: Resource has been exhausted (e.g. check quota)."
+      }
+    ],
+    "final_output": {
+      "candidateName": "Vikram Malhotra",
+      "email": "vikram.m@example.com",
+      "contactNumber": "+919876512345",
+      "linkedinUrl": "https://linkedin.com/in/vikramm",
+      "highestQualification": "B.Tech",
+      "skillsRaw": "React, TypeScript, Node.js, Redux, HTML, CSS",
+      "technologiesRaw": "Frontend Developer",
+      "technologies": "Frontend Developer",
+      "role": "Frontend Developer",
+      "totalExperience": "4 years",
+      "relevantExperience": null,
+      "currentEmployer": "Infosys",
+      "currentLocation": "Hyderabad",
+      "location": "Hyderabad",
+      "sourceFile": "vikram.pdf",
+      "parser": "legacy"
+    },
+    "aiParsingSuspended": true,
+    "aiParsingSuspendedReason": "Gemini API quota or rate limit reached \u2014 using keyword parser for remaining resumes.",
+    "notice": "Using keyword parser (AI parser quota exceeded)"
+  },
+  "scenario_5_retry_503": {
+    "description": "Attempt 0 returns 503 Overloaded. Sleeps 2000ms. Attempt 1 succeeds on same model.",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "response_status": 503,
+        "response_body_raw": "{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"The model is overloaded. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}",
+        "retry_delay_ms": 2000
+      },
+      {
+        "request_index": 1,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 1,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 2000,
+        "response_status": 200,
+        "response_body_raw": "{\n  \"full_name\": \"Sneha Patil\",\n  \"email\": \"sneha.patil@example.com\",\n  \"contact\": \"+91 97654 32109\",\n  \"linkedin\": null,\n  \"qualification\": \"B.E. Computer Science\",\n  \"skills\": [\"Go\", \"Kubernetes\", \"GCP\", \"Terraform\"],\n  \"technology\": [\"DevOps Engineer\"],\n  \"role\": \"DevOps Engineer\",\n  \"total_experience\": \"3 years\",\n  \"location\": \"Mumbai, India\"\n}"
+      }
+    ],
+    "final_output": {
+      "candidateName": "Sneha Patil",
+      "email": "sneha.patil@example.com",
+      "contactNumber": "+919765432109",
+      "linkedinUrl": null,
+      "highestQualification": "B.E. Computer Science",
+      "skillsRaw": "Go, Kubernetes, GCP, Terraform",
+      "technologiesRaw": "DevOps Engineer",
+      "technologies": "DevOps Engineer",
+      "role": "DevOps Engineer",
+      "totalExperience": "3 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": "Mumbai, India",
+      "location": "Mumbai, India",
+      "sourceFile": "sneha.pdf",
+      "parser": "metaforge"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  },
+  "scenario_6_fallback_404": {
+    "description": "Primary model gemini-2.5-flash-lite returns 404; code breaks attempt loop and switches to gemini-2.5-flash",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "response_status": 404,
+        "response_body_raw": "{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"models/gemini-2.5-flash-lite is not found for API version v1beta\",\n    \"status\": \"NOT_FOUND\"\n  }\n}",
+        "model_switched_to": "gemini-2.5-flash"
+      },
+      {
+        "request_index": 1,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "response_status": 200,
+        "response_body_raw": "{\n  \"full_name\": \"Arjun Reddy\",\n  \"email\": \"arjun.reddy@example.com\",\n  \"contact\": \"+91 94400 11223\",\n  \"linkedin\": \"https://linkedin.com/in/arjunreddy\",\n  \"qualification\": \"B.Tech Mechanical Engineering\",\n  \"skills\": [\"AutoCAD\", \"SolidWorks\", \"ANSYS\", \"CATIA\"],\n  \"technology\": [\"Mechanical Design Engineer\"],\n  \"role\": \"Mechanical Design Engineer\",\n  \"total_experience\": \"6 years\",\n  \"location\": \"Chennai, India\"\n}"
+      }
+    ],
+    "final_output": {
+      "candidateName": "Arjun Reddy",
+      "email": "arjun.reddy@example.com",
+      "contactNumber": "+919440011223",
+      "linkedinUrl": "https://linkedin.com/in/arjunreddy",
+      "highestQualification": "B.Tech Mechanical Engineering",
+      "skillsRaw": "AutoCAD, SolidWorks, ANSYS, CATIA",
+      "technologiesRaw": "Mechanical Design Engineer",
+      "technologies": "Mechanical Design Engineer",
+      "role": "Mechanical Design Engineer",
+      "totalExperience": "6 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": "Chennai, India",
+      "location": "Chennai, India",
+      "sourceFile": "arjun.pdf",
+      "parser": "metaforge"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  },
+  "scenario_7_hallucinated_values": {
+    "description": "AI hallucinated Ph.D. in AI, 15 years experience, and location 'New York, USA'. Evidence-Lock strips unevidenced qualification and experience. New York survives because location field lacks a hasTextEvidence check.",
+    "explanation_new_york_survival": "In applyEvidenceLock (metaforgeParser.ts lines 230-235), finalLocation is assigned as `locCandidate || locFromText || null`. Unlike qualification, experience, skills, and role which require text validation via hasTextEvidence() or words.some(normLower.includes), the candidate location is accepted directly from the AI model candidate object without an evidence-lock check against rawText.",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "response_status": 200,
+        "response_body_raw": "{\n  \"full_name\": \"Kavita Nair\",\n  \"email\": \"kavita.nair@example.com\",\n  \"contact\": \"+91 99887 76655\",\n  \"linkedin\": null,\n  \"qualification\": \"Ph.D. in Artificial Intelligence\",\n  \"skills\": [\"Python\", \"Docker\"],\n  \"technology\": [\"Software Engineer\"],\n  \"role\": \"Software Engineer\",\n  \"total_experience\": \"15 years\",\n  \"location\": \"New York, USA\"\n}"
+      }
+    ],
+    "beforeEvidenceLock": {
+      "candidateName": "Kavita Nair",
+      "email": "kavita.nair@example.com",
+      "contactNumber": "+91 99887 76655",
+      "linkedinUrl": null,
+      "highestQualification": "Ph.D. in Artificial Intelligence",
+      "skillsRaw": "Python, Docker",
+      "technologiesRaw": "Software Engineer",
+      "technologies": "Software Engineer",
+      "role": "Software Engineer",
+      "totalExperience": "15 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": "New York, USA",
+      "location": "New York, USA",
+      "sourceFile": "kavita.pdf",
+      "parser": "metaforge"
+    },
+    "full_after_evidence_lock_output": {
+      "candidateName": "Kavita Nair",
+      "email": "kavita.nair@example.com",
+      "contactNumber": "+919988776655",
+      "linkedinUrl": null,
+      "highestQualification": "B.Tech",
+      "skillsRaw": "Python, Docker",
+      "technologiesRaw": "Software Engineer",
+      "technologies": "Software Engineer",
+      "role": "Software Engineer",
+      "totalExperience": "3 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": "New York, USA",
+      "location": "New York, USA",
+      "sourceFile": "kavita.pdf",
+      "parser": "metaforge"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  },
+  "scenario_8_partial_null_case": {
+    "description": "Gemini returns partial nulls; contact, qualification, location null. Microservices in skillsRaw originates from extractSkillsFromFallbackSections scanning raw resume text when detectSkillSection returns sectionDetected=false.",
+    "explanation_microservices_origin": "In applyEvidenceLock (metaforgeParser.ts lines 180-210), rawText ('Jane Smith\\nSkills: Go\\nExperience in Go microservices.') is passed to extractSkillsWithEngineSync. Because 'Skills: Go' lacks a standard section heading, detectSkillSection returns sectionDetected=false. The engine then falls back to extractSkillsFromFallbackSections over the resume text. Scanning 'Experience in Go microservices.' matches 'microservices' in CORE_TECH_KEYWORDS, which is normalized and title-cased to 'Microservices'. The engine returns skills ['Go', 'Microservices'], which is locked into skillsRaw.",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "use_json_mode": true,
+        "mime_mode": "application/json",
+        "delay_ms": 0,
+        "response_status": 200,
+        "response_body_raw": "{\n  \"full_name\": \"Jane Smith\",\n  \"email\": null,\n  \"contact\": null,\n  \"linkedin\": null,\n  \"qualification\": null,\n  \"skills\": [\"Go\"],\n  \"technology\": [],\n  \"role\": null,\n  \"total_experience\": null,\n  \"location\": null\n}"
+      }
+    ],
+    "final_output": {
+      "candidateName": "Jane Smith",
+      "email": null,
+      "contactNumber": null,
+      "linkedinUrl": null,
+      "highestQualification": null,
+      "skillsRaw": "Go, Microservices",
+      "technologiesRaw": null,
+      "technologies": null,
+      "role": null,
+      "totalExperience": "",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": null,
+      "location": null,
+      "sourceFile": "jane.txt",
+      "parser": "metaforge"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  },
+  "scenario_9_network_error_fetch_throws": {
+    "description": "fetch() throws TypeError: fetch failed (DNS resolution failure or connection refused). Code catches in catch(err), sleeps 1500*(attempt+1) ms, retries attempt 1 on primary, then switches to fallback model. When all models fail, falls back to deterministic keyword parser.",
+    "requests": [
+      {
+        "request_index": 0,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 0,
+        "delay_ms": 0,
+        "exception": "TypeError: fetch failed (connect ENOTFOUND generativelanguage.googleapis.com)",
+        "retry_delay_ms": 1500
+      },
+      {
+        "request_index": 1,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash-lite",
+        "attempt": 1,
+        "delay_ms": 1500,
+        "exception": "TypeError: fetch failed (connect ENOTFOUND generativelanguage.googleapis.com)",
+        "model_switched_to": "gemini-2.5-flash"
+      },
+      {
+        "request_index": 2,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash",
+        "attempt": 0,
+        "delay_ms": 0,
+        "exception": "TypeError: fetch failed (connect ENOTFOUND generativelanguage.googleapis.com)",
+        "retry_delay_ms": 1500
+      },
+      {
+        "request_index": 3,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-goog-api-key": "[REDACTED]"
+        },
+        "model": "gemini-2.5-flash",
+        "attempt": 1,
+        "delay_ms": 1500,
+        "exception": "TypeError: fetch failed (connect ENOTFOUND generativelanguage.googleapis.com)",
+        "fallback_triggered": "parseResumeBufferLegacy"
+      }
+    ],
+    "final_output": {
+      "candidateName": "Rohit Sen",
+      "email": "rohit.sen@example.com",
+      "contactNumber": "+919876543200",
+      "linkedinUrl": null,
+      "highestQualification": "B.Sc Computer Science",
+      "skillsRaw": "Python, Django, PostgreSQL",
+      "technologiesRaw": "Python Developer",
+      "technologies": "Python Developer",
+      "role": "Python Developer",
+      "totalExperience": "3 years",
+      "relevantExperience": null,
+      "currentEmployer": null,
+      "currentLocation": "Kolkata, India",
+      "location": "Kolkata, India",
+      "sourceFile": "rohit.txt",
+      "parser": "legacy"
+    },
+    "aiParsingSuspended": false,
+    "notice": null
+  }
+}

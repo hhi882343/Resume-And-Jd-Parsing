@@ -1,0 +1,18 @@
+{
+  "candidateName": "Rajesh Kumar",
+  "email": null,
+  "contactNumber": "+919876543212",
+  "linkedinUrl": null,
+  "highestQualification": "B.Com",
+  "skillsRaw": "SAP EWM, SAP MM, S/4 HANA",
+  "technologiesRaw": "SAP EWM Functional Consultant",
+  "technologies": "SAP EWM Functional Consultant",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_003_designationExtraction_L56.txt",
+  "parser": "legacy",
+  "role": "SAP EWM Functional Consultant"
+}

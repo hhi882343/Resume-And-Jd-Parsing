@@ -1,0 +1,17 @@
+{
+  "candidateName": "Deepak Joshi",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "PyTorch, Scikit-learn",
+  "technologiesRaw": "Data Scientist",
+  "technologies": "Data Scientist",
+  "totalExperienceYears": 8,
+  "totalExperienceText": "8.5 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Data Scientist"
+}

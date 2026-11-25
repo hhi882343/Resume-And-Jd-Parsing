@@ -1,0 +1,18 @@
+{
+  "candidateName": "Kiran Rao",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, FastAPI",
+  "technologiesRaw": "Principal Engineer",
+  "technologies": "Principal Engineer",
+  "totalExperience": "8 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_132_edge_conflicting_experience_su.txt",
+  "parser": "legacy",
+  "role": "Principal Engineer"
+}

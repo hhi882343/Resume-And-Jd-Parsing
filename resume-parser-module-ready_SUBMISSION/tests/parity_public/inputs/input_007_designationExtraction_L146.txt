@@ -1,0 +1,8 @@
+Pooja Nair
+pooja.nair@example.com
++91 9876543216
+
+Skills: Python, SQL, Machine Learning, Pandas, NumPy
+
+Education
+B.Sc in Statistics

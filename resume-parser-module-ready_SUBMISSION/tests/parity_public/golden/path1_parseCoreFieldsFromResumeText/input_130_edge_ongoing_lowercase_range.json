@@ -1,0 +1,17 @@
+{
+  "candidateName": "David Miller",
+  "email": "david@miller.io",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Ruby On Rails, React",
+  "technologiesRaw": "Product Engineer",
+  "technologies": "Product Engineer",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Product Engineer"
+}

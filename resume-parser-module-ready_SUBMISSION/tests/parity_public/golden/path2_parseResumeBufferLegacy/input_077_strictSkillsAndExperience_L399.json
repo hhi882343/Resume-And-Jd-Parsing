@@ -1,0 +1,18 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Java, Python, C++, Go, TypeScript, JavaScript, SQL, Rust, Ruby, PHP",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_077_strictSkillsAndExperience_L399.txt",
+  "parser": "legacy",
+  "role": null
+}

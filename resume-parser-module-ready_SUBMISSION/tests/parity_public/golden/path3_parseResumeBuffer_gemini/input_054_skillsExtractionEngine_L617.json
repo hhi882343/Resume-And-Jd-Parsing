@@ -1,0 +1,18 @@
+{
+  "candidateName": "Grace Hopper",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, PostgreSQL",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_054_skillsExtractionEngine_L617.txt",
+  "parser": "metaforge",
+  "role": null
+}

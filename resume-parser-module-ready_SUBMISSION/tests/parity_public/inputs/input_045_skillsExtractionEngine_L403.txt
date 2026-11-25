@@ -1,0 +1,14 @@
+
+John Doe
+john.doe@example.com
++1-555-123-4567
+
+Summary
+Full Stack Engineer with 5 years of experience.
+
+Technical Skills
+Python, Docker, AWS, React, PostgreSQL
+
+Experience
+Senior Developer at Acme Corp
+Jan 2019 - Present (5 years)

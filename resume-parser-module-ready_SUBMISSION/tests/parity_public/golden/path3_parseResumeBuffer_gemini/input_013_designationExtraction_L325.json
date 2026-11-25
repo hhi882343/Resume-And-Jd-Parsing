@@ -1,0 +1,18 @@
+{
+  "candidateName": "Sunita Rao",
+  "email": "sunita.rao@gmail.com",
+  "contactNumber": "+91 98765 43222",
+  "linkedinUrl": "https://www.linkedin.com/in/sunitarao",
+  "highestQualification": "B.Tech in Computer Science",
+  "skillsRaw": "Python, Django, FastAPI, PostgreSQL",
+  "technologiesRaw": "Senior Python Developer",
+  "technologies": "Senior Python Developer",
+  "totalExperience": "6 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_013_designationExtraction_L325.txt",
+  "parser": "metaforge",
+  "role": "Senior Python Developer"
+}

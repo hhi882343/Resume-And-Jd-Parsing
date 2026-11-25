@@ -1,0 +1,8 @@
+Candidate B
+cand.b@example.com
++91 9876543221
+
+Professional Summary: Network Engineer with CCNA certification.
+
+Technical Skills
+Routing, Switching

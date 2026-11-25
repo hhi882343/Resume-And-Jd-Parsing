@@ -1,0 +1,6 @@
+José González
+Frontend Architect
+Email: jose.gonzalez@empresa.es
+Total Experience: 9 years
+Skills: React, Redux, Next.js
+Education: Licenciatura en Informática

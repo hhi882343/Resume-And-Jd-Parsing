@@ -1,0 +1,18 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Django",
+  "technologiesRaw": "Software Engineer",
+  "technologies": "Software Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_067_strictSkillsAndExperience_L170.txt",
+  "parser": "metaforge",
+  "role": "Software Engineer"
+}

@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "CAD",
+  "technologiesRaw": "Mechanical Design Engineer",
+  "technologies": "Mechanical Design Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_079_strictSkillsAndExperience_L420.txt",
+  "parser": "metaforge",
+  "role": "Mechanical Design Engineer"
+}

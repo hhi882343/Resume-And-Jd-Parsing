@@ -1,0 +1,5 @@
+Ali Reza
+Software Engineer
+Email: ali@example.com
+Total Experience: ۵ years
+Skills: Python, Django

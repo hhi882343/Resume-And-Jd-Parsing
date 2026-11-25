@@ -1,0 +1,4 @@
+
+Candidate Name
+Email: cand@test.com
+Education: B.Tech

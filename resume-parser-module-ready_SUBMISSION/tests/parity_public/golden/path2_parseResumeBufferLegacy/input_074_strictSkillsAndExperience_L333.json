@@ -1,0 +1,18 @@
+{
+  "candidateName": "Executive Profile",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.Sc in Chemistry",
+  "skillsRaw": null,
+  "technologiesRaw": "Erection, Pre-commissioning, Commissioning and Production Operations",
+  "technologies": "Erection, Pre-commissioning, Commissioning and Production Operations",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_074_strictSkillsAndExperience_L333.txt",
+  "parser": "legacy",
+  "role": "Erection, Pre-commissioning, Commissioning and Production Operations"
+}

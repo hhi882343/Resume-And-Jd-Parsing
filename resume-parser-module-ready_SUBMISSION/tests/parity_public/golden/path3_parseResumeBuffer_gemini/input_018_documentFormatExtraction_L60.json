@@ -1,0 +1,18 @@
+{
+  "candidateName": "Kunal Deshmukh",
+  "email": "kunal.deshmukh@gmail.com",
+  "contactNumber": "+91 98765 43210",
+  "linkedinUrl": "https://www.linkedin.com/in/kunaldeshmukh",
+  "highestQualification": "B.E. in Information Technology",
+  "skillsRaw": "AWS, Terraform, Kubernetes, Docker, Python, Bash, CI/CD, Ansible, Prometheus, Grafana",
+  "technologiesRaw": "Senior Cloud Engineer",
+  "technologies": "Senior Cloud Engineer",
+  "totalExperience": "7 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": "Pune, Maharashtra",
+  "location": "Pune, Maharashtra",
+  "sourceFile": "input_018_documentFormatExtraction_L60.txt",
+  "parser": "metaforge",
+  "role": "Senior Cloud Engineer"
+}

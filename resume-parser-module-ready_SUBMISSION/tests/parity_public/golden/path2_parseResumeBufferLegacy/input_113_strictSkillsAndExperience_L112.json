@@ -1,0 +1,18 @@
+{
+  "candidateName": "Alex Smith",
+  "email": null,
+  "contactNumber": "5559876543",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": "Data Analyst",
+  "technologies": "Data Analyst",
+  "totalExperience": "4 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_113_strictSkillsAndExperience_L112.txt",
+  "parser": "legacy",
+  "role": "Data Analyst"
+}

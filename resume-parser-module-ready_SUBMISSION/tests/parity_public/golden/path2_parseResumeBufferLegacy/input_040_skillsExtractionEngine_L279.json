@@ -1,0 +1,18 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Docker, AWS",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_040_skillsExtractionEngine_L279.txt",
+  "parser": "legacy",
+  "role": null
+}

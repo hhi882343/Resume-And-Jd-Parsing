@@ -1,0 +1,2677 @@
+[
+  {
+    "pattern": "^(0?\\d+|0x[a-f0-9]+)\\.(0?\\d+|0x[a-f0-9]+)\\.(0?\\d+|0x[a-f0-9]+)\\.(0?\\d+|0x[a-f0-9]+)$",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^(0?\\d+|0x[a-f0-9]+)$",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "%[0-9a-z]{1,}",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^(::)?((?:[0-9a-f]+::?)+)?([0-9a-f]+)?(::)?(%[0-9a-z]{1,})?$",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^((?:(?:[0-9a-f]+::?)+)|(?:::)(?:(?:[0-9a-f]+::?)+)?)(0?\\d+|0x[a-f0-9]+)\\.(0?\\d+|0x[a-f0-9]+)\\.(0?\\d+|0x[a-f0-9]+)\\.(0?\\d+|0x[a-f0-9]+)(%[0-9a-z]{1,})?$",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:&|<|>|\"|'|`)",
+    "flags": "",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:&|<|>|\"|'|`)",
+    "flags": "g",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:&amp;|&lt;|&gt;|&quot;|&#x27;|&#x60;)",
+    "flags": "",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:&amp;|&lt;|&gt;|&quot;|&#x27;|&#x60;)",
+    "flags": "g",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "[\\-\\.0-9A-Z_a-z\\xC0-\\xD6\\xD8-\\xF6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\u00B7\\u0300-\\u036F\\u203F-\\u2040]",
+    "flags": "",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[A-Z_a-z\\xC0-\\xD6\\xD8-\\xF6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][\\-\\.0-9A-Z_a-z\\xC0-\\xD6\\xD8-\\xF6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*(?::[A-Z_a-z\\xC0-\\xD6\\xD8-\\xF6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][\\-\\.0-9A-Z_a-z\\xC0-\\xD6\\xD8-\\xF6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*)?$",
+    "flags": "",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[\t\n\r -퟿-�𐀀-􏿿]$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[ \t\r\n]+$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[:A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿]$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[-:A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿.0-9·̀-ͯ‿-⁀]$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[:A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿][-:A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿.0-9·̀-ͯ‿-⁀]*$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[-:A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿.0-9·̀-ͯ‿-⁀]+$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[\u0001-퟿-�𐀀-􏿿]$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[\u0001-\b\u000b\f\u000e-\u001f--]$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌-‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿]$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[-A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌-‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿.0-9·̀-ͯ‿-⁀]$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^[A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌-‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿][-A-Z_a-zÀ-ÖØ-öø-˿Ͱ-ͽͿ-῿‌-‍⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�𐀀-󯿿.0-9·̀-ͯ‿-⁀]*$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^/health/?$",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^/?$",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^/parse/?$",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^/parse/bulk/?$",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:email|e-?mail|contact\\s+email)\\s*[:\\-]\\s*([A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,})",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:email|e-?mail|mail)\\s*[:\\-]?\\s*([A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,})",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "https?://(?:[a-z]{2}\\.)?(?:www\\.)?linkedin\\.com/(?:in|pub)/[a-zA-Z0-9_%\\-]{1,200}",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\s)www\\.linkedin\\.com/(?:in|pub)/[a-zA-Z0-9_%\\-]{1,200}",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\s)linkedin\\.com/(?:in|pub)/[a-zA-Z0-9_%\\-]{1,200}",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "linkedin\\s*\\.\\s*com\\s*/\\s*(?:in|pub)\\s*/\\s*[a-zA-Z0-9_%\\-]{1,200}",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "https?:\\/\\/(?:[a-z]{2}\\.)?(?:www\\.)?linkedin\\.com\\/(?:in|pub)\\/[a-zA-Z0-9_%\\-]{1,200}",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\s)www\\.linkedin\\.com\\/(?:in|pub)\\/[a-zA-Z0-9_%\\-]{1,200}",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\s)linkedin\\.com\\/(?:in|pub)\\/[a-zA-Z0-9_%\\-]{1,200}",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "linkedin\\s*\\.\\s*com\\s*\\/\\s*(?:in|pub)\\s*\\/\\s*[a-zA-Z0-9_%\\-]{1,200}",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\s)(?:linkedin|linked\\s*in)\\s*[:\\-]\\s*(https?://[^\\s]+|(?:www\\.)?linkedin\\.com/(?:in|pub)/[a-zA-Z0-9_%\\-]{1,200})",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\s)(?:linkedin|linked\\s*in|profile)\\s*[:\\s-]*\\s*in\\s*/\\s*([a-zA-Z0-9](?:[a-zA-Z0-9_-]{1,98}[a-zA-Z0-9]))",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\s)in\\s*/\\s*([a-zA-Z0-9](?:[a-zA-Z0-9_-]{1,98}[a-zA-Z0-9]))(?=[\\s.,;)|]|$)",
+    "flags": "gi",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*(?:(?:Education(?:\\s+details|\\s+qualifications?|\\s+background|\\s+history|\\s+summary|\\s+profile)?|Educational\\s+Qualifications?|Educational\\s+Details|Academic\\s+Qualifications?|Academic\\s+Background|Academic\\s+Details|Academic\\s+Record|Highest\\s+Qualification|Studies|Qualifications?|Educational\\s+Background|Degrees?(?:\\s+details)?))\\s*:?\\s*\\n([\\s\\S]*?)(?:(?=\\n\\s*(?:Education|Educational\\s+Qualification|Academic\\s+Details|Academic\\s+Background|Highest\\s+Qualification|Studies|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Skill\\s+Set|Domain\\s+Proficiency|Technical\\s+Expertise|Toolset|Area\\s+of\\s+Interest|Areas\\s+of\\s+Interest|Areas\\s+of\\s+Expertise|IT\\s+Skills|Computer\\s+Skills|Experience|Professional\\s+Experience|Relevant\\s+Experience|Work\\s+Experience|Employment|Current\\s+Company|Projects?|PROJECT(?:-\\d+)?|Certifications?|Certification|Career\\s+Highlights:?|Highlights:?|Additional\\s+Information|Interests|Summary|Objective|Synopsis|Declaration|Key\\s+Achievements?|Achievements?|Contact|Personal|References|Location)\\b)|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])TypeScript(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])React(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])Node\\.js(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])Python(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])PostgreSQL(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])Docker(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])Kubernetes(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])AWS(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])GraphQL(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])Redis(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*Professional\\s+Summary\\s*[:\\-]?(?:\\s*\\n|\\s+)([\\s\\S]*?)(?=\\n\\s*(?:Education|Academic|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Core\\s+Competencies|Competencies|Experience|Professional\\s+Experience|Work\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\b|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*Executive\\s+Profile\\s*[:\\-]?(?:\\s*\\n|\\s+)([\\s\\S]*?)(?=\\n\\s*(?:Education|Academic|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Core\\s+Competencies|Competencies|Experience|Professional\\s+Experience|Work\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\b|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*Profile\\s+Summary\\s*[:\\-]?(?:\\s*\\n|\\s+)([\\s\\S]*?)(?=\\n\\s*(?:Education|Academic|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Core\\s+Competencies|Competencies|Experience|Professional\\s+Experience|Work\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\b|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*Career\\s+Summary\\s*[:\\-]?(?:\\s*\\n|\\s+)([\\s\\S]*?)(?=\\n\\s*(?:Education|Academic|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Core\\s+Competencies|Competencies|Experience|Professional\\s+Experience|Work\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\b|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*Professional\\s+Overview\\s*[:\\-]?(?:\\s*\\n|\\s+)([\\s\\S]*?)(?=\\n\\s*(?:Education|Academic|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Core\\s+Competencies|Competencies|Experience|Professional\\s+Experience|Work\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\b|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*(?<!Professional\\s+|Career\\s+|Profile\\s+)Summary\\s*[:\\-]?(?:\\s*\\n|\\s+)([\\s\\S]*?)(?=\\n\\s*(?:Education|Academic|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Core\\s+Competencies|Competencies|Experience|Professional\\s+Experience|Work\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\b|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*(?<!Executive\\s+|Profile\\s+)(?:Professional\\s+)?Profile\\s*[:\\-]?(?:\\s*\\n|\\s+)([\\s\\S]*?)(?=\\n\\s*(?:Education|Academic|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Core\\s+Competencies|Competencies|Experience|Professional\\s+Experience|Work\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\b|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|\\n)\\s*(?:Career\\s+)?Objective\\s*[:\\-]?(?:\\s*\\n|\\s+)([\\s\\S]*?)(?=\\n\\s*(?:Education|Academic|Technical\\s+Skills|Technologies|Skills|Core\\s+Skills|Key\\s+Skills|Core\\s+Competencies|Competencies|Experience|Professional\\s+Experience|Work\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\b|$)",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "^(\\s)|(\\p{Mn})|(\\p{Cf})$",
+    "flags": "u",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNatural Language Processing\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bObject-Oriented Programming\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMicroservices Architecture\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bExploratory Data Analysis\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bEvent-driven Architecture\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bArtificial Intelligence\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTest-driven Development\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bReinforcement Learning\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFunctional Programming\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bInfrastructure as Code\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLarge Language Models\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHyperparameter Tuning\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBusiness Intelligence\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGoogle Cloud Platform\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMicrosoft SQL Server\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFeature Engineering\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bProgressive Web App\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAmazon Web Services\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPenetration Testing\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPrompt Engineering\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bData Preprocessing\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVisual Studio Code\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAgile Methodology\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bChaos Engineering\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMachine Learning\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCross-validation\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bModel Deployment\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bModel Evaluation\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bData Engineering\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJupyter Notebook\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bEntity Framework\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWeights & Biases\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bActive Directory\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bProtocol Buffers\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bComputer Vision\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSpring Security\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVector Database\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGoogle BigQuery\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMicrosoft Azure\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOracle Database\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bShell Scripting\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJetpack Compose\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGitHub Actions\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache Airflow\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDocker Compose\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApollo GraphQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache Iceberg\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bEdge Computing\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAndroid Studio\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDeep Learning\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGenerative AI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bData Analysis\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSystem Design\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bIntelliJ IDEA\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache Hadoop\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bElasticsearch\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMS SQL Server\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRuby on Rails\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSnowflake SQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMicroservices\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenTelemetry\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCodeWhisperer\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLoad Balancer\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bUnreal Engine\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bData Science\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTailwind CSS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bReact Native\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bScikit-learn\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bScikit learn\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHugging Face\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTransformers\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache Kafka\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache Spark\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGoogle Cloud\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAzure DevOps\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDigitalOcean\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRaspberry Pi\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRESTful API\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGraphQL API\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSpring Boot\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMaterial UI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache Hive\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBackbone\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWebAssembly\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bObjective-C\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache HTTP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTimescaleDB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCockroachDB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache Hudi\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAppDynamics\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bInformatica\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHuggingFace\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCAP Theorem\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAPI Gateway\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bExpress\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAngular\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTypeScript\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJavaScript\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTensorFlow\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenAI API\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLlamaIndex\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDatabricks\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAWS Lambda\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bKubernetes\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPrometheus\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPostgreSQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSQL Server\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPlaywright\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMatplotlib\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBlockchain\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPowerShell\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWebSockets\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bClickHouse\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bYugabyteDB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDelta Lake\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bServerless\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bZero Trust\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCloudflare\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bConfluence\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSalesforce\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bServiceNow\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSolidWorks\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bEmbedded C\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGitLab CI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLangChain\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSnowflake\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTerraform\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCassandra\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHibernate\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bStreamlit\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSequelize\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSocket\\.io\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bStorybook\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBootstrap\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenStack\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bELK Stack\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNew Relic\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSpark SQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDevSecOps\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBitbucket\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMercurial\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bKustomize\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWordPress\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDynatrace\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAmplitude\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAnthropic\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBluetooth\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCocoaPods\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCapacitor\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bREST API\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bReact\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCircleCI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDynamoDB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFirebase\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSupabase\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSelenium\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPrettier\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLightGBM\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCatBoost\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSolidity\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMongoose\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRabbitMQ\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bThree\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bChart\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bEmber\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bElectron\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bInfluxDB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPostgres\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAdobe XD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPower BI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bunittest\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bInsomnia\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLogstash\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMixpanel\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSnowplow\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFivetran\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSimulink\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFreeRTOS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenAPI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSwagger\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVS Code\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNode\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNext\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPyTorch\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAWS EC2\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAWS RDS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAnsible\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJenkins\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGrafana\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMariaDB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMongoDB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAutoCAD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFastAPI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLaravel\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCypress\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWebpack\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSeaborn\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bXGBoost\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAirflow\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSSL/TLS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTypeORM\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bZustand\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFlutter\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRed Hat\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHyper-V\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLinkerd\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDatadog\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bParquet\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGraphQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAngular\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bExpress\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSymfony\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNetlify\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHAProxy\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWorkday\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTableau\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bShopify\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMagento\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPostman\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGatling\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFluentd\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRollbar\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBugsnag\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSegment\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAirbyte\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCopilot\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDirectX\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBlender\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLabVIEW\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bArduino\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVxWorks\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAndroid\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSwiftUI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bXamarin\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCordova\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVue\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAWS S3\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSQLite\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDjango\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bpytest\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRollup\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bESLint\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPandas\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPlotly\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenCV\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGensim\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGradio\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMLflow\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPrisma\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSvelte\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bjQuery\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGolang\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bKotlin\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bUbuntu\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCentOS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVMware\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bConsul\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSplunk\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSentry\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPresto\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVitess\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDevOps\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGitOps\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFinOps\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPython\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMATLAB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSpring\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHadoop\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDocker\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPuppet\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGitLab\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGitHub\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHeroku\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVercel\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenID\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPodman\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bApache\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNotion\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSketch\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLooker\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDrupal\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPoetry\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGradle\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTestNG\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAppium\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJMeter\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLocust\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJaeger\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bZipkin\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bKibana\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bStitch\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTalend\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenAI\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bClaude\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGemini\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCursor\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNewSQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHTTP/2\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHTTP/3\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTCP/IP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWebRTC\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bZeroMQ\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenCL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVulkan\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOpenGL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMLOps\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCI/CD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMySQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRedis\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFlask\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJUnit\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMocha\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBabel\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNumPy\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bspaCy\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bKeras\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOAuth\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bOWASP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRedux\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bD3\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHTML5\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bScala\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSwift\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNginx\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLinux\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bIstio\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVault\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTrino\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNeo4j\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bReact\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRails\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSpark\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bKafka\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAzure\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bEnvoy\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSlack\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFigma\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bExcel\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bConda\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMaven\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCMake\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bemacs\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bregex\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNoSQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSOLID\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHTTPS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWi-Fi\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMetal\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bUnity\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bXcode\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bUIKit\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bIonic\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTauri\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNW\\.js\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJest\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVite\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bYOLO\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBERT\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLSTM\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNLTK\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDash\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCUDA\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSAML\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLDAP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWeb3\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBash\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bgRPC\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMobX\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSASS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSCSS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLESS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCSS3\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRust\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDart\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHelm\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTiDB\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAvro\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJSON\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bYAML\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSOAP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSIEM\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJava\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPerl\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRuby\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNode\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bChef\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSolr\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bREST\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bUnix\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJira\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bQlik\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bHTML\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\byarn\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bpnpm\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMake\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bChai\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLoki\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSSIS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bgrep\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bcurl\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCRUD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bACID\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bKISS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDDoS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bQUIC\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMQTT\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAMQP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRFID\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bFPGA\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bASIC\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bMaya\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRTOS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCAD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGPT\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLLM\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRAG\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCNN\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bRNN\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGRU\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGAN\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bdbt\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bETL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bELT\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bJWT\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bORC\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bXML\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSRE\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSOC\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bC\\+\\+(?:$|[\\s,;!?:\n\r)\\]/])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSAS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSQL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bPHP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVue\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGit\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSVN\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAWS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGCP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bZsh\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSAP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVBA\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCSS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bnpm\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bpip\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bAnt\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bvim\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bsed\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bawk\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bORM\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDRY\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDDD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTDD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bBDD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bUML\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bERD\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bCDN\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bDNS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVPN\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bVPC\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bIAM\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bWAF\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTLS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bSSL\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bUDP\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bIoT\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bLTE\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bNFC\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGPU\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bTPU\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bQNX\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\biOS\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bGo\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bC#(?:$|[\\s,;!?:\n\r)\\]/])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bk6\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\bjq\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "\\b5G\\b",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  },
+  {
+    "pattern": "(?:^|[^a-zA-Z0-9+#.-])Go(?:$|[^a-zA-Z0-9+#.-])",
+    "flags": "i",
+    "timestamp": "2026-11-02T12:00:00.000Z"
+  }
+]

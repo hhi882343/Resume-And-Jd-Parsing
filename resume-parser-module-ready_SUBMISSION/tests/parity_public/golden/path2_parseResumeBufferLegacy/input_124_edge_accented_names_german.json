@@ -1,0 +1,18 @@
+{
+  "candidateName": "Cloud",
+  "email": "mueller.schmidt@berlin.de",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Terraform, GCP, Kubernetes",
+  "technologiesRaw": "Cloud Consultant",
+  "technologies": "Cloud Consultant",
+  "totalExperience": "7 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": "Berlin, Germany",
+  "location": "Berlin, Germany",
+  "sourceFile": "input_124_edge_accented_names_german.txt",
+  "parser": "legacy",
+  "role": "Cloud Consultant"
+}

@@ -1,0 +1,17 @@
+{
+  "candidateName": "Ananya Sharma",
+  "email": "ananya.sharma@gmail.com",
+  "contactNumber": "+919876543210",
+  "linkedinUrl": "https://www.linkedin.com/in/ananyasharma",
+  "highestQualification": "B.Tech in Computer Science",
+  "educationRaw": "B.Tech in Computer Science",
+  "skillsRaw": "TypeScript, React, Node.js, PostgreSQL, Docker",
+  "technologiesRaw": "Full Stack Developer",
+  "technologies": "Full Stack Developer",
+  "totalExperienceYears": 4,
+  "totalExperienceText": "4 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Full Stack Developer"
+}

@@ -1,0 +1,18 @@
+{
+  "candidateName": "Skills Professional Experience",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Docker, AWS, React, TypeScript, PostgreSQL",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_034_skillsExtractionEngine_L145.txt",
+  "parser": "metaforge",
+  "role": null
+}

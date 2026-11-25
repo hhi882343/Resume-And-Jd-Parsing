@@ -1,0 +1,905 @@
+[
+  {
+    "id": "variant-01-plain-json",
+    "description": "Standard valid JSON object matching ATS schema",
+    "input": {
+      "rawModelText": "{\"jobTitle\":\"Senior Backend Engineer\",\"location\":\"San Francisco, CA\",\"employmentType\":\"FTE\",\"mandatorySkills\":[\"Python\",\"PostgreSQL\"],\"skills\":[\"AWS\",\"Docker\"],\"overallExperience\":\"5+ years\"}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-594",
+        "jobTitle": "Senior Backend Engineer",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Mid Senior",
+        "overallExperience": "5+ years",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "Python",
+          "PostgreSQL"
+        ],
+        "skills": [
+          "AWS",
+          "Docker"
+        ],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-02-fenced-json",
+    "description": "JSON enclosed in markdown code fences (```json ... ```)",
+    "input": {
+      "rawModelText": "```json\n{\"jobTitle\":\"Senior Backend Engineer\",\"mandatorySkills\":[\"Python\",\"PostgreSQL\"]}\n```",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "Unexpected token '`', \"```json\n{\"\"... is not valid JSON"
+    }
+  },
+  {
+    "id": "variant-03-prose-before-after",
+    "description": "JSON surrounded by conversational assistant prose",
+    "input": {
+      "rawModelText": "Here is the extracted job requirement data:\n{\"jobTitle\":\"Senior Backend Engineer\",\"mandatorySkills\":[\"Python\"]}\nHope this helps!",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "Unexpected token 'H', \"Here is th\"... is not valid JSON"
+    }
+  },
+  {
+    "id": "variant-04-trailing-commas",
+    "description": "JSON with trailing commas in object and list",
+    "input": {
+      "rawModelText": "{\"jobTitle\": \"Senior Backend Engineer\", \"mandatorySkills\": [\"Python\", \"AWS\",],}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "Unexpected token ']', ...\"n\", \"AWS\",],}\" is not valid JSON"
+    }
+  },
+  {
+    "id": "variant-05-single-object-where-array-expected",
+    "description": "Object passed instead of array for mandatorySkills",
+    "input": {
+      "rawModelText": "{\"jobTitle\":\"Senior Backend Engineer\",\"mandatorySkills\":{\"name\":\"Python\",\"level\":\"Expert\"},\"skills\":{\"tool\":\"Docker\"}}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-157",
+        "jobTitle": "Senior Backend Engineer",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-06-array-where-string-expected",
+    "description": "Array passed instead of string for jobTitle",
+    "input": {
+      "rawModelText": "{\"jobTitle\":[\"Lead\",\"Backend\",\"Engineer\"],\"mandatorySkills\":[\"Python\"]}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-519",
+        "jobTitle": "Lead,Backend,Engineer",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "Python"
+        ],
+        "skills": [
+          "Python"
+        ],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-07-null-fields",
+    "description": "Explicit null values across schema fields",
+    "input": {
+      "rawModelText": "{\"jobTitle\":null,\"mandatorySkills\":null,\"skills\":null,\"location\":null,\"annualBudget\":null,\"numberOfPositions\":null}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-714",
+        "jobTitle": "Not specified",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-08-numbers-where-strings-expected",
+    "description": "Numeric values where strings are expected (jobTitle, budget, positions)",
+    "input": {
+      "rawModelText": "{\"jobTitle\":98765,\"numberOfPositions\":4,\"annualBudget\":175000,\"mandatorySkills\":[\"Python\"]}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-949",
+        "jobTitle": "98765",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Multiple",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "4",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "175000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "Python"
+        ],
+        "skills": [
+          "Python"
+        ],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-09-string-where-skills-array-expected",
+    "description": "Delimited string for mandatorySkills (comma, semicolon, pipe)",
+    "input": {
+      "rawModelText": "{\"jobTitle\":\"Data Platform Architect\",\"mandatorySkills\":\"Python, Apache Spark; PostgreSQL | AWS\",\"skills\":\"Kubernetes, Terraform\"}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-776",
+        "jobTitle": "Data Platform Architect",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "Python",
+          "Apache Spark",
+          "PostgreSQL",
+          "AWS"
+        ],
+        "skills": [
+          "Kubernetes",
+          "Terraform"
+        ],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-10-extra-keys",
+    "description": "Unexpected extra keys in LLM output",
+    "input": {
+      "rawModelText": "{\"jobTitle\":\"Site Reliability Engineer\",\"mandatorySkills\":[\"Linux\",\"Kubernetes\"],\"unexpectedConfidenceScore\":0.98,\"internalPocNotes\":\"Urgent client hiring\"}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-944",
+        "jobTitle": "Site Reliability Engineer",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "Linux",
+          "Kubernetes"
+        ],
+        "skills": [
+          "Linux",
+          "Kubernetes"
+        ],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-11-wrapped-data-object",
+    "description": "LLM wrapped output in top-level \"data\" envelope",
+    "input": {
+      "rawModelText": "{\"data\":{\"jobTitle\":\"Cloud Architect\",\"mandatorySkills\":[\"AWS\",\"Terraform\"]}}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-948",
+        "jobTitle": "Not specified",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-12-wrapped-requirements-object",
+    "description": "LLM wrapped output in top-level \"requirements\" envelope",
+    "input": {
+      "rawModelText": "{\"requirements\":[{\"jobTitle\":\"DevOps Specialist\",\"mandatorySkills\":[\"Ansible\"]}]}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-348",
+        "jobTitle": "Not specified",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-13-truncated-json",
+    "description": "Truncated incomplete JSON stream",
+    "input": {
+      "rawModelText": "{\"jobTitle\": \"Security Engineer\", \"mandatorySkills\": [\"CyberArk\", \"PAM",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "Unterminated string in JSON at position 70 (line 1 column 71)"
+    }
+  },
+  {
+    "id": "variant-14-empty-string",
+    "description": "Empty string response",
+    "input": {
+      "rawModelText": "",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "Error",
+      "errorMessage": "Empty response from Gemini"
+    }
+  },
+  {
+    "id": "variant-15-whitespace-only",
+    "description": "Whitespace only response (spaces, newlines, tabs)",
+    "input": {
+      "rawModelText": "   \n\t   \n  ",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "Unexpected end of JSON input"
+    }
+  },
+  {
+    "id": "variant-16-non-json-prose",
+    "description": "Pure natural language response with no JSON structure",
+    "input": {
+      "rawModelText": "I am unable to analyze this job description because the requirements are not clear.",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "Unexpected token 'I', \"I am unabl\"... is not valid JSON"
+    }
+  },
+  {
+    "id": "variant-17-nan",
+    "description": "JSON containing unquoted NaN (invalid standard JSON)",
+    "input": {
+      "rawModelText": "{\"jobTitle\": NaN, \"mandatorySkills\": [\"Python\"]}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "Unexpected token 'N', ...\"obTitle\": NaN, \"mand\"... is not valid JSON"
+    }
+  },
+  {
+    "id": "variant-18-infinity",
+    "description": "JSON containing unquoted Infinity (invalid standard JSON)",
+    "input": {
+      "rawModelText": "{\"jobTitle\": Infinity, \"mandatorySkills\": [\"Python\"]}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "Unexpected token 'I', ...\"obTitle\": Infinity, \"... is not valid JSON"
+    }
+  },
+  {
+    "id": "variant-19-negative-infinity",
+    "description": "JSON containing unquoted -Infinity (invalid standard JSON)",
+    "input": {
+      "rawModelText": "{\"jobTitle\": -Infinity, \"mandatorySkills\": [\"Python\"]}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "SyntaxError",
+      "errorMessage": "No number after minus sign in JSON at position 14 (line 1 column 15)"
+    }
+  },
+  {
+    "id": "variant-20-float-one-point-zero",
+    "description": "Numeric float 1.0 coerced to string '1' matching JS String(1.0)",
+    "input": {
+      "rawModelText": "{\"jobTitle\": \"Staff Platform Engineer\", \"numberOfPositions\": 1.0, \"annualBudget\": 1.0}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-729",
+        "jobTitle": "Staff Platform Engineer",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Single",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "1",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-21-scientific-large",
+    "description": "Large scientific notation number 1e21 coerced to '1e+21'",
+    "input": {
+      "rawModelText": "{\"jobTitle\": \"Lead Architect\", \"annualBudget\": 1e21}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-105",
+        "jobTitle": "Lead Architect",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "1e+21",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-22-large-precision-loss-number",
+    "description": "Large integer beyond 2^53-1 parsed into IEEE-754 double with precision loss",
+    "input": {
+      "rawModelText": "{\"jobTitle\": \"Chief Scientist\", \"annualBudget\": 12345678901234567890}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-404",
+        "jobTitle": "Chief Scientist",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "12345678901234567000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-23-negative-zero",
+    "description": "Negative zero -0 coerced to string '0' matching JS String(-0)",
+    "input": {
+      "rawModelText": "{\"jobTitle\": \"DevOps Engineer\", \"numberOfPositions\": -0}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-711",
+        "jobTitle": "DevOps Engineer",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Multiple",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "0",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-24-duplicate-keys",
+    "description": "Duplicate JSON keys where last key wins matching standard JSON.parse",
+    "input": {
+      "rawModelText": "{\"jobTitle\": \"Initial Role\", \"jobTitle\": \"Overridden Role\", \"mandatorySkills\": [\"Python\"]}",
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": true,
+      "provider": "gemini",
+      "data": {
+        "requirementId": "REQ-2026-10-31-792",
+        "jobTitle": "Overridden Role",
+        "isInferredTitle": false,
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "Python"
+        ],
+        "skills": [
+          "Python"
+        ],
+        "jobDescription": "Not specified"
+      }
+    }
+  },
+  {
+    "id": "variant-25-openai-empty-content",
+    "description": "OpenAI-compatible provider response with empty message content choices[0].message.content = ''",
+    "input": {
+      "providerPath": "openai",
+      "mockResponse": {
+        "choices": [
+          {
+            "message": {
+              "content": ""
+            }
+          }
+        ]
+      },
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "Error",
+      "errorMessage": "Empty response from LLM",
+      "callChatApiCleansText": false
+    }
+  },
+  {
+    "id": "variant-26-openai-null-content",
+    "description": "OpenAI-compatible provider response with null message content choices[0].message.content = null",
+    "input": {
+      "providerPath": "openai",
+      "mockResponse": {
+        "choices": [
+          {
+            "message": {
+              "content": null
+            }
+          }
+        ]
+      },
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "Error",
+      "errorMessage": "Empty response from LLM",
+      "callChatApiCleansText": false
+    }
+  },
+  {
+    "id": "variant-27-gemini-empty-candidates",
+    "description": "Gemini response with empty candidates array candidates = []",
+    "input": {
+      "mockResponse": {
+        "candidates": []
+      },
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "Error",
+      "errorMessage": "Empty response from Gemini"
+    }
+  },
+  {
+    "id": "variant-28-gemini-safety-finish",
+    "description": "Gemini response blocked by safety filter with finishReason SAFETY and no parts text",
+    "input": {
+      "mockResponse": {
+        "candidates": [
+          {
+            "finishReason": "SAFETY"
+          }
+        ]
+      },
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "Error",
+      "errorMessage": "[GoogleGenerativeAI Error]: Candidate was blocked due to SAFETY"
+    }
+  },
+  {
+    "id": "variant-29-openai-missing-content-key",
+    "description": "OpenAI-compatible provider response with missing content key choices[0].message = {}",
+    "input": {
+      "providerPath": "openai",
+      "mockResponse": {
+        "choices": [
+          {
+            "message": {}
+          }
+        ]
+      },
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "Error",
+      "errorMessage": "Empty response from LLM",
+      "callChatApiCleansText": false
+    }
+  },
+  {
+    "id": "variant-30-openai-empty-choices",
+    "description": "OpenAI-compatible provider response with empty choices array choices = []",
+    "input": {
+      "providerPath": "openai",
+      "mockResponse": {
+        "choices": []
+      },
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "Error",
+      "errorMessage": "Empty response from LLM",
+      "callChatApiCleansText": false
+    }
+  },
+  {
+    "id": "variant-31-gemini-empty-parts",
+    "description": "Gemini response candidate content parts array is empty parts = []",
+    "input": {
+      "mockResponse": {
+        "candidates": [
+          {
+            "content": {
+              "parts": []
+            }
+          }
+        ]
+      },
+      "jdText": "We are seeking a Senior Backend Engineer in San Francisco, CA. Required skills: Python, PostgreSQL, AWS."
+    },
+    "expected_output": {
+      "success": false,
+      "errorType": "Error",
+      "errorMessage": "Empty response from Gemini"
+    }
+  }
+]

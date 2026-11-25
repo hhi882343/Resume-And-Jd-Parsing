@@ -1,0 +1,12 @@
+
+Grace Hopper
+grace@example.com
+
+Technical Skills
+COBOL, Fortran, Assembly
+
+Work Experience
+Senior Systems Architect
+Responsibilities:
+- Developed web services using Python, Docker, Kubernetes, and AWS.
+- Built reactive frontends with React and TypeScript.

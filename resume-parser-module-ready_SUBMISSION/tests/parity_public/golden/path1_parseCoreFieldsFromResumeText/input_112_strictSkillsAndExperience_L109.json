@@ -1,0 +1,17 @@
+{
+  "candidateName": "Jane Doe",
+  "email": null,
+  "contactNumber": "5551234567",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Java, Spring Boot, SQL, React",
+  "technologiesRaw": "Java Full Stack Developer",
+  "technologies": "Java Full Stack Developer",
+  "totalExperienceYears": 5,
+  "totalExperienceText": "5 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Java Full Stack Developer"
+}

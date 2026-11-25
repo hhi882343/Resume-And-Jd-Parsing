@@ -1,0 +1,18 @@
+{
+  "candidateName": "Daniel Craig",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "React, Node.js",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_143_edge_missing_skills_section_wi.txt",
+  "parser": "legacy",
+  "role": null
+}

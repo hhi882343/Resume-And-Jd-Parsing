@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": "+91 98765 43221",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Routing, Switching",
+  "technologiesRaw": "Network Engineer",
+  "technologies": "Network Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_012_designationExtraction_L263.txt",
+  "parser": "metaforge",
+  "role": "Network Engineer"
+}

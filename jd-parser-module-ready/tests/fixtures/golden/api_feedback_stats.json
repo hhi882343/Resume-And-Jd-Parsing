@@ -1,0 +1,86 @@
+[
+  {
+    "id": "stats-empty-db",
+    "description": "Feedback stats on empty database (0 runs, 0 predictions, avgReward null)",
+    "expected_status": 200,
+    "expected_response": {
+      "totalAnalysisRuns": 0,
+      "totalPredictions": 0,
+      "totalCorrections": 0,
+      "totalPreferencePairs": 0,
+      "avgReward": null,
+      "policyVersion": "gemini-bootstrap",
+      "dpoReady": false
+    }
+  },
+  {
+    "id": "stats-after-unedited-correction",
+    "description": "Stats after unedited correction (totalCorrections remains 0, avgReward null)",
+    "expected_status": 200,
+    "expected_response": {
+      "totalAnalysisRuns": 0,
+      "totalPredictions": 0,
+      "totalCorrections": 0,
+      "totalPreferencePairs": 0,
+      "avgReward": null,
+      "policyVersion": "gemini-bootstrap",
+      "dpoReady": false
+    }
+  },
+  {
+    "id": "stats-after-single-edited",
+    "description": "Stats after 1 edited correction (totalCorrections=1, avgReward float)",
+    "expected_status": 200,
+    "expected_response": {
+      "totalAnalysisRuns": 1,
+      "totalPredictions": 1,
+      "totalCorrections": 1,
+      "totalPreferencePairs": 1,
+      "avgReward": 0.7281746031746031,
+      "policyVersion": "gemini-bootstrap",
+      "dpoReady": false
+    }
+  },
+  {
+    "id": "stats-after-multiple-corrections",
+    "description": "Stats after multiple corrections with avgReward filter (< 0.999)",
+    "expected_status": 200,
+    "expected_response": {
+      "totalAnalysisRuns": 3,
+      "totalPredictions": 3,
+      "totalCorrections": 3,
+      "totalPreferencePairs": 3,
+      "avgReward": 0.8607804232804233,
+      "policyVersion": "gemini-bootstrap",
+      "dpoReady": false
+    }
+  },
+  {
+    "id": "stats-dpo-ready-false-49",
+    "description": "Stats at 49 preference pairs: dpoReady is false",
+    "expected_status": 200,
+    "expected_response": {
+      "totalAnalysisRuns": 49,
+      "totalPredictions": 49,
+      "totalCorrections": 49,
+      "totalPreferencePairs": 49,
+      "avgReward": 0.7948412698412699,
+      "policyVersion": "gemini-bootstrap",
+      "dpoReady": false
+    }
+  },
+  {
+    "id": "stats-dpo-ready-true-50",
+    "description": "Stats at 50 preference pairs: dpoReady flips to true",
+    "expected_status": 200,
+    "expected_response": {
+      "totalAnalysisRuns": 50,
+      "totalPredictions": 50,
+      "totalCorrections": 50,
+      "totalPreferencePairs": 50,
+      "avgReward": 0.7948412698412699,
+      "policyVersion": "gemini-bootstrap",
+      "dpoReady": true
+    }
+  }
+]

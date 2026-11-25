@@ -1,0 +1,13 @@
+
+John Doe
+Software Engineer
+Email: john@example.com
+
+Technical Skills
+Python, Django
+
+Job Responsibilities
+- 3D CAD Modeling & Detailing
+- Sheet Metal & Weldment Design
+- Design for Manufacturing (DFM)
+- Developed responsive web applications using React and Node.js

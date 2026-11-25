@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "React, Node.js",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_062_strictSkillsAndExperience_L81.txt",
+  "parser": "metaforge",
+  "role": null
+}

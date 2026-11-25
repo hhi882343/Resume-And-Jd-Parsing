@@ -1,0 +1,18 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_038_skillsExtractionEngine_L228.txt",
+  "parser": "legacy",
+  "role": null
+}

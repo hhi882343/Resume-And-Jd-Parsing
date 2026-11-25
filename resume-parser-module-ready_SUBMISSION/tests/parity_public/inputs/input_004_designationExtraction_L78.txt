@@ -1,0 +1,11 @@
+Anita Sharma
+anita.sharma@example.com
++91 9876543213
+
+Career Summary: Network Engineer with enterprise networking experience.
+
+Technical Skills
+Cisco, Routing, Switching, Firewalls
+
+Education
+B.Tech in Electronics and Communication

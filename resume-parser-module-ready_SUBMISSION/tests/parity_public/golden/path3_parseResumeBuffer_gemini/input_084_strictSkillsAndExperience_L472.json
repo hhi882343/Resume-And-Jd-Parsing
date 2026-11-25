@@ -1,0 +1,18 @@
+{
+  "candidateName": "Bob Johnson",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Flask, PostgreSQL, REST APIs",
+  "technologiesRaw": "Software Engineer",
+  "technologies": "Software Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_084_strictSkillsAndExperience_L472.txt",
+  "parser": "metaforge",
+  "role": "Software Engineer"
+}

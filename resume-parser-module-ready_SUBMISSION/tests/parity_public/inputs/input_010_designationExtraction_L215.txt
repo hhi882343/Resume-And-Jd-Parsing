@@ -1,0 +1,8 @@
+Deepak Singh
+deepak.singh@example.com
++91 9876543219
+
+Professional Summary: DevOps Engineer with AWS and Kubernetes experience.
+
+Technical Skills
+AWS, Docker, Kubernetes, Terraform

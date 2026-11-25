@@ -1,0 +1,17 @@
+{
+  "candidateName": "Deepak Singh",
+  "email": null,
+  "contactNumber": "+919876543219",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "AWS, Docker, Kubernetes, Terraform",
+  "technologiesRaw": "DevOps Engineer",
+  "technologies": "DevOps Engineer",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "DevOps Engineer"
+}

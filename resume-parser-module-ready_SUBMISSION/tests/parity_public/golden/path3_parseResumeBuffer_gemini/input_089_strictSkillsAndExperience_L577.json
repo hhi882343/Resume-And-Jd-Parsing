@@ -1,0 +1,18 @@
+{
+  "candidateName": "Grace Hopper",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "COBOL, Fortran, Assembly",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_089_strictSkillsAndExperience_L577.txt",
+  "parser": "metaforge",
+  "role": null
+}

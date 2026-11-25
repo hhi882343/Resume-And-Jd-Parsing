@@ -1,0 +1,17 @@
+{
+  "candidateName": "Karthik Raju",
+  "email": null,
+  "contactNumber": "+919123456780",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "AWS, Terraform, Docker, Kubernetes",
+  "technologiesRaw": "DevOps Engineer",
+  "technologies": "DevOps Engineer",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "DevOps Engineer"
+}

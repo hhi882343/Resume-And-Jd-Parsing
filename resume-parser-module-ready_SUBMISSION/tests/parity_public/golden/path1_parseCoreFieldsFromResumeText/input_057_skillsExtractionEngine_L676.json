@@ -1,0 +1,17 @@
+{
+  "candidateName": "Jack Ryan",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Python, Java, Go, Rust, C++, TypeScript, JavaScript, Kotlin, Swift, Ruby",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": null
+}

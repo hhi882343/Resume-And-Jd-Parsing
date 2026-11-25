@@ -1,0 +1,17 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Python, Machine Learning, Data Analysis",
+  "technologiesRaw": "In Python Programming, Machine Learning, and Data Analysis",
+  "technologies": "In Python Programming, Machine Learning, and Data Analysis",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "In Python Programming, Machine Learning, and Data Analysis"
+}

@@ -1,0 +1,7 @@
+
+Taylor Data
+taylor@example.com
+
+Work Experience
+Data Scientist
+- Performed data preprocessing and model evaluation using Python and Scikit-learn.

@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": "+91 98765 43210",
+  "linkedinUrl": null,
+  "highestQualification": "M.Tech in Data Science",
+  "skillsRaw": "Python, Apache Spark, Apache, Spark, SQL, Kafka, Data Science",
+  "technologiesRaw": "Senior Data Engineer",
+  "technologies": "Senior Data Engineer",
+  "totalExperience": "5.5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": "Bangalore, India",
+  "location": "Bangalore, India",
+  "sourceFile": "input_125_edge_emoji_in_header_and_secti.txt",
+  "parser": "metaforge",
+  "role": "Senior Data Engineer"
+}

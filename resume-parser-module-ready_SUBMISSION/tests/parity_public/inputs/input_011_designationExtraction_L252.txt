@@ -1,0 +1,8 @@
+Candidate A
+cand.a@example.com
++91 9876543220
+
+Professional Summary: Java Developer with expertise in Spring.
+
+Technical Skills
+Java, Spring

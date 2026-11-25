@@ -1,0 +1,17 @@
+{
+  "candidateName": "Executive Profile",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": null,
+  "technologiesRaw": "IT Architect",
+  "technologies": "IT Architect",
+  "totalExperienceYears": 7,
+  "totalExperienceText": "7+ years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "IT Architect"
+}

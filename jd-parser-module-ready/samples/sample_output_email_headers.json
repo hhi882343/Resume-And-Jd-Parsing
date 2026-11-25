@@ -1,0 +1,31 @@
+{
+  "has_headers": true,
+  "subject": "TPC - Requirement - PLM - Technical Publication - Bangalore",
+  "date": "",
+  "from": [
+    {
+      "name": "Kallol Chakraborty",
+      "email": "kallol.chakraborty@ltts.com"
+    }
+  ],
+  "to": [
+    {
+      "name": "Arundhati Shivashankarappa Rudagi",
+      "email": "arundhati.rudagi_ext@ltts.com"
+    },
+    {
+      "name": "Pranati Paul",
+      "email": "pranati.paul_ext@ltts.com"
+    },
+    {
+      "name": "K V Sai Siri",
+      "email": "kv.saisiri_ext@ltts.com"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Ashwini Kudi C E",
+      "email": "ashwini.kudi@ltts.com"
+    }
+  ]
+}

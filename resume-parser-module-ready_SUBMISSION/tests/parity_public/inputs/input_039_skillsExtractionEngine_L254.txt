@@ -1,0 +1,13 @@
+
+Technical Skills
+Python, Java, Docker
+
+Work Experience
+Senior Backend Engineer (2018 - Present)
+Responsibilities:
+- Maintained production Kubernetes clusters and Docker containers.
+- Implemented data pipelines using Python, Apache Spark, and PostgreSQL.
+- Architected cloud solutions using AWS and Terraform.
+
+Projects
+E-commerce Platform: Built using React, Node.js, and MongoDB.

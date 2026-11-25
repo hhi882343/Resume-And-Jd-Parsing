@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate Name",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Docker, Kubernetes, AWS",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_060_skillsExtractionEngine_L727.txt",
+  "parser": "legacy",
+  "role": null
+}

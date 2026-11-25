@@ -1,0 +1,6 @@
+René François
+Backend Developer
+Email: rene.francois@example.fr
+Location: Paris, France
+Experience: 6 years
+Skills: Go, PostgreSQL, Docker

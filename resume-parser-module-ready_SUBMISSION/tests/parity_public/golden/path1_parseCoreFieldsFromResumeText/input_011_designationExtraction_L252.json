@@ -1,0 +1,17 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": "+919876543220",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Java, Spring",
+  "technologiesRaw": "Java Developer",
+  "technologies": "Java Developer",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Java Developer"
+}

@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "Diploma in Chemical Engineering",
+  "skillsRaw": "Petrochemical and Chemical Industry",
+  "technologiesRaw": "Refinery, Petrochemical and Chemical Industry",
+  "technologies": "Refinery, Petrochemical and Chemical Industry",
+  "totalExperience": "12 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_072_strictSkillsAndExperience_L307.txt",
+  "parser": "metaforge",
+  "role": "Refinery, Petrochemical and Chemical Industry"
+}

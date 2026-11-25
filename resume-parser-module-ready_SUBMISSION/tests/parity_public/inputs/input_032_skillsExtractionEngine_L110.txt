@@ -1,0 +1,10 @@
+
++--------------------+------------------------+
+| Category           | Skills                 |
++--------------------+------------------------+
+| Languages          | Python, Go, TypeScript |
+| Cloud              | AWS, Docker            |
++--------------------+------------------------+
+
+Experience
+Cloud Engineer at Alpha Inc

@@ -1,0 +1,18 @@
+{
+  "candidateName": "Leo Tolstoy",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Docker, React, PostgreSQL",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_059_skillsExtractionEngine_L709.txt",
+  "parser": "legacy",
+  "role": null
+}

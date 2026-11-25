@@ -1,0 +1,18 @@
+{
+  "candidateName": "Jack Ryan",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Java, Go, Rust, C++, TypeScript, JavaScript, Kotlin, Swift, Ruby",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_057_skillsExtractionEngine_L676.txt",
+  "parser": "metaforge",
+  "role": null
+}

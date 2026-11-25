@@ -1,0 +1,18 @@
+{
+  "candidateName": "Mohammed Junaid",
+  "email": "mohammedjunaidsapsf@gmail.com",
+  "contactNumber": "+917013044354",
+  "linkedinUrl": null,
+  "highestQualification": "B COM (COMPUTERS)",
+  "skillsRaw": "SF EC, Time Off, Employee Central",
+  "technologiesRaw": "SAP SuccessFactors Consultant",
+  "technologies": "SAP SuccessFactors Consultant",
+  "totalExperience": "3 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_022_resumeFieldSanitize_L51.txt",
+  "parser": "legacy",
+  "role": "SAP SuccessFactors Consultant"
+}

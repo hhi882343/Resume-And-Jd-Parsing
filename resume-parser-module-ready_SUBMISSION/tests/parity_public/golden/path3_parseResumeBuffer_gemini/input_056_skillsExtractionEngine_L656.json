@@ -1,0 +1,18 @@
+{
+  "candidateName": "Ivy League",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Docker",
+  "technologiesRaw": "Senior Software Engineer at Google",
+  "technologies": "Senior Software Engineer at Google",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_056_skillsExtractionEngine_L656.txt",
+  "parser": "metaforge",
+  "role": "Senior Software Engineer at Google"
+}

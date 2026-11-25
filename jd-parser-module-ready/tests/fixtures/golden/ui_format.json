@@ -1,0 +1,2769 @@
+{
+  "metadata": {
+    "description": "Golden fixtures for Phase 7B UI format helpers and corrected payload construction",
+    "generatedAt": "2026-10-31T11:15:11.671Z",
+    "sourceFiles": [
+      "src/types/requirement.ts",
+      "src/lib/requirement-serialize.ts",
+      "src/components/RequirementOverview.tsx",
+      "src/app/api/corrections/route.ts"
+    ]
+  },
+  "toFixedRecords": [
+    {
+      "id": "fixed-01",
+      "x": 12.5,
+      "digits": 0,
+      "expected": "13"
+    },
+    {
+      "id": "fixed-02",
+      "x": 28.499999999999996,
+      "digits": 0,
+      "expected": "28"
+    },
+    {
+      "id": "fixed-03",
+      "x": 1.005,
+      "digits": 2,
+      "expected": "1.00"
+    },
+    {
+      "id": "fixed-04",
+      "x": 1.005,
+      "digits": 0,
+      "expected": "1"
+    },
+    {
+      "id": "fixed-05",
+      "x": 0,
+      "digits": 0,
+      "expected": "0"
+    },
+    {
+      "id": "fixed-06",
+      "x": 0,
+      "digits": 0,
+      "expected": "0"
+    },
+    {
+      "id": "fixed-07",
+      "x": 0,
+      "digits": 2,
+      "expected": "0.00"
+    },
+    {
+      "id": "fixed-08",
+      "x": 100,
+      "digits": 0,
+      "expected": "100"
+    },
+    {
+      "id": "fixed-09",
+      "x": 85,
+      "digits": 0,
+      "expected": "85"
+    },
+    {
+      "id": "fixed-10",
+      "x": 85.4,
+      "digits": 0,
+      "expected": "85"
+    },
+    {
+      "id": "fixed-11",
+      "x": 85.5,
+      "digits": 0,
+      "expected": "86"
+    },
+    {
+      "id": "fixed-12",
+      "x": 85.6,
+      "digits": 0,
+      "expected": "86"
+    },
+    {
+      "id": "fixed-13",
+      "x": -12.5,
+      "digits": 0,
+      "expected": "-13"
+    },
+    {
+      "id": "fixed-14",
+      "x": -0.4,
+      "digits": 0,
+      "expected": "-0"
+    },
+    {
+      "id": "fixed-15",
+      "x": -0.5,
+      "digits": 0,
+      "expected": "-1"
+    },
+    {
+      "id": "fixed-16",
+      "x": -0.6,
+      "digits": 0,
+      "expected": "-1"
+    },
+    {
+      "id": "fixed-17",
+      "x": 1.5,
+      "digits": 0,
+      "expected": "2"
+    },
+    {
+      "id": "fixed-18",
+      "x": 2.5,
+      "digits": 0,
+      "expected": "3"
+    },
+    {
+      "id": "fixed-19",
+      "x": 3.5,
+      "digits": 0,
+      "expected": "4"
+    },
+    {
+      "id": "fixed-20",
+      "x": 4.5,
+      "digits": 0,
+      "expected": "5"
+    },
+    {
+      "id": "fixed-21",
+      "x": 0.05,
+      "digits": 1,
+      "expected": "0.1"
+    },
+    {
+      "id": "fixed-22",
+      "x": 0.15,
+      "digits": 1,
+      "expected": "0.1"
+    },
+    {
+      "id": "fixed-23",
+      "x": 0.25,
+      "digits": 1,
+      "expected": "0.3"
+    },
+    {
+      "id": "fixed-24",
+      "x": 0.35,
+      "digits": 1,
+      "expected": "0.3"
+    },
+    {
+      "id": "fixed-25",
+      "x": 0.45,
+      "digits": 1,
+      "expected": "0.5"
+    },
+    {
+      "id": "fixed-26",
+      "x": 0.55,
+      "digits": 1,
+      "expected": "0.6"
+    },
+    {
+      "id": "fixed-27",
+      "x": 0.65,
+      "digits": 1,
+      "expected": "0.7"
+    },
+    {
+      "id": "fixed-28",
+      "x": 0.75,
+      "digits": 1,
+      "expected": "0.8"
+    },
+    {
+      "id": "fixed-29",
+      "x": 0.85,
+      "digits": 1,
+      "expected": "0.8"
+    },
+    {
+      "id": "fixed-30",
+      "x": 0.95,
+      "digits": 1,
+      "expected": "0.9"
+    },
+    {
+      "id": "fixed-31",
+      "x": 1e+21,
+      "digits": 0,
+      "expected": "1e+21"
+    },
+    {
+      "id": "fixed-32",
+      "x": 123456.789,
+      "digits": 2,
+      "expected": "123456.79"
+    },
+    {
+      "id": "fixed-33",
+      "x": 99.9,
+      "digits": 0,
+      "expected": "100"
+    },
+    {
+      "id": "fixed-34",
+      "x": 99.4,
+      "digits": 0,
+      "expected": "99"
+    },
+    {
+      "id": "fixed-35",
+      "x": 98.5,
+      "digits": 0,
+      "expected": "99"
+    },
+    {
+      "id": "fixed-36",
+      "x": 98,
+      "digits": 0,
+      "expected": "98"
+    },
+    {
+      "id": "fixed-37",
+      "x": 97.89999999999999,
+      "digits": 0,
+      "expected": "98"
+    },
+    {
+      "id": "fixed-38",
+      "x": 8.345,
+      "digits": 1,
+      "expected": "8.3"
+    },
+    {
+      "id": "fixed-39",
+      "x": 8.345,
+      "digits": 2,
+      "expected": "8.35"
+    },
+    {
+      "id": "fixed-40",
+      "x": 8.345,
+      "digits": 3,
+      "expected": "8.345"
+    },
+    {
+      "id": "fixed-41",
+      "x": 1.45,
+      "digits": 1,
+      "expected": "1.4"
+    },
+    {
+      "id": "fixed-42",
+      "x": 1.45,
+      "digits": 2,
+      "expected": "1.45"
+    },
+    {
+      "id": "fixed-43",
+      "x": 1.45,
+      "digits": 3,
+      "expected": "1.450"
+    },
+    {
+      "id": "fixed-44",
+      "x": 0.5,
+      "digits": 1,
+      "expected": "0.5"
+    },
+    {
+      "id": "fixed-45",
+      "x": 0.5,
+      "digits": 2,
+      "expected": "0.50"
+    },
+    {
+      "id": "fixed-46",
+      "x": 0.5,
+      "digits": 3,
+      "expected": "0.500"
+    },
+    {
+      "id": "fixed-47",
+      "x": 1.5,
+      "digits": 1,
+      "expected": "1.5"
+    },
+    {
+      "id": "fixed-48",
+      "x": 1.5,
+      "digits": 2,
+      "expected": "1.50"
+    },
+    {
+      "id": "fixed-49",
+      "x": 1.5,
+      "digits": 3,
+      "expected": "1.500"
+    },
+    {
+      "id": "fixed-50",
+      "x": 2.5,
+      "digits": 1,
+      "expected": "2.5"
+    },
+    {
+      "id": "fixed-51",
+      "x": 2.5,
+      "digits": 2,
+      "expected": "2.50"
+    },
+    {
+      "id": "fixed-52",
+      "x": 2.5,
+      "digits": 3,
+      "expected": "2.500"
+    },
+    {
+      "id": "fixed-53",
+      "x": -1.5,
+      "digits": 1,
+      "expected": "-1.5"
+    },
+    {
+      "id": "fixed-54",
+      "x": -1.5,
+      "digits": 2,
+      "expected": "-1.50"
+    },
+    {
+      "id": "fixed-55",
+      "x": -1.5,
+      "digits": 3,
+      "expected": "-1.500"
+    },
+    {
+      "id": "fixed-56",
+      "x": 1e-7,
+      "digits": 1,
+      "expected": "0.0"
+    },
+    {
+      "id": "fixed-57",
+      "x": 1e-7,
+      "digits": 2,
+      "expected": "0.00"
+    },
+    {
+      "id": "fixed-58",
+      "x": 1e-7,
+      "digits": 3,
+      "expected": "0.000"
+    },
+    {
+      "id": "fixed-59",
+      "x": "NaN",
+      "digits": 1,
+      "expected": "NaN"
+    },
+    {
+      "id": "fixed-60",
+      "x": "NaN",
+      "digits": 2,
+      "expected": "NaN"
+    },
+    {
+      "id": "fixed-61",
+      "x": "NaN",
+      "digits": 3,
+      "expected": "NaN"
+    },
+    {
+      "id": "fixed-62",
+      "x": "Infinity",
+      "digits": 1,
+      "expected": "Infinity"
+    },
+    {
+      "id": "fixed-63",
+      "x": "Infinity",
+      "digits": 2,
+      "expected": "Infinity"
+    },
+    {
+      "id": "fixed-64",
+      "x": "Infinity",
+      "digits": 3,
+      "expected": "Infinity"
+    },
+    {
+      "id": "fixed-65",
+      "x": "-Infinity",
+      "digits": 1,
+      "expected": "-Infinity"
+    },
+    {
+      "id": "fixed-66",
+      "x": "-Infinity",
+      "digits": 2,
+      "expected": "-Infinity"
+    },
+    {
+      "id": "fixed-67",
+      "x": "-Infinity",
+      "digits": 3,
+      "expected": "-Infinity"
+    },
+    {
+      "id": "fixed-68",
+      "x": 1e+21,
+      "digits": 1,
+      "expected": "1e+21"
+    },
+    {
+      "id": "fixed-69",
+      "x": 1e+21,
+      "digits": 2,
+      "expected": "1e+21"
+    },
+    {
+      "id": "fixed-70",
+      "x": 1e+21,
+      "digits": 3,
+      "expected": "1e+21"
+    },
+    {
+      "id": "fixed-71",
+      "x": 123456789012345680000,
+      "digits": 1,
+      "expected": "123456789012345683968.0"
+    },
+    {
+      "id": "fixed-72",
+      "x": 123456789012345680000,
+      "digits": 2,
+      "expected": "123456789012345683968.00"
+    },
+    {
+      "id": "fixed-73",
+      "x": 123456789012345680000,
+      "digits": 3,
+      "expected": "123456789012345683968.000"
+    }
+  ],
+  "skillsFromTextRecords": [
+    {
+      "id": "skills-from-01",
+      "input": "Python, Docker, Kubernetes",
+      "expected": [
+        "Python",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "skills-from-02",
+      "input": "Python; Docker; Kubernetes",
+      "expected": [
+        "Python",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "skills-from-03",
+      "input": "Python | Docker | Kubernetes",
+      "expected": [
+        "Python",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "skills-from-04",
+      "input": "Python, Docker; Kubernetes | AWS, GCP",
+      "expected": [
+        "Python",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "GCP"
+      ]
+    },
+    {
+      "id": "skills-from-05",
+      "input": "",
+      "expected": []
+    },
+    {
+      "id": "skills-from-06",
+      "input": "   \t\n  ",
+      "expected": []
+    },
+    {
+      "id": "skills-from-07",
+      "input": "Python, Docker, , ; | ",
+      "expected": [
+        "Python",
+        "Docker"
+      ]
+    },
+    {
+      "id": "skills-from-08",
+      "input": "C# 8.0, Node.js 🚀, Zürich",
+      "expected": [
+        "C# 8.0",
+        "Node.js 🚀",
+        "Zürich"
+      ]
+    },
+    {
+      "id": "skills-from-09",
+      "input": "  SingleSkill  ",
+      "expected": [
+        "SingleSkill"
+      ]
+    },
+    {
+      "id": "skills-from-10",
+      "input": "Skill One;Skill Two|Skill Three,Skill Four",
+      "expected": [
+        "Skill One",
+        "Skill Two",
+        "Skill Three",
+        "Skill Four"
+      ]
+    },
+    {
+      "id": "skills-from-11",
+      "input": "A, B, C, D, E",
+      "expected": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "id": "skills-from-12",
+      "input": "﻿React﻿,  Vue ;  Angular  | Node, \u001cGo\u001f",
+      "expected": [
+        "React",
+        "Vue",
+        "Angular",
+        "Node",
+        "\u001cGo\u001f"
+      ]
+    },
+    {
+      "id": "skills-from-13",
+      "input": "﻿Python﻿",
+      "expected": [
+        "Python"
+      ]
+    },
+    {
+      "id": "skills-from-14",
+      "input": " Docker ",
+      "expected": [
+        "Docker"
+      ]
+    },
+    {
+      "id": "skills-from-15",
+      "input": " Kubernetes ",
+      "expected": [
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "skills-from-16",
+      "input": " Terraform ",
+      "expected": [
+        "Terraform"
+      ]
+    },
+    {
+      "id": "skills-from-17",
+      "input": "NextLine",
+      "expected": [
+        "NextLine"
+      ]
+    },
+    {
+      "id": "skills-from-18",
+      "input": "\u001cFileSep\u001dGroupSep\u001eRecordSep\u001fUnitSep",
+      "expected": [
+        "\u001cFileSep\u001dGroupSep\u001eRecordSep\u001fUnitSep"
+      ]
+    },
+    {
+      "id": "skills-from-19",
+      "input": " ﻿   C++   ﻿ , \u001c Rust \u001f ",
+      "expected": [
+        "C++",
+        "\u001c Rust \u001f"
+      ]
+    }
+  ],
+  "skillsToTextRecords": [
+    {
+      "id": "skills-to-01",
+      "input": [],
+      "expected": ""
+    },
+    {
+      "id": "skills-to-02",
+      "input": [
+        "Python"
+      ],
+      "expected": "Python"
+    },
+    {
+      "id": "skills-to-03",
+      "input": [
+        "Python",
+        "Docker",
+        "Kubernetes"
+      ],
+      "expected": "Python, Docker, Kubernetes"
+    },
+    {
+      "id": "skills-to-04",
+      "input": [
+        "C#",
+        "Node.js 🚀",
+        "Go"
+      ],
+      "expected": "C#, Node.js 🚀, Go"
+    },
+    {
+      "id": "skills-to-05",
+      "input": [
+        "Single Skill"
+      ],
+      "expected": "Single Skill"
+    },
+    {
+      "id": "skills-to-06",
+      "input": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "Kubernetes",
+        "Docker",
+        "Terraform"
+      ],
+      "expected": "AWS, Azure, GCP, Kubernetes, Docker, Terraform"
+    }
+  ],
+  "payloadRecords": [
+    {
+      "id": "edit-01-untouched",
+      "description": "No edits made by user; draft is identical to predicted",
+      "scalarEdits": {},
+      "mandatoryText": null,
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "SQL"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-02-title-changed",
+      "description": "Job title updated to Staff Engineer",
+      "scalarEdits": {
+        "jobTitle": "Staff Engineer"
+      },
+      "mandatoryText": null,
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Staff Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "SQL"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Staff Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-03-skills-added",
+      "description": "Mandatory skills expanded via comma-separated string",
+      "scalarEdits": {},
+      "mandatoryText": "Python, FastAPI, SQL, Celery, RabbitMQ",
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "SQL",
+          "Celery",
+          "RabbitMQ"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL",
+            "Celery",
+            "RabbitMQ"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-04-skills-removed",
+      "description": "Mandatory skills reduced to single skill",
+      "scalarEdits": {},
+      "mandatoryText": "Python",
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-05-skills-reordered",
+      "description": "Skills order reversed",
+      "scalarEdits": {},
+      "mandatoryText": "SQL, FastAPI, Python",
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "SQL",
+          "FastAPI",
+          "Python"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "SQL",
+            "FastAPI",
+            "Python"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-06-whitespace-only",
+      "description": "Whitespace only in location and noticePeriod",
+      "scalarEdits": {
+        "location": "   ",
+        "noticePeriod": " \t\n "
+      },
+      "mandatoryText": null,
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "   ",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": " \t\n ",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "SQL"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "   ",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": " \t\n ",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-07-delimiters-semicolon",
+      "description": "Skills edited with semicolon delimiters",
+      "scalarEdits": {},
+      "mandatoryText": "Python; FastAPI; PostgreSQL",
+      "skillsText": "Docker; Kubernetes; Redis",
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "PostgreSQL"
+        ],
+        "skills": [
+          "Docker",
+          "Kubernetes",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "skills": [
+            "Docker",
+            "Kubernetes",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-08-delimiters-pipe",
+      "description": "Skills edited with pipe delimiters",
+      "scalarEdits": {},
+      "mandatoryText": "Python | FastAPI | PostgreSQL",
+      "skillsText": "Docker | Kubernetes | Redis",
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "PostgreSQL"
+        ],
+        "skills": [
+          "Docker",
+          "Kubernetes",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "skills": [
+            "Docker",
+            "Kubernetes",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-09-delimiters-mixed",
+      "description": "Skills edited with mixed comma, semicolon, and pipe",
+      "scalarEdits": {},
+      "mandatoryText": "Python, FastAPI; PostgreSQL | Celery, Kafka",
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "PostgreSQL",
+          "Celery",
+          "Kafka"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL",
+            "Celery",
+            "Kafka"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-10-empty-strings",
+      "description": "Fields cleared to empty strings",
+      "scalarEdits": {
+        "annualBudget": "",
+        "monthlyBudget": "",
+        "sla": ""
+      },
+      "mandatoryText": null,
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "",
+        "annualBudget": "",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "SQL"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "",
+          "annualBudget": "",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-11-unicode-characters",
+      "description": "Unicode characters and emojis in title and location",
+      "scalarEdits": {
+        "jobTitle": "Ingénieur Logiciel — Sénior 🚀",
+        "location": "Zürich, Schweiz"
+      },
+      "mandatoryText": "C# 10, .NET Core 🚀, Azure",
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Ingénieur Logiciel — Sénior 🚀",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Zürich, Schweiz",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "C# 10",
+          ".NET Core 🚀",
+          "Azure"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Ingénieur Logiciel — Sénior 🚀",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Zürich, Schweiz",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "C# 10",
+            ".NET Core 🚀",
+            "Azure"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-12-positions-text",
+      "description": "Headcount given as descriptive range",
+      "scalarEdits": {
+        "numberOfPositions": "2-3 openings"
+      },
+      "mandatoryText": null,
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "2-3 openings",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "SQL"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "2-3 openings",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-13-all-21-fields",
+      "description": "All 21 editable scalar fields altered simultaneously",
+      "scalarEdits": {
+        "clientLeadPocFrom": "Lead X",
+        "relevantExperience": "Lead",
+        "workMode": "Remote",
+        "demandReceivedDate": "2026-10-25",
+        "clientPocFromCc": "Cc Y",
+        "typeOfDemand": "Contract",
+        "employmentType": "Contractor",
+        "location": "London, UK",
+        "sla": "24h",
+        "internalPocTo": "Recruiter Z",
+        "jobTitle": "Principal Architect",
+        "priority": "CRITICAL",
+        "budgetCurrency": "GBP",
+        "overallExperience": "10+ Years",
+        "workTimings": "UK Shift",
+        "requirementFrom": "Global Client Ltd",
+        "numberOfPositions": "1",
+        "monthlyBudget": "GBP 8000",
+        "annualBudget": "GBP 95000",
+        "noticePeriod": "15 Days",
+        "qualificationCriteria": "MSc Computer Science"
+      },
+      "mandatoryText": "Python, Architecture, Microservices",
+      "skillsText": "Terraform, AWS, Go",
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Principal Architect",
+        "clientLeadPocFrom": "Lead X",
+        "clientPocFromCc": "Cc Y",
+        "internalPocTo": "Recruiter Z",
+        "requirementFrom": "Global Client Ltd",
+        "demandReceivedDate": "2026-10-25",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Contract",
+        "jobStatus": "Unassigned",
+        "priority": "CRITICAL",
+        "relevantExperience": "Lead",
+        "overallExperience": "10+ Years",
+        "qualificationCriteria": "MSc Computer Science",
+        "employmentType": "Contractor",
+        "workMode": "Remote",
+        "workTimings": "UK Shift",
+        "location": "London, UK",
+        "numberOfPositions": "1",
+        "budgetCurrency": "GBP",
+        "monthlyBudget": "GBP 8000",
+        "annualBudget": "GBP 95000",
+        "noticePeriod": "15 Days",
+        "sla": "24h",
+        "mandatorySkills": [
+          "Python",
+          "Architecture",
+          "Microservices"
+        ],
+        "skills": [
+          "Terraform",
+          "AWS",
+          "Go"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Principal Architect",
+          "clientLeadPocFrom": "Lead X",
+          "clientPocFromCc": "Cc Y",
+          "internalPocTo": "Recruiter Z",
+          "requirementFrom": "Global Client Ltd",
+          "demandReceivedDate": "2026-10-25",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Contract",
+          "jobStatus": "Unassigned",
+          "priority": "CRITICAL",
+          "relevantExperience": "Lead",
+          "overallExperience": "10+ Years",
+          "qualificationCriteria": "MSc Computer Science",
+          "employmentType": "Contractor",
+          "workMode": "Remote",
+          "workTimings": "UK Shift",
+          "location": "London, UK",
+          "numberOfPositions": "1",
+          "budgetCurrency": "GBP",
+          "monthlyBudget": "GBP 8000",
+          "annualBudget": "GBP 95000",
+          "noticePeriod": "15 Days",
+          "sla": "24h",
+          "mandatorySkills": [
+            "Python",
+            "Architecture",
+            "Microservices"
+          ],
+          "skills": [
+            "Terraform",
+            "AWS",
+            "Go"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-14-empty-skills",
+      "description": "All skills wiped out by user",
+      "scalarEdits": {},
+      "mandatoryText": "",
+      "skillsText": "",
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Senior Python Engineer",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [],
+          "skills": [],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-15-uneditable-preserved",
+      "description": "Verifies uneditable fields (jobStatus, closedDate, openSince, jobDescription) remain intact",
+      "scalarEdits": {
+        "jobTitle": "Lead Architect"
+      },
+      "mandatoryText": null,
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Lead Architect",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "SQL"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Lead Architect",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    },
+    {
+      "id": "edit-16-metadata-stripped-in-payload",
+      "description": "Verifies AnalyzedRequirement metadata (runId, predictionId, roleIndex) is stripped by toRequirementPayload",
+      "scalarEdits": {
+        "jobTitle": "Director of Engineering"
+      },
+      "mandatoryText": null,
+      "skillsText": null,
+      "expectedCorrectedPayload": {
+        "requirementId": "REQ-2026-001",
+        "jobTitle": "Director of Engineering",
+        "clientLeadPocFrom": "John Doe",
+        "clientPocFromCc": "Jane Doe",
+        "internalPocTo": "Recruiter Bob",
+        "requirementFrom": "Acme Corp",
+        "demandReceivedDate": "2026-10-01",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "FTE",
+        "jobStatus": "Unassigned",
+        "priority": "HIGH",
+        "relevantExperience": "Senior",
+        "overallExperience": "5-8 Years",
+        "qualificationCriteria": "B.Tech / B.E.",
+        "employmentType": "Permanent",
+        "workMode": "Hybrid",
+        "workTimings": "General Shift",
+        "location": "Bangalore",
+        "numberOfPositions": "3",
+        "budgetCurrency": "INR",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "25-35 LPA",
+        "noticePeriod": "Immediate to 30 Days",
+        "sla": "48h",
+        "mandatorySkills": [
+          "Python",
+          "FastAPI",
+          "SQL"
+        ],
+        "skills": [
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "jobDescription": "Build scalable microservices in Python."
+      },
+      "expectedSaveContext": {
+        "rawJdText": "We are looking for a Senior Python Engineer in Bangalore. 3 positions. 5-8 years exp.",
+        "chunkTitle": "Backend Python Role",
+        "roleIndex": 1,
+        "totalRoles": 2,
+        "modelUsed": "gemini-2.5-flash-lite",
+        "predicted": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Senior Python Engineer",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "corrected": {
+          "requirementId": "REQ-2026-001",
+          "jobTitle": "Director of Engineering",
+          "clientLeadPocFrom": "John Doe",
+          "clientPocFromCc": "Jane Doe",
+          "internalPocTo": "Recruiter Bob",
+          "requirementFrom": "Acme Corp",
+          "demandReceivedDate": "2026-10-01",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "FTE",
+          "jobStatus": "Unassigned",
+          "priority": "HIGH",
+          "relevantExperience": "Senior",
+          "overallExperience": "5-8 Years",
+          "qualificationCriteria": "B.Tech / B.E.",
+          "employmentType": "Permanent",
+          "workMode": "Hybrid",
+          "workTimings": "General Shift",
+          "location": "Bangalore",
+          "numberOfPositions": "3",
+          "budgetCurrency": "INR",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "25-35 LPA",
+          "noticePeriod": "Immediate to 30 Days",
+          "sla": "48h",
+          "mandatorySkills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+          ],
+          "skills": [
+            "Docker",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "jobDescription": "Build scalable microservices in Python."
+        },
+        "predictionId": "pred-uuid-456",
+        "runId": "run-uuid-123"
+      }
+    }
+  ]
+}

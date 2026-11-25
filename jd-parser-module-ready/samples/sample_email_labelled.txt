@@ -1,0 +1,14 @@
+From: John Smith <john.smith@acme.org>
+To: Recruitment Desk <recruitment@agency.com>, Sarah Connor <sarah@agency.com>
+Cc: Alex Vance <alex.v@acme.org>; Michael Scott <michael@acme.org>
+Date: 2026-10-25 09:15:00
+Subject: Requirement - Java Microservices Architect - Pune
+
+Hello Team,
+
+Please review the attached JD and start sourcing candidates with 10+ years experience in Java and Spring Boot.
+
+Location: Pune
+Budget: 35 LPA
+Notice: 30 days maximum
+

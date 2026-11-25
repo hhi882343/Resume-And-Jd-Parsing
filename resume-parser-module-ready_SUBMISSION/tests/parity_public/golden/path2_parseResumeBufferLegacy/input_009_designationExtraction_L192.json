@@ -1,0 +1,18 @@
+{
+  "candidateName": "Ravi Verma",
+  "email": null,
+  "contactNumber": "+919876543218",
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech in Computer Science",
+  "skillsRaw": "JavaScript, React, Node.js, MongoDB",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_009_designationExtraction_L192.txt",
+  "parser": "legacy",
+  "role": null
+}

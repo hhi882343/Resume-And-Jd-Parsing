@@ -1,0 +1,5 @@
+
+Professional Experience		Technical Skills
+Senior Engineer at TechCo		Python, Docker, Kubernetes
+Built distributed systems		Terraform, AWS, Go
+Education				Projects

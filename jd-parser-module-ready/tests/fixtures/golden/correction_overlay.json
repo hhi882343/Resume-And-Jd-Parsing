@@ -1,0 +1,979 @@
+[
+  {
+    "id": "overlay-01-single-field-override",
+    "description": "Human correction overrides jobTitle",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "jobTitle": "Senior Frontend Developer"
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Senior Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-02-not-specified-does-not-overwrite",
+    "description": "Correction has 'Not specified', preserves LLM value",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "location": "Not specified"
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-03-empty-string-does-not-overwrite",
+    "description": "Correction has empty string '', preserves LLM value",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "workMode": ""
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-04-null-does-not-overwrite",
+    "description": "Correction has null, preserves LLM value",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "employmentType": null
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-05-undefined-does-not-overwrite",
+    "description": "Correction has undefined, preserves LLM value",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {}
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-06-replaces-empty-llm-field",
+    "description": "LLM had 'Not specified', correction provides value -> overrides",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "noticePeriod": "15 Days"
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "15 Days",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-07-skills-array-replacement",
+    "description": "Non-empty skills array in correction replaces LLM skills array",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "mandatorySkills": [
+          "TypeScript",
+          "React",
+          "Next.js"
+        ]
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "TypeScript",
+        "React",
+        "Next.js"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-08-empty-skills-array-does-not-overwrite",
+    "description": "Empty skills array [] in correction does NOT overwrite LLM skills",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "mandatorySkills": []
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-09-multiple-fields-simultaneous",
+    "description": "Correction updates title, location, workMode, and budget together",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "jobTitle": "Staff React Architect",
+        "location": "Remote",
+        "workMode": "Remote",
+        "annualBudget": "$175,000"
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Staff React Architect",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "Remote",
+      "workTimings": "Not specified",
+      "location": "Remote",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$175,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-10-headcount-update",
+    "description": "Update numberOfPositions from '1' to '4'",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "numberOfPositions": "4"
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "4",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-11-both-empty-remains-not-specified",
+    "description": "Both LLM and correction are 'Not specified' -> remains 'Not specified'",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "sla": "Not specified"
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "Not specified",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  },
+  {
+    "id": "overlay-12-unmentioned-fields-preserved",
+    "description": "Correction specifying only 1 field leaves all other 27 fields unchanged",
+    "input": {
+      "fresh_llm_result": {
+        "requirementId": "REQ-2026-10-30-171",
+        "jobTitle": "Frontend Developer",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "MEDIUM",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "FTE",
+        "workMode": "On-site",
+        "workTimings": "Not specified",
+        "location": "San Francisco, CA",
+        "numberOfPositions": "1",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "$120,000",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ],
+        "skills": [
+          "Webpack"
+        ],
+        "jobDescription": "Not specified"
+      },
+      "prior_correction": {
+        "clientLeadPocFrom": "lead@client.com"
+      }
+    },
+    "expected_output": {
+      "requirementId": "REQ-2026-10-30-171",
+      "jobTitle": "Frontend Developer",
+      "clientLeadPocFrom": "lead@client.com",
+      "clientPocFromCc": "Not specified",
+      "internalPocTo": "Not specified",
+      "requirementFrom": "Not specified",
+      "demandReceivedDate": "Not specified",
+      "closedDate": "Not specified",
+      "openSince": "Not specified",
+      "typeOfDemand": "Not specified",
+      "jobStatus": "Unassigned",
+      "priority": "MEDIUM",
+      "relevantExperience": "Not specified",
+      "overallExperience": "Not specified",
+      "qualificationCriteria": "Not specified",
+      "employmentType": "FTE",
+      "workMode": "On-site",
+      "workTimings": "Not specified",
+      "location": "San Francisco, CA",
+      "numberOfPositions": "1",
+      "budgetCurrency": "Not specified",
+      "monthlyBudget": "Not specified",
+      "annualBudget": "$120,000",
+      "noticePeriod": "Not specified",
+      "sla": "Not specified",
+      "mandatorySkills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "skills": [
+        "Webpack"
+      ],
+      "jobDescription": "Not specified"
+    }
+  }
+]

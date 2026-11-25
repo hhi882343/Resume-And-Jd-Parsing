@@ -1,0 +1,12 @@
+{
+  "name": "resume-parser-tools",
+  "version": "1.0.0",
+  "description": "Node helper tools for PDF and DOC extraction parity",
+  "private": true,
+  "dependencies": {
+    "pdf-parse": "1.1.4",
+    "pdfjs-dist": "5.7.284",
+    "word-extractor": "1.0.4"
+  }
+}
+

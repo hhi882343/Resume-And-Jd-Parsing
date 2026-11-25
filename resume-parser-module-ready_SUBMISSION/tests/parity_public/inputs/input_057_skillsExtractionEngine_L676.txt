@@ -1,0 +1,6 @@
+
+Jack Ryan
+jack@example.com
+
+Technical Skills
+Python, Java, Go, Rust, C++, C, TypeScript, JavaScript, Kotlin, Swift, Ruby, PHP, Scala

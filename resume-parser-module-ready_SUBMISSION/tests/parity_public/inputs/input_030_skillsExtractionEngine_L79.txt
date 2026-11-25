@@ -1,0 +1,3 @@
+
+Technical Skills
+Python / Django / Docker / CI/CD / PL/SQL

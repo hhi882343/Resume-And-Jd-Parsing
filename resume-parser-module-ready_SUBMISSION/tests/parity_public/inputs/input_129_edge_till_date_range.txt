@@ -1,0 +1,7 @@
+Vikram Malhotra
+Lead QA Engineer
+Email: vikram@example.com
+Work Experience:
+TechCorp (March 2018 - Till Date)
+Total Experience: 6+ years
+Skills: Selenium, Cypress, Java

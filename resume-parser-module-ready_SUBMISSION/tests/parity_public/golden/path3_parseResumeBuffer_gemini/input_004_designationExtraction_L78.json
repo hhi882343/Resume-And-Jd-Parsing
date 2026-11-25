@@ -1,0 +1,18 @@
+{
+  "candidateName": "Anita Sharma",
+  "email": null,
+  "contactNumber": "+91 98765 43213",
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech in Electronics and Communication",
+  "skillsRaw": "Routing, Switching, Firewalls",
+  "technologiesRaw": "Network Engineer",
+  "technologies": "Network Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_004_designationExtraction_L78.txt",
+  "parser": "metaforge",
+  "role": "Network Engineer"
+}

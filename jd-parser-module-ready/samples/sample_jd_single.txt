@@ -1,0 +1,35 @@
+Subject: Requirement for Senior Python Backend Engineer - Bangalore
+From: Talent Acquisition <recruiter@techcorp.com>
+To: Vendor Partner <partners@staffing.com>
+CC: Engineering Lead <lead@techcorp.com>
+Date: Mon, 28 Oct 2026 10:30:00 +0530
+
+Hi Team,
+
+We have an urgent opening for a Senior Python Backend Developer.
+
+Position: Senior Python Backend Developer
+Location: Bangalore (Hybrid)
+Experience: 5-8 years
+Budget: 22-26 LPA
+Notice Period: Immediate to 30 days
+Employment Type: Full-time
+Positions: 2
+
+Job Description:
+- Strong hands-on experience with Python 3.10+, FastAPI, and Django.
+- Solid experience in designing RESTful APIs and microservices.
+- Experience with PostgreSQL, Redis, and SQLAlchemy.
+- Working knowledge of Docker, Kubernetes, and AWS (ECS, S3, RDS).
+- Familiarity with CI/CD pipelines (GitHub Actions, GitLab CI).
+
+Good to have:
+- Experience with Apache Kafka or RabbitMQ.
+- Knowledge of LLM application development (LangChain, LlamaIndex).
+
+Education: B.Tech/B.E in Computer Science or related field.
+
+Regards,
+Talent Acquisition Team
+TechCorp Solutions
+

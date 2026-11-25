@@ -1,0 +1,6 @@
+Deepak Joshi
+Data Scientist
+Email: deepak@example.com
+Summary: Having nearly 10 years in machine learning.
+Experience section: Total experience: 8.5 years.
+Skills: PyTorch, Scikit-learn

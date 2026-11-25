@@ -1,0 +1,18 @@
+{
+  "candidateName": "Mark Code",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Go, Kubernetes, Vue.js, Vue, MongoDB, JWT Authentication",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_093_strictSkillsAndExperience_L663.txt",
+  "parser": "metaforge",
+  "role": null
+}

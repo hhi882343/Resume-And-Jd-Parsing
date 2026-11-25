@@ -1,0 +1,11 @@
+Jane Smith
+jane.smith@example.com
++91 9876543211
+
+Summary: Senior Data Engineer with experience in data platforms.
+
+Technical Skills
+Python, SQL, Spark, Kafka
+
+Education
+M.Tech in Data Science

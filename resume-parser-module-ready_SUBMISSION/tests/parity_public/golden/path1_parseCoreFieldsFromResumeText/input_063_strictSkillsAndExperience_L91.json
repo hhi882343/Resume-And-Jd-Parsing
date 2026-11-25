@@ -1,0 +1,17 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperienceYears": 5,
+  "totalExperienceText": "5 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": null
+}

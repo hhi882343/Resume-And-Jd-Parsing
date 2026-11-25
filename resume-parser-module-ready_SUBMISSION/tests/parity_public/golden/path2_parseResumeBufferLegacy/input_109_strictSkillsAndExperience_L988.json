@@ -1,0 +1,18 @@
+{
+  "candidateName": "John Nothing",
+  "email": "john@nothing.com",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_109_strictSkillsAndExperience_L988.txt",
+  "parser": "legacy",
+  "role": null
+}

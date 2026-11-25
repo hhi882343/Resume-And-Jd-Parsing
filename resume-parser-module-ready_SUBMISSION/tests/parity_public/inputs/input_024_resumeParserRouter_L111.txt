@@ -1,0 +1,7 @@
+Karthik Raju
+karthik@example.com
++91 9123456780
+
+Professional Summary: DevOps Engineer with AWS experience.
+
+Skills: AWS, Terraform, Docker, Kubernetes

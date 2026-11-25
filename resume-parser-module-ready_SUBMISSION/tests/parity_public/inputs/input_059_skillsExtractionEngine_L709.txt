@@ -1,0 +1,7 @@
+
+Leo Tolstoy
+leo@example.com
+
+| Technical Skills | Professional Experience |
+| Python, Docker   | Managed client deployments and resolved tickets |
+| React, PostgreSQL| Designed user interfaces and maintained servers |

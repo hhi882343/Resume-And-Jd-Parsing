@@ -1,0 +1,18 @@
+{
+  "candidateName": "Shiva Boda",
+  "email": null,
+  "contactNumber": "+91 98765 43210",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, SQL, MS SQL Server",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_105_strictSkillsAndExperience_L829.txt",
+  "parser": "metaforge",
+  "role": null
+}

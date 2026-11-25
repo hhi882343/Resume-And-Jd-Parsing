@@ -1,0 +1,18 @@
+{
+  "candidateName": "Mrutyunjaya Mahapatra",
+  "email": null,
+  "contactNumber": "+91 98765 43210",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_021_parseCoreResumeFields_name_L20.txt",
+  "parser": "legacy",
+  "role": null
+}

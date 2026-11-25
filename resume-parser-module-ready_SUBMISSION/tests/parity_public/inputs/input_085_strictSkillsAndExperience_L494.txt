@@ -1,0 +1,8 @@
+
+Carol Danvers
+carol@example.com
+
+Technical Projects
+Predictive Analytics Pipeline:
+- Built machine learning models using Scikit-learn and XGBoost for patient outcome prediction.
+- Deployed models using FastAPI and Docker.

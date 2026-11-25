@@ -1,0 +1,9 @@
+
+Candidate Name
+cand@test.com
+
+Technical Skills        Work Experience
+Python                  Senior Engineer at Corp
+Docker                  Built scalable architectures
+Kubernetes              Mentored junior teammates
+AWS                     Maintained system availability

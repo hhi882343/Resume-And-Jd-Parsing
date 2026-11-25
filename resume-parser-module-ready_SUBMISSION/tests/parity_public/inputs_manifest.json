@@ -1,0 +1,860 @@
+[
+  {
+    "id": "input_001_designationExtraction_L12",
+    "name": "designationExtraction_L12",
+    "category": "jest_test",
+    "length": 232
+  },
+  {
+    "id": "input_002_designationExtraction_L34",
+    "name": "designationExtraction_L34",
+    "category": "jest_test",
+    "length": 192
+  },
+  {
+    "id": "input_003_designationExtraction_L56",
+    "name": "designationExtraction_L56",
+    "category": "jest_test",
+    "length": 178
+  },
+  {
+    "id": "input_004_designationExtraction_L78",
+    "name": "designationExtraction_L78",
+    "category": "jest_test",
+    "length": 231
+  },
+  {
+    "id": "input_005_designationExtraction_L100",
+    "name": "designationExtraction_L100",
+    "category": "jest_test",
+    "length": 148
+  },
+  {
+    "id": "input_006_designationExtraction_L121",
+    "name": "designationExtraction_L121",
+    "category": "jest_test",
+    "length": 249
+  },
+  {
+    "id": "input_007_designationExtraction_L146",
+    "name": "designationExtraction_L146",
+    "category": "jest_test",
+    "length": 132
+  },
+  {
+    "id": "input_008_designationExtraction_L166",
+    "name": "designationExtraction_L166",
+    "category": "jest_test",
+    "length": 254
+  },
+  {
+    "id": "input_009_designationExtraction_L192",
+    "name": "designationExtraction_L192",
+    "category": "jest_test",
+    "length": 192
+  },
+  {
+    "id": "input_010_designationExtraction_L215",
+    "name": "designationExtraction_L215",
+    "category": "jest_test",
+    "length": 180
+  },
+  {
+    "id": "input_011_designationExtraction_L252",
+    "name": "designationExtraction_L252",
+    "category": "jest_test",
+    "length": 140
+  },
+  {
+    "id": "input_012_designationExtraction_L263",
+    "name": "designationExtraction_L263",
+    "category": "jest_test",
+    "length": 147
+  },
+  {
+    "id": "input_013_designationExtraction_L325",
+    "name": "designationExtraction_L325",
+    "category": "jest_test",
+    "length": 341
+  },
+  {
+    "id": "input_014_documentFormatExtraction_L13",
+    "name": "documentFormatExtraction_L13",
+    "category": "jest_test",
+    "length": 102
+  },
+  {
+    "id": "input_015_documentFormatExtraction_L25",
+    "name": "documentFormatExtraction_L25",
+    "category": "jest_test",
+    "length": 64
+  },
+  {
+    "id": "input_016_documentFormatExtraction_L36",
+    "name": "documentFormatExtraction_L36",
+    "category": "jest_test",
+    "length": 62
+  },
+  {
+    "id": "input_017_documentFormatExtraction_L47",
+    "name": "documentFormatExtraction_L47",
+    "category": "jest_test",
+    "length": 55
+  },
+  {
+    "id": "input_018_documentFormatExtraction_L60",
+    "name": "documentFormatExtraction_L60",
+    "category": "jest_test",
+    "length": 410
+  },
+  {
+    "id": "input_019_parseCoreResumeFields_name_L8",
+    "name": "parseCoreResumeFields.name_L8",
+    "category": "jest_test",
+    "length": 52
+  },
+  {
+    "id": "input_020_parseCoreResumeFields_name_L13",
+    "name": "parseCoreResumeFields.name_L13",
+    "category": "jest_test",
+    "length": 58
+  },
+  {
+    "id": "input_021_parseCoreResumeFields_name_L20",
+    "name": "parseCoreResumeFields.name_L20",
+    "category": "jest_test",
+    "length": 81
+  },
+  {
+    "id": "input_022_resumeFieldSanitize_L51",
+    "name": "resumeFieldSanitize_L51",
+    "category": "jest_test",
+    "length": 284
+  },
+  {
+    "id": "input_023_resumeParserRouter_L54",
+    "name": "resumeParserRouter_L54",
+    "category": "jest_test",
+    "length": 318
+  },
+  {
+    "id": "input_024_resumeParserRouter_L111",
+    "name": "resumeParserRouter_L111",
+    "category": "jest_test",
+    "length": 151
+  },
+  {
+    "id": "input_025_resumeParserRouter_L121",
+    "name": "resumeParserRouter_L121",
+    "category": "jest_test",
+    "length": 149
+  },
+  {
+    "id": "input_026_skillsExtractionEngine_L15",
+    "name": "skillsExtractionEngine_L15",
+    "category": "jest_test",
+    "length": 142
+  },
+  {
+    "id": "input_027_skillsExtractionEngine_L41",
+    "name": "skillsExtractionEngine_L41",
+    "category": "jest_test",
+    "length": 86
+  },
+  {
+    "id": "input_028_skillsExtractionEngine_L54",
+    "name": "skillsExtractionEngine_L54",
+    "category": "jest_test",
+    "length": 57
+  },
+  {
+    "id": "input_029_skillsExtractionEngine_L66",
+    "name": "skillsExtractionEngine_L66",
+    "category": "jest_test",
+    "length": 74
+  },
+  {
+    "id": "input_030_skillsExtractionEngine_L79",
+    "name": "skillsExtractionEngine_L79",
+    "category": "jest_test",
+    "length": 60
+  },
+  {
+    "id": "input_031_skillsExtractionEngine_L94",
+    "name": "skillsExtractionEngine_L94",
+    "category": "jest_test",
+    "length": 130
+  },
+  {
+    "id": "input_032_skillsExtractionEngine_L110",
+    "name": "skillsExtractionEngine_L110",
+    "category": "jest_test",
+    "length": 329
+  },
+  {
+    "id": "input_033_skillsExtractionEngine_L131",
+    "name": "skillsExtractionEngine_L131",
+    "category": "jest_test",
+    "length": 146
+  },
+  {
+    "id": "input_034_skillsExtractionEngine_L145",
+    "name": "skillsExtractionEngine_L145",
+    "category": "jest_test",
+    "length": 242
+  },
+  {
+    "id": "input_035_skillsExtractionEngine_L157",
+    "name": "skillsExtractionEngine_L157",
+    "category": "jest_test",
+    "length": 165
+  },
+  {
+    "id": "input_036_skillsExtractionEngine_L185",
+    "name": "skillsExtractionEngine_L185",
+    "category": "jest_test",
+    "length": 89
+  },
+  {
+    "id": "input_037_skillsExtractionEngine_L199",
+    "name": "skillsExtractionEngine_L199",
+    "category": "jest_test",
+    "length": 395
+  },
+  {
+    "id": "input_038_skillsExtractionEngine_L228",
+    "name": "skillsExtractionEngine_L228",
+    "category": "jest_test",
+    "length": 260
+  },
+  {
+    "id": "input_039_skillsExtractionEngine_L254",
+    "name": "skillsExtractionEngine_L254",
+    "category": "jest_test",
+    "length": 382
+  },
+  {
+    "id": "input_040_skillsExtractionEngine_L279",
+    "name": "skillsExtractionEngine_L279",
+    "category": "jest_test",
+    "length": 158
+  },
+  {
+    "id": "input_041_skillsExtractionEngine_L297",
+    "name": "skillsExtractionEngine_L297",
+    "category": "jest_test",
+    "length": 123
+  },
+  {
+    "id": "input_042_skillsExtractionEngine_L318",
+    "name": "skillsExtractionEngine_L318",
+    "category": "jest_test",
+    "length": 124
+  },
+  {
+    "id": "input_043_skillsExtractionEngine_L357",
+    "name": "skillsExtractionEngine_L357",
+    "category": "jest_test",
+    "length": 149
+  },
+  {
+    "id": "input_044_skillsExtractionEngine_L379",
+    "name": "skillsExtractionEngine_L379",
+    "category": "jest_test",
+    "length": 101
+  },
+  {
+    "id": "input_045_skillsExtractionEngine_L403",
+    "name": "skillsExtractionEngine_L403",
+    "category": "jest_test",
+    "length": 232
+  },
+  {
+    "id": "input_046_skillsExtractionEngine_L447",
+    "name": "skillsExtractionEngine_L447",
+    "category": "jest_test",
+    "length": 106
+  },
+  {
+    "id": "input_047_skillsExtractionEngine_L463",
+    "name": "skillsExtractionEngine_L463",
+    "category": "jest_test",
+    "length": 107
+  },
+  {
+    "id": "input_048_skillsExtractionEngine_L506",
+    "name": "skillsExtractionEngine_L506",
+    "category": "jest_test",
+    "length": 160
+  },
+  {
+    "id": "input_049_skillsExtractionEngine_L525",
+    "name": "skillsExtractionEngine_L525",
+    "category": "jest_test",
+    "length": 146
+  },
+  {
+    "id": "input_050_skillsExtractionEngine_L543",
+    "name": "skillsExtractionEngine_L543",
+    "category": "jest_test",
+    "length": 178
+  },
+  {
+    "id": "input_051_skillsExtractionEngine_L560",
+    "name": "skillsExtractionEngine_L560",
+    "category": "jest_test",
+    "length": 104
+  },
+  {
+    "id": "input_052_skillsExtractionEngine_L578",
+    "name": "skillsExtractionEngine_L578",
+    "category": "jest_test",
+    "length": 172
+  },
+  {
+    "id": "input_053_skillsExtractionEngine_L597",
+    "name": "skillsExtractionEngine_L597",
+    "category": "jest_test",
+    "length": 192
+  },
+  {
+    "id": "input_054_skillsExtractionEngine_L617",
+    "name": "skillsExtractionEngine_L617",
+    "category": "jest_test",
+    "length": 136
+  },
+  {
+    "id": "input_055_skillsExtractionEngine_L633",
+    "name": "skillsExtractionEngine_L633",
+    "category": "jest_test",
+    "length": 241
+  },
+  {
+    "id": "input_056_skillsExtractionEngine_L656",
+    "name": "skillsExtractionEngine_L656",
+    "category": "jest_test",
+    "length": 171
+  },
+  {
+    "id": "input_057_skillsExtractionEngine_L676",
+    "name": "skillsExtractionEngine_L676",
+    "category": "jest_test",
+    "length": 134
+  },
+  {
+    "id": "input_058_skillsExtractionEngine_L689",
+    "name": "skillsExtractionEngine_L689",
+    "category": "jest_test",
+    "length": 234
+  },
+  {
+    "id": "input_059_skillsExtractionEngine_L709",
+    "name": "skillsExtractionEngine_L709",
+    "category": "jest_test",
+    "length": 219
+  },
+  {
+    "id": "input_060_skillsExtractionEngine_L727",
+    "name": "skillsExtractionEngine_L727",
+    "category": "jest_test",
+    "length": 277
+  },
+  {
+    "id": "input_061_strictSkillsAndExperience_L49",
+    "name": "strictSkillsAndExperience_L49",
+    "category": "jest_test",
+    "length": 63
+  },
+  {
+    "id": "input_062_strictSkillsAndExperience_L81",
+    "name": "strictSkillsAndExperience_L81",
+    "category": "jest_test",
+    "length": 83
+  },
+  {
+    "id": "input_063_strictSkillsAndExperience_L91",
+    "name": "strictSkillsAndExperience_L91",
+    "category": "jest_test",
+    "length": 69
+  },
+  {
+    "id": "input_064_strictSkillsAndExperience_L110",
+    "name": "strictSkillsAndExperience_L110",
+    "category": "jest_test",
+    "length": 91
+  },
+  {
+    "id": "input_065_strictSkillsAndExperience_L123",
+    "name": "strictSkillsAndExperience_L123",
+    "category": "jest_test",
+    "length": 275
+  },
+  {
+    "id": "input_066_strictSkillsAndExperience_L149",
+    "name": "strictSkillsAndExperience_L149",
+    "category": "jest_test",
+    "length": 103
+  },
+  {
+    "id": "input_067_strictSkillsAndExperience_L170",
+    "name": "strictSkillsAndExperience_L170",
+    "category": "jest_test",
+    "length": 266
+  },
+  {
+    "id": "input_068_strictSkillsAndExperience_L209",
+    "name": "strictSkillsAndExperience_L209",
+    "category": "jest_test",
+    "length": 145
+  },
+  {
+    "id": "input_069_strictSkillsAndExperience_L228",
+    "name": "strictSkillsAndExperience_L228",
+    "category": "jest_test",
+    "length": 180
+  },
+  {
+    "id": "input_070_strictSkillsAndExperience_L271",
+    "name": "strictSkillsAndExperience_L271",
+    "category": "jest_test",
+    "length": 167
+  },
+  {
+    "id": "input_071_strictSkillsAndExperience_L290",
+    "name": "strictSkillsAndExperience_L290",
+    "category": "jest_test",
+    "length": 202
+  },
+  {
+    "id": "input_072_strictSkillsAndExperience_L307",
+    "name": "strictSkillsAndExperience_L307",
+    "category": "jest_test",
+    "length": 303
+  },
+  {
+    "id": "input_073_strictSkillsAndExperience_L321",
+    "name": "strictSkillsAndExperience_L321",
+    "category": "jest_test",
+    "length": 168
+  },
+  {
+    "id": "input_074_strictSkillsAndExperience_L333",
+    "name": "strictSkillsAndExperience_L333",
+    "category": "jest_test",
+    "length": 174
+  },
+  {
+    "id": "input_075_strictSkillsAndExperience_L345",
+    "name": "strictSkillsAndExperience_L345",
+    "category": "jest_test",
+    "length": 84
+  },
+  {
+    "id": "input_076_strictSkillsAndExperience_L389",
+    "name": "strictSkillsAndExperience_L389",
+    "category": "jest_test",
+    "length": 86
+  },
+  {
+    "id": "input_077_strictSkillsAndExperience_L399",
+    "name": "strictSkillsAndExperience_L399",
+    "category": "jest_test",
+    "length": 101
+  },
+  {
+    "id": "input_078_strictSkillsAndExperience_L410",
+    "name": "strictSkillsAndExperience_L410",
+    "category": "jest_test",
+    "length": 132
+  },
+  {
+    "id": "input_079_strictSkillsAndExperience_L420",
+    "name": "strictSkillsAndExperience_L420",
+    "category": "jest_test",
+    "length": 86
+  },
+  {
+    "id": "input_080_strictSkillsAndExperience_L428",
+    "name": "strictSkillsAndExperience_L428",
+    "category": "jest_test",
+    "length": 134
+  },
+  {
+    "id": "input_081_strictSkillsAndExperience_L436",
+    "name": "strictSkillsAndExperience_L436",
+    "category": "jest_test",
+    "length": 121
+  },
+  {
+    "id": "input_082_strictSkillsAndExperience_L444",
+    "name": "strictSkillsAndExperience_L444",
+    "category": "jest_test",
+    "length": 55
+  },
+  {
+    "id": "input_083_strictSkillsAndExperience_L456",
+    "name": "strictSkillsAndExperience_L456",
+    "category": "jest_test",
+    "length": 138
+  },
+  {
+    "id": "input_084_strictSkillsAndExperience_L472",
+    "name": "strictSkillsAndExperience_L472",
+    "category": "jest_test",
+    "length": 229
+  },
+  {
+    "id": "input_085_strictSkillsAndExperience_L494",
+    "name": "strictSkillsAndExperience_L494",
+    "category": "jest_test",
+    "length": 223
+  },
+  {
+    "id": "input_086_strictSkillsAndExperience_L515",
+    "name": "strictSkillsAndExperience_L515",
+    "category": "jest_test",
+    "length": 233
+  },
+  {
+    "id": "input_087_strictSkillsAndExperience_L536",
+    "name": "strictSkillsAndExperience_L536",
+    "category": "jest_test",
+    "length": 351
+  },
+  {
+    "id": "input_088_strictSkillsAndExperience_L556",
+    "name": "strictSkillsAndExperience_L556",
+    "category": "jest_test",
+    "length": 315
+  },
+  {
+    "id": "input_089_strictSkillsAndExperience_L577",
+    "name": "strictSkillsAndExperience_L577",
+    "category": "jest_test",
+    "length": 257
+  },
+  {
+    "id": "input_090_strictSkillsAndExperience_L602",
+    "name": "strictSkillsAndExperience_L602",
+    "category": "jest_test",
+    "length": 148
+  },
+  {
+    "id": "input_091_strictSkillsAndExperience_L629",
+    "name": "strictSkillsAndExperience_L629",
+    "category": "jest_test",
+    "length": 169
+  },
+  {
+    "id": "input_092_strictSkillsAndExperience_L645",
+    "name": "strictSkillsAndExperience_L645",
+    "category": "jest_test",
+    "length": 166
+  },
+  {
+    "id": "input_093_strictSkillsAndExperience_L663",
+    "name": "strictSkillsAndExperience_L663",
+    "category": "jest_test",
+    "length": 161
+  },
+  {
+    "id": "input_094_strictSkillsAndExperience_L684",
+    "name": "strictSkillsAndExperience_L684",
+    "category": "jest_test",
+    "length": 133
+  },
+  {
+    "id": "input_095_strictSkillsAndExperience_L695",
+    "name": "strictSkillsAndExperience_L695",
+    "category": "jest_test",
+    "length": 87
+  },
+  {
+    "id": "input_096_strictSkillsAndExperience_L707",
+    "name": "strictSkillsAndExperience_L707",
+    "category": "jest_test",
+    "length": 94
+  },
+  {
+    "id": "input_097_strictSkillsAndExperience_L718",
+    "name": "strictSkillsAndExperience_L718",
+    "category": "jest_test",
+    "length": 86
+  },
+  {
+    "id": "input_098_strictSkillsAndExperience_L747",
+    "name": "strictSkillsAndExperience_L747",
+    "category": "jest_test",
+    "length": 311
+  },
+  {
+    "id": "input_099_strictSkillsAndExperience_L765",
+    "name": "strictSkillsAndExperience_L765",
+    "category": "jest_test",
+    "length": 102
+  },
+  {
+    "id": "input_100_strictSkillsAndExperience_L777",
+    "name": "strictSkillsAndExperience_L777",
+    "category": "jest_test",
+    "length": 132
+  },
+  {
+    "id": "input_101_strictSkillsAndExperience_L789",
+    "name": "strictSkillsAndExperience_L789",
+    "category": "jest_test",
+    "length": 81
+  },
+  {
+    "id": "input_102_strictSkillsAndExperience_L800",
+    "name": "strictSkillsAndExperience_L800",
+    "category": "jest_test",
+    "length": 67
+  },
+  {
+    "id": "input_103_strictSkillsAndExperience_L806",
+    "name": "strictSkillsAndExperience_L806",
+    "category": "jest_test",
+    "length": 60
+  },
+  {
+    "id": "input_104_strictSkillsAndExperience_L818",
+    "name": "strictSkillsAndExperience_L818",
+    "category": "jest_test",
+    "length": 57
+  },
+  {
+    "id": "input_105_strictSkillsAndExperience_L829",
+    "name": "strictSkillsAndExperience_L829",
+    "category": "jest_test",
+    "length": 506
+  },
+  {
+    "id": "input_106_strictSkillsAndExperience_L916",
+    "name": "strictSkillsAndExperience_L916",
+    "category": "jest_test",
+    "length": 134
+  },
+  {
+    "id": "input_107_strictSkillsAndExperience_L930",
+    "name": "strictSkillsAndExperience_L930",
+    "category": "jest_test",
+    "length": 100
+  },
+  {
+    "id": "input_108_strictSkillsAndExperience_L944",
+    "name": "strictSkillsAndExperience_L944",
+    "category": "jest_test",
+    "length": 58
+  },
+  {
+    "id": "input_109_strictSkillsAndExperience_L988",
+    "name": "strictSkillsAndExperience_L988",
+    "category": "jest_test",
+    "length": 87
+  },
+  {
+    "id": "input_110_strictSkillsAndExperience_L100",
+    "name": "strictSkillsAndExperience_L1005",
+    "category": "jest_test",
+    "length": 147
+  },
+  {
+    "id": "input_111_strictSkillsAndExperience_L104",
+    "name": "strictSkillsAndExperience_L1044",
+    "category": "jest_test",
+    "length": 568
+  },
+  {
+    "id": "input_112_strictSkillsAndExperience_L109",
+    "name": "strictSkillsAndExperience_L1099",
+    "category": "jest_test",
+    "length": 227
+  },
+  {
+    "id": "input_113_strictSkillsAndExperience_L112",
+    "name": "strictSkillsAndExperience_L1123",
+    "category": "jest_test",
+    "length": 184
+  },
+  {
+    "id": "input_114_strictSkillsAndExperience_L114",
+    "name": "strictSkillsAndExperience_L1140",
+    "category": "jest_test",
+    "length": 239
+  },
+  {
+    "id": "input_115_strictSkillsAndExperience_L115",
+    "name": "strictSkillsAndExperience_L1158",
+    "category": "jest_test",
+    "length": 221
+  },
+  {
+    "id": "input_116_strictSkillsAndExperience_L117",
+    "name": "strictSkillsAndExperience_L1175",
+    "category": "jest_test",
+    "length": 234
+  },
+  {
+    "id": "input_117_strictSkillsAndExperience_L119",
+    "name": "strictSkillsAndExperience_L1199",
+    "category": "jest_test",
+    "length": 472
+  },
+  {
+    "id": "input_118_sample_resume",
+    "name": "sample_resume",
+    "category": "sample_file",
+    "length": 1118
+  },
+  {
+    "id": "input_119_edge_non_breaking_spaces",
+    "name": "edge_non_breaking_spaces",
+    "category": "synthetic_edge_case",
+    "length": 107
+  },
+  {
+    "id": "input_120_edge_byte_order_mark_bom",
+    "name": "edge_byte_order_mark_bom",
+    "category": "synthetic_edge_case",
+    "length": 115
+  },
+  {
+    "id": "input_121_edge_windows_crlf_newlines",
+    "name": "edge_windows_crlf_newlines",
+    "category": "synthetic_edge_case",
+    "length": 172
+  },
+  {
+    "id": "input_122_edge_accented_names_latin1",
+    "name": "edge_accented_names_latin1",
+    "category": "synthetic_edge_case",
+    "length": 138
+  },
+  {
+    "id": "input_123_edge_accented_names_spanish",
+    "name": "edge_accented_names_spanish",
+    "category": "synthetic_edge_case",
+    "length": 159
+  },
+  {
+    "id": "input_124_edge_accented_names_german",
+    "name": "edge_accented_names_german",
+    "category": "synthetic_edge_case",
+    "length": 161
+  },
+  {
+    "id": "input_125_edge_emoji_in_header_and_secti",
+    "name": "edge_emoji_in_header_and_sections",
+    "category": "synthetic_edge_case",
+    "length": 264
+  },
+  {
+    "id": "input_126_edge_unicode_digits_persian",
+    "name": "edge_unicode_digits_persian",
+    "category": "synthetic_edge_case",
+    "length": 98
+  },
+  {
+    "id": "input_127_edge_unicode_fullwidth_digits",
+    "name": "edge_unicode_fullwidth_digits",
+    "category": "synthetic_edge_case",
+    "length": 119
+  },
+  {
+    "id": "input_128_edge_present_range_ongoing",
+    "name": "edge_present_range_ongoing",
+    "category": "synthetic_edge_case",
+    "length": 205
+  },
+  {
+    "id": "input_129_edge_till_date_range",
+    "name": "edge_till_date_range",
+    "category": "synthetic_edge_case",
+    "length": 168
+  },
+  {
+    "id": "input_130_edge_ongoing_lowercase_range",
+    "name": "edge_ongoing_lowercase_range",
+    "category": "synthetic_edge_case",
+    "length": 120
+  },
+  {
+    "id": "input_131_edge_plus_years_variant",
+    "name": "edge_plus_years_variant",
+    "category": "synthetic_edge_case",
+    "length": 177
+  },
+  {
+    "id": "input_132_edge_conflicting_experience_su",
+    "name": "edge_conflicting_experience_summary_vs_history",
+    "category": "synthetic_edge_case",
+    "length": 213
+  },
+  {
+    "id": "input_133_edge_conflicting_experience_ne",
+    "name": "edge_conflicting_experience_nearly_vs_exact",
+    "category": "synthetic_edge_case",
+    "length": 185
+  },
+  {
+    "id": "input_134_edge_zero_experience_fresher",
+    "name": "edge_zero_experience_fresher",
+    "category": "synthetic_edge_case",
+    "length": 138
+  },
+  {
+    "id": "input_135_edge_trailing_period_in_degree",
+    "name": "edge_trailing_period_in_degree",
+    "category": "synthetic_edge_case",
+    "length": 130
+  },
+  {
+    "id": "input_136_edge_abbreviation_hons_in_degr",
+    "name": "edge_abbreviation_hons_in_degree",
+    "category": "synthetic_edge_case",
+    "length": 134
+  },
+  {
+    "id": "input_137_edge_mixed_crlf_and_lf",
+    "name": "edge_mixed_crlf_and_lf",
+    "category": "synthetic_edge_case",
+    "length": 115
+  },
+  {
+    "id": "input_138_edge_table_pipe_skills_layout",
+    "name": "edge_table_pipe_skills_layout",
+    "category": "synthetic_edge_case",
+    "length": 157
+  },
+  {
+    "id": "input_139_edge_two_column_skills_layout",
+    "name": "edge_two_column_skills_layout",
+    "category": "synthetic_edge_case",
+    "length": 124
+  },
+  {
+    "id": "input_140_edge_compound_slashes_and_spec",
+    "name": "edge_compound_slashes_and_special_skills",
+    "category": "synthetic_edge_case",
+    "length": 121
+  },
+  {
+    "id": "input_141_edge_more_than_10_skills_cap_t",
+    "name": "edge_more_than_10_skills_cap_test",
+    "category": "synthetic_edge_case",
+    "length": 169
+  },
+  {
+    "id": "input_142_edge_isolated_role_in_headline",
+    "name": "edge_isolated_role_in_headline",
+    "category": "synthetic_edge_case",
+    "length": 126
+  },
+  {
+    "id": "input_143_edge_missing_skills_section_wi",
+    "name": "edge_missing_skills_section_with_narrative",
+    "category": "synthetic_edge_case",
+    "length": 163
+  }
+]

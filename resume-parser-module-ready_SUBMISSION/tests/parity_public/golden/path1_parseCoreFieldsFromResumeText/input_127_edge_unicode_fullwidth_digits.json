@@ -1,0 +1,17 @@
+{
+  "candidateName": "Kenji Sato",
+  "email": "kenji@example.jp",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "C++, Linux, Distributed Systems",
+  "technologiesRaw": "Systems Architect",
+  "technologies": "Systems Architect",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Systems Architect"
+}

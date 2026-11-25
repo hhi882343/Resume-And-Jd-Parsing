@@ -1,0 +1,18 @@
+{
+  "candidateName": "Divya Nair",
+  "email": "divya@gmail.com",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": "Hyderabad, Telangana",
+  "location": "Hyderabad, Telangana",
+  "sourceFile": "input_015_documentFormatExtraction_L25.txt",
+  "parser": "metaforge",
+  "role": null
+}

@@ -1,0 +1,17 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.S. in Computer Science",
+  "educationRaw": "B.S. in Computer Science",
+  "skillsRaw": "REST APIs, Microservices, Python, Go, AWS, Docker, Terraform",
+  "technologiesRaw": "Software Engineer",
+  "technologies": "Software Engineer",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Software Engineer"
+}

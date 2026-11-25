@@ -1,0 +1,7 @@
+
+Technical Skills
+- Designed and developed new products.
+- Responsible for hardware testing and debugging.
+- Worked on various engineering projects.
+- Python
+- Docker

@@ -1,0 +1,276 @@
+{
+  "cors_headers": {
+    "access-control-allow-origin": "*"
+  },
+  "health_with_key": {
+    "statusCode": 200,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": null,
+      "mode": "hybrid-ai-with-fallback"
+    }
+  },
+  "health_without_key": {
+    "statusCode": 200,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": false,
+      "aiSuspendedNotice": null,
+      "mode": "local-deterministic"
+    }
+  },
+  "api_resume_health": {
+    "statusCode": 200,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": null,
+      "mode": "hybrid-ai-with-fallback"
+    }
+  },
+  "parse_success": {
+    "statusCode": 200,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "success": true,
+      "message": "Resume parsed successfully",
+      "data": {
+        "candidateName": "John Doe",
+        "email": null,
+        "contactNumber": "5550192834",
+        "linkedinUrl": "https://www.linkedin.com/in/johndoe-dev",
+        "highestQualification": "Bachelor of Science in Computer Science, , Berkeley ( )",
+        "skillsRaw": "TypeScript, React, Node.js, Python, PostgreSQL, Docker, Kubernetes, AWS, GraphQL, Redis",
+        "technologiesRaw": "Senior Full Stack Engineer",
+        "technologies": "Senior Full Stack Engineer",
+        "totalExperience": "7 years",
+        "relevantExperience": null,
+        "currentEmployer": null,
+        "currentLocation": "San Francisco, California",
+        "location": "San Francisco, California",
+        "sourceFile": "sample_resume.txt",
+        "parser": "legacy",
+        "role": "Senior Full Stack Engineer"
+      }
+    }
+  },
+  "api_resume_parse_success": {
+    "statusCode": 200,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "success": true,
+      "message": "Resume parsed successfully",
+      "data": {
+        "candidateName": "John Doe",
+        "email": null,
+        "contactNumber": "5550192834",
+        "linkedinUrl": "https://www.linkedin.com/in/johndoe-dev",
+        "highestQualification": "Bachelor of Science in Computer Science, , Berkeley ( )",
+        "skillsRaw": "TypeScript, React, Node.js, Python, PostgreSQL, Docker, Kubernetes, AWS, GraphQL, Redis",
+        "technologiesRaw": "Senior Full Stack Engineer",
+        "technologies": "Senior Full Stack Engineer",
+        "totalExperience": "7 years",
+        "relevantExperience": null,
+        "currentEmployer": null,
+        "currentLocation": "San Francisco, California",
+        "location": "San Francisco, California",
+        "sourceFile": "sample_resume.txt",
+        "parser": "legacy",
+        "role": "Senior Full Stack Engineer"
+      }
+    }
+  },
+  "parse_missing_file": {
+    "statusCode": 400,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "success": false,
+      "message": "Resume file is required under form field \"resume\""
+    }
+  },
+  "parse_oversize_file": {
+    "statusCode": 500,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "success": false,
+      "message": "File too large"
+    }
+  },
+  "parse_unsupported_extension": {
+    "statusCode": 500,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "success": false,
+      "message": "File format .xyz is not supported. Supported: PDF, DOCX, DOC, TXT, and common image formats."
+    }
+  },
+  "bulk_mixed_with_real_error": {
+    "statusCode": 200,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "success": true,
+      "message": "Bulk resume parse completed",
+      "count": 2,
+      "parser": "legacy",
+      "notice": null,
+      "results": [
+        {
+          "sourceFile": "candidate1.txt",
+          "status": "done",
+          "data": {
+            "candidateName": "John Doe",
+            "email": null,
+            "contactNumber": "5550192834",
+            "linkedinUrl": "https://www.linkedin.com/in/johndoe-dev",
+            "highestQualification": "Bachelor of Science in Computer Science, , Berkeley ( )",
+            "skillsRaw": "TypeScript, React, Node.js, Python, PostgreSQL, Docker, Kubernetes, AWS, GraphQL, Redis",
+            "technologiesRaw": "Senior Full Stack Engineer",
+            "technologies": "Senior Full Stack Engineer",
+            "totalExperience": "7 years",
+            "relevantExperience": null,
+            "currentEmployer": null,
+            "currentLocation": "San Francisco, California",
+            "location": "San Francisco, California",
+            "sourceFile": "candidate1.txt",
+            "parser": "legacy",
+            "role": "Senior Full Stack Engineer"
+          }
+        },
+        {
+          "sourceFile": "corrupted.pdf",
+          "status": "error",
+          "error": "Invalid PDF structure."
+        }
+      ]
+    }
+  },
+  "bulk_more_than_5_files": {
+    "statusCode": 400,
+    "headers": {
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "success": false,
+      "message": "Maximum 5 resumes allowed per batch upload"
+    }
+  },
+  "GET_HEALTH_UPPERCASE": {
+    "statusCode": 200,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "131",
+      "etag": "W/\"83-hXZ43ZBSXRhcAphHmt8IyPUw8ks\""
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": null,
+      "mode": "hybrid-ai-with-fallback"
+    }
+  },
+  "GET_HEALTH_TRAILING_SLASH": {
+    "statusCode": 200,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "131",
+      "etag": "W/\"83-hXZ43ZBSXRhcAphHmt8IyPUw8ks\""
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": null,
+      "mode": "hybrid-ai-with-fallback"
+    }
+  },
+  "POST_API_RESUME_PARSE_MIXED_CASE": {
+    "statusCode": 400,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "81",
+      "etag": "W/\"51-YBHMOkIvofSP17+Ds8HiK9/CtsU\""
+    },
+    "body": {
+      "success": false,
+      "message": "Resume file is required under form field \"resume\""
+    }
+  },
+  "OPTIONS_PREFLIGHT": {
+    "statusCode": 204,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+      "vary": "Access-Control-Request-Headers",
+      "access-control-allow-headers": "content-type",
+      "content-length": "0"
+    },
+    "body": ""
+  },
+  "GET_HEALTH_INITIAL": {
+    "statusCode": 200,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "131",
+      "etag": "W/\"83-hXZ43ZBSXRhcAphHmt8IyPUw8ks\""
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": null,
+      "mode": "hybrid-ai-with-fallback"
+    }
+  },
+  "GET_HEALTH_AFTER_429_SUSPENSION": {
+    "statusCode": 200,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "211",
+      "etag": "W/\"d3-lfaV/WfWNtMarsrysl0tWhRAQgk\""
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": "Gemini API quota or rate limit reached \u2014 using keyword parser for remaining resumes.",
+      "mode": "local-deterministic"
+    }
+  }
+}

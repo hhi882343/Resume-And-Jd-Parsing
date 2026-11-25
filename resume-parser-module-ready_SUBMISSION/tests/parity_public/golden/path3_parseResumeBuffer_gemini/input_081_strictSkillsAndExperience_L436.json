@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Erection, Pre-commissioning",
+  "technologiesRaw": "Erection, Pre-commissioning, Commissioning and Production Operations",
+  "technologies": "Erection, Pre-commissioning, Commissioning and Production Operations",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_081_strictSkillsAndExperience_L436.txt",
+  "parser": "metaforge",
+  "role": "Erection, Pre-commissioning, Commissioning and Production Operations"
+}

@@ -1,0 +1,2216 @@
+[
+  {
+    "catalog_index": 0,
+    "file": "src/ai/experience.ts",
+    "line": 23,
+    "pattern": "^(\\d{4})-(\\d{1,2})$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 1,
+    "file": "src/ai/experience.ts",
+    "line": 34,
+    "pattern": "^(\\d{4})$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 5,
+    "file": "src/ai/experience.ts",
+    "line": 129,
+    "pattern": "^(?:(?:total|overall|work|professional)\\s+)?(?:years\\s+of\\s+)?(?:experience|exp\\.?)\\s*(?:is|of)?\\s*[:|\\t\\-–—]\\s*",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 10,
+    "file": "src/ai/experience.ts",
+    "line": 147,
+    "pattern": "^(\\d+(?:\\.\\d+)?\\+?)\\s*(?:years?|yrs?|yr\\b)(?:\\s*(?:and\\s*)?(\\d+)\\s*(?:months?|mos?))?",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 11,
+    "file": "src/ai/experience.ts",
+    "line": 158,
+    "pattern": "^(\\d+)\\s*(?:months?|mos?)",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 12,
+    "file": "src/ai/experience.ts",
+    "line": 172,
+    "pattern": "^((?:(?:over|nearly|approx(?:imately)?|more\\s+than|at\\s+least|around|almost|about|close\\s+to|upwards\\s+of|in\\s+excess\\s+of)\\s+)?\\d+(?:\\.\\d+)?\\+?\\s*(?:years?|yrs?|yr\\b)(?:\\s*(?:and\\s*)?\\d+\\s*(?:months?|mos?))?|\\d+\\s*(?:months?|mos?))$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 13,
+    "file": "src/ai/experience.ts",
+    "line": 184,
+    "pattern": "\\brelevant\\s*$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing brelevant details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 17,
+    "file": "src/ai/experience.ts",
+    "line": 192,
+    "pattern": "^\\s*(?:degree|course|b\\.?tech|b\\.?e|m\\.?tech|m\\.?e|diploma|graduation)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing degree course tech details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 25,
+    "file": "src/ai/experience.ts",
+    "line": 276,
+    "pattern": "(\\d+)\\s*(?:months?|mos?)",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 26,
+    "file": "src/ai/experience.ts",
+    "line": 280,
+    "pattern": "(\\d+)\\s*(?:years?|yrs?)\\s+(\\d+)\\s*(?:months?|mos?)",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 28,
+    "file": "src/ai/gemini.ts",
+    "line": 19,
+    "pattern": "quota|rate.?limit|high demand|overloaded|unavailable|try again",
+    "flags": "i",
+    "positive_test_string": "Sample context containing quota rate limit details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 29,
+    "file": "src/ai/gemini.ts",
+    "line": 20,
+    "pattern": "not found|not supported",
+    "flags": "i",
+    "positive_test_string": "Sample context containing not found not details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 30,
+    "file": "src/ai/gemini.ts",
+    "line": 107,
+    "pattern": "API key not valid|invalid.*api.*key",
+    "flags": "i",
+    "positive_test_string": "Sample context containing API key not details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 31,
+    "file": "src/ai/gemini.ts",
+    "line": 111,
+    "pattern": "quota|resource.?exhausted",
+    "flags": "i",
+    "positive_test_string": "Sample context containing quota resource exhausted details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 32,
+    "file": "src/ai/gemini.ts",
+    "line": 114,
+    "pattern": "not found|not supported",
+    "flags": "i",
+    "positive_test_string": "Sample context containing not found not details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 33,
+    "file": "src/ai/gemini.ts",
+    "line": 119,
+    "pattern": "high demand|overloaded",
+    "flags": "i",
+    "positive_test_string": "Sample context containing high demand overloaded details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 34,
+    "file": "src/ai/gemini.ts",
+    "line": 122,
+    "pattern": "high demand|overloaded",
+    "flags": "i",
+    "positive_test_string": "Sample context containing high demand overloaded details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 35,
+    "file": "src/ai/gemini.ts",
+    "line": 133,
+    "pattern": "invalid.*gemini|invalid.*key|quota|not found|not supported",
+    "flags": "i",
+    "positive_test_string": "Sample context containing invalid gemini invalid details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 36,
+    "file": "src/ai/gemini.ts",
+    "line": 167,
+    "pattern": "No JSON|Empty response|Invalid parse",
+    "flags": "i",
+    "positive_test_string": "Sample context containing JSON Empty response details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 37,
+    "file": "src/ai/gemini.ts",
+    "line": 188,
+    "pattern": "invalid.*key|quota|resource.?exhausted",
+    "flags": "i",
+    "positive_test_string": "Sample context containing invalid key quota details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 38,
+    "file": "src/ai/gemini.ts",
+    "line": 295,
+    "pattern": "quota|rate.?limit",
+    "flags": "i",
+    "positive_test_string": "Sample context containing quota rate limit details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 41,
+    "file": "src/ai/normalize.ts",
+    "line": 21,
+    "pattern": "^(\\+\\d{2})(\\d)",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 42,
+    "file": "src/ai/schema.ts",
+    "line": 43,
+    "pattern": "```(?:json)?\\s*([\\s\\S]*?)```",
+    "flags": "i",
+    "positive_test_string": "Sample context containing json details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 43,
+    "file": "src/ai/schema.ts",
+    "line": 58,
+    "pattern": ",\\s*}",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 44,
+    "file": "src/ai/schema.ts",
+    "line": 59,
+    "pattern": ",\\s*]",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 45,
+    "file": "src/candidateNameValidation.ts",
+    "line": 7,
+    "pattern": "^(?:career summary|core strengths?|core competencies?|core\\s+skills?|key\\s+achievements?|achievements?|key\\s+accomplishments?|software architecture|key responsibilities handled|of\\s+the\\s+company|summary|objective|professional summary|personal summary|executive summary|work experience|professional experience|organizations?\\s+experience|organizational experience|detailed\\s+experience|technical competency|skills|key skills|technical skills|profile summary|career objective|synopsis|declaration|about\\s+me|strengths|candidate assessment sheet|st peters engineering college|curriculum\\s+vitae|curriculum|vitae|experience\\s+summary|work\\s+summary|employment\\s+summary|professional\\s+profile|personal\\s+profile|resume|biodata|resume\\s+summary|contact\\s+details?|personal\\s+details?)$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 46,
+    "file": "src/candidateNameValidation.ts",
+    "line": 10,
+    "pattern": "^(?:salesforce|java|\\.net|python|react|angular|boomi|mulesoft|full\\s*stack|integration|network|cloud|cyber|data|machine\\s*learning|technical|senior|lead|staff|principal)\\s+[a-z0-9][a-z0-9\\s]+(developer|engineer|consultant|analyst|architect|tester)\\b$",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 49,
+    "file": "src/candidateNameValidation.ts",
+    "line": 72,
+    "pattern": "\\b(?:resume|curriculum vitae)\\s*$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing resume curriculum vitae details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 55,
+    "file": "src/candidateNameValidation.ts",
+    "line": 116,
+    "pattern": "^(key\\s+achievements?|achievements?|key\\s+accomplishments?|core\\s+competencies?|core\\s+skills?|core\\s+strengths?|professional\\s+summary|career\\s+summary|career\\s+objective|technical\\s+summary|executive\\s+summary|personal\\s+summary|synopsis|declaration|about\\s+me|profile\\s+summary|summary|objective|strengths|awards?|certifications?|projects?|work\\s+history|employment\\s+history|organizations?\\s+experience|organizational\\s+experience|detailed\\s+experience|technical\\s+competency|professional\\s+experience|work\\s+experience|experience|education|skills|technical\\s+skills|key\\s+skills|of\\s+the\\s+company|curriculum\\s+vitae|experience\\s+summary|work\\s+summary|biodata|resume|contact\\s+details?)$",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 58,
+    "file": "src/extractResumeText.ts",
+    "line": 28,
+    "pattern": "[ \\t]+\\n",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 59,
+    "file": "src/extractResumeText.ts",
+    "line": 29,
+    "pattern": "\\n{3,}",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 60,
+    "file": "src/metaforgeParser.ts",
+    "line": 37,
+    "pattern": "quota|rate.?limit|429|resource.?exhausted|too many requests|high demand|overloaded|503|unavailable|busy|invalid.*key|not found|not supported",
+    "flags": "i",
+    "positive_test_string": "Sample context containing quota rate limit details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 61,
+    "file": "src/metaforgeParser.ts",
+    "line": 53,
+    "pattern": "^https?:\\/\\/",
+    "flags": "i",
+    "positive_test_string": "Sample context containing https details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 62,
+    "file": "src/metaforgeParser.ts",
+    "line": 54,
+    "pattern": "^linkedin\\.com",
+    "flags": "i",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 63,
+    "file": "src/metaforgeParser.ts",
+    "line": 54,
+    "pattern": "^www\\.linkedin\\.com",
+    "flags": "i",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 64,
+    "file": "src/metaforgeParser.ts",
+    "line": 55,
+    "pattern": "^www\\.",
+    "flags": "i",
+    "positive_test_string": "Sample context containing www details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 65,
+    "file": "src/metaforgeParser.ts",
+    "line": 57,
+    "pattern": "^\\/in\\/",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 66,
+    "file": "src/metaforgeParser.ts",
+    "line": 58,
+    "pattern": "^https?:\\/\\/",
+    "flags": "i",
+    "positive_test_string": "Sample context containing https details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 70,
+    "file": "src/metaforgeParser.ts",
+    "line": 175,
+    "pattern": "^(\\d+(?:\\.\\d+)?\\+?)",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 71,
+    "file": "src/metaforgeParser.ts",
+    "line": 178,
+    "pattern": "`\\\\b${numEscaped}\\\\s*(?:years?|yrs?|months?|mos?)`",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 75,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 57,
+    "pattern": "\\*\\*",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 77,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 71,
+    "pattern": "`(?:${startNames.source})\\\\s*\\\\n([\\\\s\\\\S]*?)(?:${endBefore.source}|$)`",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 78,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 81,
+    "pattern": "`(?:^|\\\\n)\\\\s*(?:${EDUCATION_SECTION_START})\\\\s*:?\\\\s*\\\\n([\\\\s\\\\S]*?)(?:${SECTION_END}|$)`",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 79,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 88,
+    "pattern": "`(?:^|\\\\n)\\\\s*(?:${EDUCATION_SECTION_START})\\\\s*:?\\\\s*\\\\n([\\\\s\\\\S]*?)(?=\\\\n\\\\s*(?:${SKILL_SECTION_START}|Technical\\\\s+Skills|Experience|Projects|Certifications?)\\\\b|$)`",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 80,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 96,
+    "pattern": "`(?:^|\\\\n)\\\\s*(?:${EDUCATION_SECTION_START})\\\\s*:?\\\\s*\\\\n`",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 81,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 97,
+    "pattern": "`\\\\n\\\\s*(?:${SKILL_SECTION_START}|Technical\\\\s+Skills|Core\\\\s+Skills|Skills|Experience|Projects|Certifications?)\\\\b`",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 82,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 105,
+    "pattern": "^(?:technical\\s+skills?|core\\s+skills?|key\\s+skills?|relevant\\s+skills?|software\\s+skills?|skills?|tools\\s*(?:&|and|\\/)\\s*technologies|technologies\\s*(?:&|and|\\/)\\s*tools|technical\\s+competencies|core\\s+competencies|core\\s+technical\\s+capabilities|technical\\s+proficiencies|technical\\s+proficiency|technical\\s+expertise|professional\\s+expertise|professional\\s+skills?|areas?\\s+of\\s+expertise|software|tools|technologies|technology\\s+stack|tech\\s+stack|programming\\s+languages?|programming\\s+skills?|it\\s+skills?|computer\\s+skills?|skills?\\s*set|skills?\\s+profile|skills?\\s+summary|skillset)$",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 86,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 131,
+    "pattern": "pattern.source",
+    "flags": "pattern.flags",
+    "positive_test_string": "Sample context containing pattern source details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 87,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 134,
+    "pattern": "^mailto:",
+    "flags": "i",
+    "positive_test_string": "Sample context containing mailto details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 88,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 136,
+    "pattern": "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 89,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 137,
+    "pattern": "(?:example|test|sample|dummy|resume|candidate)\\.(?:com|org|net)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing example test sample details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 91,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 144,
+    "pattern": "^mailto:",
+    "flags": "i",
+    "positive_test_string": "Sample context containing mailto details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 92,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 145,
+    "pattern": "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 93,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 146,
+    "pattern": "(?:example|test|sample|dummy|resume|candidate)\\.(?:com|org|net)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing example test sample details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 95,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 161,
+    "pattern": "\\(\\+91\\)\\s*[6-9]\\d{9}\\b",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 96,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 162,
+    "pattern": "\\(\\s*\\+91\\s*\\)\\s*[6-9]\\d{9}\\b",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 97,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 163,
+    "pattern": "\\b\\+1[-.\\s]?\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}\\b",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 102,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 174,
+    "pattern": "^(?:phone|phone\\s*no\\.?|mobile|mob|tel|cell|contact|contact\\s*number|ph\\.?\\s*no\\.?)\\s*[:\\-]?\\s*",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 104,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 178,
+    "pattern": "^[6-9]",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 106,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 201,
+    "pattern": "\\/+$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 109,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 204,
+    "pattern": "^https?:\\/\\/",
+    "flags": "i",
+    "positive_test_string": "Sample context containing https details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 110,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 205,
+    "pattern": "^\\/\\/",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 111,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 206,
+    "pattern": "^www\\.",
+    "flags": "i",
+    "positive_test_string": "Sample context containing www details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 112,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 207,
+    "pattern": "^https:\\/\\/linkedin\\.com",
+    "flags": "i",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 113,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 208,
+    "pattern": "^https:\\/\\/linkedin\\.com",
+    "flags": "i",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 117,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 233,
+    "pattern": "`https?://(?:[a-z]{2}\\\\.)?(?:www\\\\.)?linkedin\\\\.com/(?:in|pub)/${uid}`",
+    "flags": "gi",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 118,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 234,
+    "pattern": "`(?:^|\\\\s)www\\\\.linkedin\\\\.com/(?:in|pub)/${uid}`",
+    "flags": "gi",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 119,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 235,
+    "pattern": "`(?:^|\\\\s)linkedin\\\\.com/(?:in|pub)/${uid}`",
+    "flags": "gi",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 120,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 236,
+    "pattern": "`linkedin\\\\s*\\\\.\\\\s*com\\\\s*/\\\\s*(?:in|pub)\\\\s*/\\\\s*${uid}`",
+    "flags": "gi",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 121,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 241,
+    "pattern": "re.source",
+    "flags": "re.flags.includes('g') ? re.flags : `${re.flags}g`",
+    "positive_test_string": "Sample context containing source details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 122,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 245,
+    "pattern": "^linkedin\\s*\\.",
+    "flags": "i",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 125,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 247,
+    "pattern": "^https?:\\/\\/",
+    "flags": "i",
+    "positive_test_string": "Sample context containing https details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 126,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 248,
+    "pattern": "^www\\.linkedin\\.com",
+    "flags": "i",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 127,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 249,
+    "pattern": "^linkedin\\.com",
+    "flags": "i",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 128,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 256,
+    "pattern": "`(?:^|\\\\s)(?:linkedin|linked\\\\s*in)\\\\s*[:\\\\-]\\\\s*(https?://[^\\\\s]+|(?:www\\\\.)?linkedin\\\\.com/(?:in|pub)/${uid})`",
+    "flags": "i",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 129,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 263,
+    "pattern": "^https?:\\/\\/",
+    "flags": "i",
+    "positive_test_string": "Sample context containing https details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 130,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 264,
+    "pattern": "^www\\.",
+    "flags": "i",
+    "positive_test_string": "Sample context containing www details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 132,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 278,
+    "pattern": "^\\d+$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 133,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 279,
+    "pattern": "^[a-zA-Z0-9](?:[a-zA-Z0-9_-]*[a-zA-Z0-9])?$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 135,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 287,
+    "pattern": "`(?:^|\\\\s)(?:linkedin|linked\\\\s*in|profile)\\\\s*[:\\\\s-]*\\\\s*in\\\\s*/\\\\s*(${slugPart})`",
+    "flags": "gi",
+    "positive_test_string": "Connect with me at https://www.linkedin.com/in/test-candidate-12345",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 136,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 297,
+    "pattern": "`(?:^|\\\\s)in\\\\s*/\\\\s*(${slugPart})(?=[\\\\s.,;)|]|$)`",
+    "flags": "gi",
+    "positive_test_string": "Sample context containing slugPart details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 141,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 336,
+    "pattern": "^[A-Z][A-Z\\s.'-]{2,80}$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 143,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 343,
+    "pattern": "^[A-Za-z][A-Za-z.'-]*(?:\\s+(?:[A-Za-z][A-Za-z.'-]*|[A-Za-z]\\.)){0,6}$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 145,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 352,
+    "pattern": "(?:^|\\n)\\s*(?:Name|Candidate\\s*Name|Full\\s*Name)\\s*[-–—]\\s*([^\\n]+)",
+    "flags": "i",
+    "positive_test_string": "Sample context containing Name Candidate Name details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 148,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 371,
+    "pattern": "^(objective|summary|career\\s+summary|experience\\s+summary|work\\s+summary|curriculum\\s+vitae|curriculum|vitae|education|work\\s+experience|professional\\s+experience|organizations?\\s+experience|experience|skills|technical|projects|contact|personal|profile|core\\s+strengths?|career\\s+objective|key\\s+achievements?|achievements?|synopsis|declaration|about\\s+me|strengths|technical\\s+competency|biodata|resume)$",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 150,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 375,
+    "pattern": "^(hyderabad|bengaluru|bangalore|chennai|mumbai|delhi|pune|kolkata|india)\\b",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 153,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 386,
+    "pattern": "^(?:name|candidate|full\\s*name)\\s*[:\\-]\\s*(.+)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing name candidate full details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 154,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 394,
+    "pattern": "^[A-Z][a-z]+(?:\\s+(?:[A-Z][a-z]+|[A-Z]\\.)){1,4}$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 155,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 403,
+    "pattern": "^[A-Z][A-Z.\\s]{2,50}$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 162,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 434,
+    "pattern": "^[A-Z][a-z]+(?:\\s+[A-Z][a-z]+){0,4}$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 163,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 439,
+    "pattern": "^[A-Z][A-Z\\s]{2,50}$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 168,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 471,
+    "pattern": "\\b(ph\\.?\\s*d|phd|doctorate|doctoral|doctor\\s+of\\s+philosophy)\\b",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 169,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 472,
+    "pattern": "\\b(m\\.?\\s*phil|m\\.?\\s*philosophy)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing phil philosophy details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 173,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 483,
+    "pattern": "\\b(12\\s*th|twelfth|hsc|h\\.?\\s*s\\.?\\s*c|intermediate|\\+2|plus\\s*two|puc|senior\\s*secondary|class\\s*xii|class\\s*12)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing twelfth hsc intermediate details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 174,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 487,
+    "pattern": "\\b(10\\s*th|tenth|ssc|s\\.?\\s*s\\.?\\s*c|matric|matriculation|sslc|class\\s*10|class\\s*x\\b)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing tenth ssc matric details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 176,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 502,
+    "pattern": "\\b(?:cgpa|sgpa|gpa)\\s*[:\\-]?\\s*[\\d.]+\\s*(?:\\/\\s*\\d+)?\\b",
+    "flags": "gi",
+    "positive_test_string": "Sample context containing cgpa sgpa gpa details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 177,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 503,
+    "pattern": "\\b(?:percentage|aggregate|marks?|scores?)\\s*[:\\-]?\\s*[\\d.]+\\s*%?\\b",
+    "flags": "gi",
+    "positive_test_string": "Sample context containing percentage aggregate marks details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 178,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 504,
+    "pattern": "\\b\\d+(?:\\.\\d+)?\\s*%\\b",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 184,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 524,
+    "pattern": "^(project(?:-\\d+)?|description|roles?|team\\s*size)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing project description roles details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 186,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 556,
+    "pattern": "\\n\\s*(?:PROJECT|Project)[\\s_-]?\\d",
+    "flags": "i",
+    "positive_test_string": "Sample context containing PROJECT Project details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 197,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 623,
+    "pattern": "^(project(?:-\\d+)?|description|roles?|team\\s*size|duration|customer|tools?)\\b",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 198,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 642,
+    "pattern": "^(present|current|now|till\\s+date|till\\s+now|ongoing)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing present current now details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 199,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 647,
+    "pattern": "^([a-z]+)\\s*[,']?\\s*(\\d{4})$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 200,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 651,
+    "pattern": "^([a-z]+)\\s*[']?\\s*(\\d{2})$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 201,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 657,
+    "pattern": "^(\\d{1,2})[-/](\\d{4})$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 202,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 665,
+    "pattern": "^(\\d{4})[-/](\\d{1,2})$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 203,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 673,
+    "pattern": "^(\\d{4})$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 209,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 713,
+    "pattern": "dateRangePattern.source",
+    "flags": "gi",
+    "positive_test_string": "Sample context containing dateRangePattern source details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 210,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 748,
+    "pattern": "dateRangePattern.source",
+    "flags": "gi",
+    "positive_test_string": "Sample context containing dateRangePattern source details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 211,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 818,
+    "pattern": "(\\d+)\\s*(?:months?|mos?)",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 216,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 844,
+    "pattern": "^(?:(?:total|overall|work|professional)\\s+)?(?:years\\s+of\\s+)?(?:experience|exp\\.?)\\s*(?:is|of)?\\s*[:|\\t\\-–—]\\s*",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 221,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 865,
+    "pattern": "^(\\d+(?:\\.\\d+)?\\+?)\\s*(?:years?|yrs?|yr\\b)(?:\\s*(?:and\\s*)?(\\d+)\\s*(?:months?|mos?))?",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 222,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 877,
+    "pattern": "^(\\d+)\\s*(?:months?|mos?)",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 223,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 894,
+    "pattern": "^((?:(?:over|nearly|approx(?:imately)?|more\\s+than|at\\s+least|around|almost|about|close\\s+to|upwards\\s+of|in\\s+excess\\s+of)\\s+)?\\d+(?:\\.\\d+)?\\+?\\s*(?:years?|yrs?|yr\\b)(?:\\s*(?:and\\s*)?\\d+\\s*(?:months?|mos?))?|\\d+\\s*(?:months?|mos?))$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 225,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 917,
+    "pattern": "\\brelevant\\s*$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing brelevant details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 228,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 926,
+    "pattern": "^\\s*(?:degree|course|b\\.?tech|b\\.?e|m\\.?tech|m\\.?e|diploma|graduation)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing degree course tech details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 236,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1052,
+    "pattern": "(?:current\\s+company|present\\s+company|currently\\s+working\\s+at)\\s*[:\\-]\\s*([^\\n]{2,120})",
+    "flags": "i",
+    "positive_test_string": "Sample context containing current company present details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 238,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1057,
+    "pattern": "currently\\s+i\\s+am\\s+working\\s+as\\s+[^.\\n]{0,40}\\s+in\\s+([A-Za-z][A-Za-z0-9&.\\- ]{2,80})",
+    "flags": "i",
+    "positive_test_string": "Sample context containing currently working details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 240,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1059,
+    "pattern": "presently\\s+working\\s+with\\s+([A-Za-z][A-Za-z0-9&.\\- ]{2,80})",
+    "flags": "i",
+    "positive_test_string": "Sample context containing presently working with details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 245,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1071,
+    "pattern": "(?:permanent\\s+address|current\\s+address|address)\\s*[:\\-]\\s*([^\\n]{2,140})",
+    "flags": "i",
+    "positive_test_string": "Sample context containing permanent address current details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 255,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1111,
+    "pattern": "^(?:internship|internships|projects?|education|certifications?|strengths?|technical\\s+skills|skills|summary|profile|objective|languages?|declaration|references?)\\b",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 257,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1125,
+    "pattern": "^(?:worked|working|responsibilities|responsible|handled|handling)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing worked working responsibilities details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 261,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1139,
+    "pattern": "\\s+(?:with|having|possessing|offering)\\s+(?:over\\s+|nearly\\s+|about\\s+|approximately\\s+|more\\s+than\\s+)?\\d+(?:\\.\\d+)?\\+?\\s*(?:years?|yrs?|months?|mos?).*$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 262,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1140,
+    "pattern": "\\s+(?:with|having|possessing|specializing\\s+in|specialized\\s+in|experienced\\s+in|offering)\\s+(?:experience\\s+using|experience\\s+in|background\\s+in)\\s+.*$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 263,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1141,
+    "pattern": "\\s*[-–—|]\\s*\\d+\\+?\\s*(?:years?|yrs?).*$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 264,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1146,
+    "pattern": "^\\s*(?:over\\s+|nearly\\s+|about\\s+|approximately\\s+|more\\s+than\\s+)?\\d+(?:\\.\\d+)?\\+?\\s*(?:years?|yrs?|months?|mos?)\\s*(?:of\\s+experience)?\\s*$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 265,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1149,
+    "pattern": "^\\s*\\d+\\+?\\s*(?:years?|yrs?)\\s+(?:of\\s+)?",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 267,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1151,
+    "pattern": "\\b(?:worked\\s+in|experience\\s+in)\\b.*\\b\\d+\\s+years\\b",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 268,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1160,
+    "pattern": "^(?:professional|expert|practitioner|associate|generalist|officer|executive|consultant|specialist|lead|manager|engineer|developer|analyst)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing professional expert practitioner details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 270,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1171,
+    "pattern": "^(?:erection|pre[\\s-]commissioning|commissioning|production\\s+operations)",
+    "flags": "i",
+    "positive_test_string": "Sample context containing erection pre commissioning details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 273,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1196,
+    "pattern": "`(?:^|\\\\n)\\\\s*${headingRegex.source}\\\\s*[:\\\\-]?(?:\\\\s*\\\\n|\\\\s+)([\\\\s\\\\S]*?)(?=\\\\n\\\\s*(?:Education|Academic|Technical\\\\s+Skills|Technologies|Skills|Core\\\\s+Skills|Key\\\\s+Skills|Core\\\\s+Competencies|Competencies|Experience|Professional\\\\s+Experience|Work\\\\s+Experience|Employment|Projects?|Certifications?|Declaration|Personal|Contact)\\\\b|$)`",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 275,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1209,
+    "pattern": "^(?:seeking|looking|aspiring)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing seeking looking aspiring details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 276,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1212,
+    "pattern": "^(?:(?:working|experience|employed|role|serving)\\s+as\\s+(?:an?|the)?)\\s*",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 277,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1213,
+    "pattern": "^(?:(?:over|around|having)?\\s*[\\d+.]+\\s+years(?:\\s+of)?\\s+experience\\s+(?:in\\s+the\\s+industry\\s+)?as\\s+(?:an?|the)?)\\s*",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 278,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1214,
+    "pattern": "^(?:experienced|results?-driven|dynamic|accomplished|skilled|certified|energetic|seasoned|passionate|innovative|motivated)\\s+",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 280,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1221,
+    "pattern": "\\s+(?:professional|expert|practitioner)\\s*$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing professional expert practitioner details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 281,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1222,
+    "pattern": "^(?:professional|expert|practitioner|associate|generalist|officer|executive)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing professional expert practitioner details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 285,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1241,
+    "pattern": "^\\+?\\d[\\d\\s\\-()]{7,}\\d$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 286,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1242,
+    "pattern": "^(?:hyderabad|bangalore|bengaluru|mumbai|pune|delhi|chennai|kolkata|noida|gurgaon|new york|london|san francisco|california|texas|india|usa|uk)[,\\s]",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 287,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1243,
+    "pattern": "^[A-Za-z\\s]+,\\s*[A-Za-z\\s]+(?:\\s+\\d{5,6})?$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 288,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1244,
+    "pattern": "^(?:worked|working|responsibilities|responsible|handled|handling)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing worked working responsibilities details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 293,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1277,
+    "pattern": "^(?:responsibilities|roles|duties|project|client|tools|team|environment|duration)\\b",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 299,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1313,
+    "pattern": "^pre[\\s-]commissioning$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing pre commissioning details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 300,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1314,
+    "pattern": "^erection$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing erection details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 301,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1315,
+    "pattern": "^commissioning$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing commissioning details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 302,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1316,
+    "pattern": "^production\\s+operations?$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing production operations details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 303,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1317,
+    "pattern": "^procurement$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing procurement details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 304,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1318,
+    "pattern": "^fabrication$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing fabrication details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 305,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1319,
+    "pattern": "^installation$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing installation details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 306,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1320,
+    "pattern": "^maintenance$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing maintenance details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 318,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1410,
+    "pattern": "Professional\\s+Overview",
+    "flags": "i",
+    "positive_test_string": "Sample context containing Professional Overview details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 321,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1413,
+    "pattern": "(?:Career\\s+)?Objective",
+    "flags": "i",
+    "positive_test_string": "Sample context containing Career Objective details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 322,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1445,
+    "pattern": "\\bTech\\s*Stack\\s*[:\\-]\\s*([^\\n]+)",
+    "flags": "gi",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 323,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1446,
+    "pattern": "\\bSkills?\\s+Set\\s*[:\\-]\\s*([^\\n]+)",
+    "flags": "gi",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 325,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1448,
+    "pattern": "\\b(?:Programming|AI\\s*&?\\s*ML|Frameworks?\\s*&?\\s*Libraries|Tools\\s*&?\\s*Platforms)\\s*[:\\-]\\s*([^\\n]+)",
+    "flags": "gi",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 327,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1450,
+    "pattern": "\\b(?:Technologies|Technical\\s+Proficiencies)\\s*[:\\-]\\s*([^\\n]+)",
+    "flags": "gi",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 328,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1459,
+    "pattern": "^\\d+$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 329,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1460,
+    "pattern": ":$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 333,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1473,
+    "pattern": "^(technical|functional|skills profile|key skills|skills)$",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 335,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1481,
+    "pattern": "^(key\\s+achievements?|achievements?|awards?|certificates?|declaration|synopsis|summary|objective|work\\s+history|employment|accomplishments?|projects?|core\\s+skills?|key\\s+skills?|technical\\s+skills?)$",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 336,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1486,
+    "pattern": "^\\s*(?:\\*\\*)?([A-Za-z0-9][A-Za-z0-9\\s&'.+/()-]{0,52})\\s*[:\\-–—]\\s*(.+)$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 339,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1504,
+    "pattern": "^integration tool\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing integration tool details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 340,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1505,
+    "pattern": "^programming languages?\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing programming languages details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 341,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1506,
+    "pattern": "^database\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing database details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 342,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1507,
+    "pattern": "^operating systems?\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing operating systems details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 343,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1508,
+    "pattern": "^other tech concepts?\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing other tech concepts details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 344,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1509,
+    "pattern": "^tools?\\b",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 345,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1510,
+    "pattern": "^frameworks?\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing frameworks details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 346,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1511,
+    "pattern": "^platforms?\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing platforms details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 349,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1516,
+    "pattern": "^(technical|functional|skills profile)$",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 354,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1538,
+    "pattern": "^\\s*(?:\\*\\*)?[A-Za-z0-9][A-Za-z0-9\\s&'.+/()-]{0,52}\\s*[:\\-–—]\\s*.+$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 355,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1540,
+    "pattern": "^(integration tool|programming languages?|database|operating systems?|other tech concepts?|management and leadership skills|training\\s*&\\s*development)\\b",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 364,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1570,
+    "pattern": "^(operating system|environment|database|internet tools|languages|other|tools|frameworks?|cloud|testing tools|monitoring|version control|methodologies)$",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 372,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1613,
+    "pattern": "^(?:3d\\s+cad\\s+tools?|2d\\s+drafting|plm\\s+tools?|cad\\s+tools?|cae\\s+tools?|programming(?:\\s+languages?)?|languages|frameworks?(?:\\s*&?\\s*libraries)?|databases?|cloud(?:\\s*&?\\s*platforms)?|operating\\s+systems?|standards?|automation|methodologies|web\\s+technologies|developer\\s+tools|office\\s+tools|miscellaneous|soft\\s+skills|core\\s+competencies|technical\\s+competencies|tools\\s*(?:&|and)\\s*technologies|technical\\s+skills?|skills?|tools?|technologies|area\\s+of\\s+interest|areas\\s+of\\s+interest)$",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 376,
+    "file": "src/parseCoreResumeFields.ts",
+    "line": 1673,
+    "pattern": "^(description|roles?|team\\s*size|duration|customer|tools?)\\b",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 380,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 15,
+    "pattern": "\\s+in\\s*$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 381,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 15,
+    "pattern": "\\s+from\\s*$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing from details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 382,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 15,
+    "pattern": "\\s+at\\s*$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 385,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 24,
+    "pattern": "^(?:Core|Technical|Primary|Secondary|Key|Other|Tools?|Languages?|Platforms?|Databases?|Frameworks?|Cloud)\\s*:\\s*",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 392,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 56,
+    "pattern": "^\\d+[\\s.)\\-–—]+",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 393,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 60,
+    "pattern": "^(?:completed\\s+)?(?:degree\\s+in|qualification\\s+in|graduation\\s+in|graduated\\s+from|pursuing\\s+(?:a\\s+)?|completed\\s+|holds\\s+a\\s+|highest\\s+qualification\\s*[:\\-]?\\s*)\\s*",
+    "flags": "i",
+    "positive_test_string": "Sample context containing completed degree qualification details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 399,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 85,
+    "pattern": "\\b(?:cgpa|sgpa|gpa)\\s*[:\\-]?\\s*[\\d.]+\\s*(?:\\/\\s*\\d+)?\\b",
+    "flags": "gi",
+    "positive_test_string": "Sample context containing cgpa sgpa gpa details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 400,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 86,
+    "pattern": "\\b(?:percentage|aggregate|marks?|scores?)\\s*[:\\-]?\\s*[\\d.]+\\s*%?\\b",
+    "flags": "gi",
+    "positive_test_string": "Sample context containing percentage aggregate marks details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 401,
+    "file": "src/resumeFieldSanitize.ts",
+    "line": 87,
+    "pattern": "\\b\\d+(?:\\.\\d+)?\\s*%\\b",
+    "flags": "g",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 422,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 66,
+    "pattern": "^(?:competencies|competency|technical\\s+skills?|core\\s+skills?|key\\s+skills?|relevant\\s+skills?|software\\s+skills?|skills?|tools\\s*(?:&|and|\\/)\\s*technologies|technologies\\s*(?:&|and|\\/)\\s*tools|technical\\s+competencies|core\\s+competencies|core\\s+technical\\s+capabilities|core\\s+technical\\s+skills?|key\\s+technical\\s+skills?|technical\\s+proficiencies|technical\\s+proficiency|technical\\s+expertise|professional\\s+expertise|professional\\s+skills?|core\\s+strengths|areas?\\s+of\\s+expertise|technical\\s+toolkit|tech\\s+stack|technology\\s+stack|programming\\s+languages?|programming\\s+skills?|it\\s+skills?|computer\\s+skills?|skills?\\s*set|skills?\\s+profile|skills?\\s+summary|skillset|skills?\\s*(?:&|and|\\/)\\s*tools|skills?\\s*(?:&|and|\\/)\\s*abilities|skills?\\s*(?:&|and|\\/)\\s*proficiencies|skills?\\s*(?:&|and|\\/)\\s*competencies|software\\s+proficiencies|technical\\s+background|key\\s+competencies|technical\\s+knowledge|technical\\s+summary|primary\\s+skills?|secondary\\s+skills?|functional\\s*(?:&|and)\\s*technical\\s+skills?|technical\\s*(?:&|and)\\s*professional\\s+skills?|tools\\s*(?:&|and)\\s*frameworks?|frameworks?\\s*(?:&|and)\\s*tools?|programming\\s+languages?\\s*(?:&|and|\\/)\\s*tools?|key\\s+skills?\\s*(?:&|and|\\/)\\s*core\\s+competencies)$",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 423,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 71,
+    "pattern": "^(?:experience|work\\s+experience|professional\\s+experience|employment|employment\\s+history|work\\s+history|career\\s+history|employment\\s+details|job\\s+responsibilities?|responsibilities|roles?\\s*(?:&|and|\\/)\\s*responsibilities|key\\s+responsibilities|duties|job\\s+duties|internships?|internship\\s+experience|internship\\s+details|internship\\s+projects?|summer\\s+internships?|virtual\\s+internships?|projects?|key\\s+projects?|academic\\s+projects?|project\\s+experience|project\\s+details|technical\\s+projects?|personal\\s+projects?|major\\s+projects?|mini\\s+projects?|capstone\\s+projects?|education|academic|academic\\s+qualifications?|educational\\s+qualifications?|qualifications?|academic\\s+background|educational\\s+background|academic\\s+record|academic\\s+details|certifications?|certificates?|licenses?|certifications?\\s*(?:&|and)\\s*licenses?|courses?|trainings?|workshops?|seminars?|strengths?|core\\s+strengths?|personal\\s+strengths?|soft\\s+skills?|interpersonal\\s+skills?|professional\\s+summary|executive\\s+profile|profile\\s+summary|career\\s+summary|summary|profile|objective|career\\s+objective|declaration|personal\\s+details|personal\\s+profile|personal\\s+information|references?|publications?|achievements?|awards?|key\\s+achievements?|spoken\\s+languages?|languages?|languages?\\s+(?:known|spoken|proficiency)|language\\s+proficiency|interests?|hobbies|activities|extra-curricular\\s+activities)$",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 424,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 74,
+    "pattern": "^(?:programming\\s+languages?|languages?|databases?|frameworks?|libraries|tools?|cloud|devops|operating\\s+systems?|web\\s+technologies?|methodologies|frontend|backend|full\\s*stack|version\\s+control|testing|others?|misc|miscellaneous|technologies|tools\\s*(?:&|and)\\s*technologies|technical\\s+skills?|core\\s+competencies|key\\s+skills?|soft\\s+skills?|management\\s+skills?|domain\\s+skills?|functional\\s+skills?|platforms?|servers?|concepts?|skills?\\s*set|skills?\\s+profile|it\\s+skills?|computer\\s+skills?)$",
+    "flags": "i",
+    "positive_test_string": "Technical Skills: Python, Java, Docker, AWS",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 427,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 138,
+    "pattern": "^(?:[•*▪▫❖➢✓★\\-–—+]|[oO]\\s+|\\d+[\\s.)])",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 429,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 185,
+    "pattern": "^\\|[\\s\\-:|]+\\|$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 431,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 224,
+    "pattern": "^category$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing category details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 436,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 346,
+    "pattern": "^\\s*(?:[#*•\\-–—~=_+[\\]|\\s\\d.)]+)?([A-Za-z0-9][A-Za-z0-9\\s&'.+/()#-]{1,50})\\s*[:\\-–—]\\s*(.+)$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 438,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 358,
+    "pattern": "[,;&]\\s*$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 440,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 414,
+    "pattern": "^\\s*(?:[#*•\\-–—~=_+[\\]|\\s\\d.)]+)?([A-Za-z0-9][A-Za-z0-9\\s&'.+/()#-]{1,50})\\s*[:\\-–—]\\s*(.+)$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 441,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 519,
+    "pattern": "^(?:professional\\s+summary|career\\s+summary|profile\\s+summary|summary\\s+of\\s+qualifications|executive\\s+profile|executive\\s+summary|professional\\s+profile|personal\\s+profile|about\\s+me|career\\s+objective|professional\\s+overview|profile|summary|objective|career\\s+profile|synopsis|brief\\s+profile)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing professional summary career details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 442,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 522,
+    "pattern": "^(?:technical\\s+projects?|key\\s+projects?|academic\\s+projects?|personal\\s+projects?|projects?\\s+experience|project\\s+experience|project\\s+details|project\\s+work|recent\\s+projects?|major\\s+projects?|notable\\s+projects?|projects?)$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 443,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 525,
+    "pattern": "^(?:work\\s+experience|professional\\s+experience|experience|employment\\s+history|work\\s+history|career\\s+history|employment|employment\\s+details|job\\s+responsibilities?|responsibilities|roles?\\s*(?:&|and|\\/)\\s*responsibilities|key\\s+responsibilities|work\\s+profile|relevant\\s+experience|industry\\s+experience)$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 444,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 528,
+    "pattern": "^(?:education|academic\\s+background|academics|educational\\s+qualifications?|academic\\s+qualifications?|academic\\s+record|academic\\s+details|qualifications?|educational\\s+background|education\\s*(?:&|and)\\s*training)$",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 445,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 531,
+    "pattern": "^(?:certifications?|certificates?|licenses?|training|internships?|achievements?|awards?|key\\s+achievements?|publications?|additional\\s+information|activities|interests?|hobbies|extra-curricular\\s+activities)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing certifications certificates licenses details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 447,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 548,
+    "pattern": "^(?:[•*▪▫❖➢✓★\\-–—+]|[oO]\\s+|\\d+[\\s.)])",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 448,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 705,
+    "pattern": "^(?:ms\\s+(?:sql(?:\\s+server)?|azure|office|excel|word|access|visio|project|power\\s+bi|dynamics)|microsoft\\s+sql(?:\\s+server)?)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing sql server azure details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 449,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 715,
+    "pattern": "^\\d+$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 451,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 716,
+    "pattern": "^\\d+(?:\\.\\d+)?\\+?\\s*(?:years?|yrs?|months?|mos?)$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 454,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 726,
+    "pattern": "^(?:project\\s+management|product\\s+management|system\\s+architecture|database\\s+administration|business\\s+analysis|data\\s+analysis|ui\\/ux\\s+design|graphic\\s+design|responsive\\s+web\\s+design|sheet\\s+metal\\s+design)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing project management product details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 461,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 753,
+    "pattern": "\\bdeep\\s+learning(?:\\s+(?:models?|networks?))?\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing bdeep learning models details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 466,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 760,
+    "pattern": "\\bExpress(?:\\.js)?\\b",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 479,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 775,
+    "pattern": "\\bproject\\s+management\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing bproject management details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 480,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 776,
+    "pattern": "\\bagile(?:\\s+methodolog(?:y|ies)|\\s+practices)?\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing bagile methodolog ies details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 481,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 777,
+    "pattern": "\\bscrum\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing bscrum details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 485,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 783,
+    "pattern": "\\b(?:quality\\s+assurance|software\\s+quality\\s+assurance|QA\\s+testing)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing quality assurance software details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 486,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 784,
+    "pattern": "\\b(?:requirements\\s+gathering|gathering\\s+(?:business\\s+)?requirements)\\b",
+    "flags": "i",
+    "positive_test_string": "Sample context containing requirements gathering gathering details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 495,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 801,
+    "pattern": "`${prefix}${escaped}${suffix}`",
+    "flags": "i",
+    "positive_test_string": "Sample context containing prefix escaped suffix details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 497,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 808,
+    "pattern": "`\\\\b${kw.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&')}\\\\b`",
+    "flags": "i",
+    "positive_test_string": "Sample context containing replace details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 501,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 953,
+    "pattern": "(?:\\b(?:c\\s*\\/c\\+\\+|c\\s+and\\s+c\\+\\+|embedded\\s+c|programming\\s+in\\s+c|developed\\s+in\\s+c|written\\s+in\\s+c)\\b|\\busing\\s+c[,.\\s]+|\\bc[,.\\s]+(?:c\\+\\+|python|java)\\b)",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 502,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 957,
+    "pattern": "(?:\\b(?:r\\s+and\\s+python|python\\s+and\\s+r|r\\s*\\/\\s*python|programming\\s+in\\s+r|using\\s+r\\s+for|r\\s+programming|r\\s+studio)\\b)",
+    "flags": "i",
+    "positive_test_string": "Sample context containing and python python details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 513,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1048,
+    "pattern": "^(?:core|advanced|intermediate|basic|basics|proficient|proficiency|hands[- ]on|expert|experienced|fundamentals?|concepts?|oops?|oop\\s+concepts?|version\\s+control|programming|scripting|level\\s*\\d+|\\d+\\+?\\s*(?:years?|yrs?|months?)|familiar(?:ity)?|working\\s+knowledge|elementary)$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 514,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1052,
+    "pattern": "^([A-Za-z0-9+#.-]+(?:\\s+[A-Za-z0-9+#.-]+)?)\\s*\\(([^)]+)\\)$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 516,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1092,
+    "pattern": "^(?:expertise\\s+in|proficient\\s+in|proficiency\\s+in|experienced\\s+in|hands[- ]on\\s+(?:experience\\s+(?:in|with))?|knowledge\\s+of|working\\s+knowledge\\s+of|good\\s+knowledge\\s+of|familiar\\s+with|basic|advanced|intermediate|component-wise)\\s+",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 523,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1125,
+    "pattern": "^([A-Za-z0-9+#.-]+)\\s+(?:and|&)\\s+([A-Za-z0-9+#.-]+)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing and details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 524,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1130,
+    "pattern": "^(?:cross|border|tax|risk|data|model|project|stakeholders?)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing cross border tax details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 525,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1131,
+    "pattern": "^(?:border|compliance|processing|management|evaluation|development|testing)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing border compliance processing details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 526,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1139,
+    "pattern": "^([A-Za-z0-9]+\\s+Modeling)\\s+(?:and|&)\\s+(Drafting)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing Modeling and Drafting details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 530,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1188,
+    "pattern": "^(?:agile\\s+methodology|scrum\\s+methodology|object-oriented\\s+programming|functional\\s+programming|embedded\\s+c\\s+programming|system\\s+programming)$",
+    "flags": "i",
+    "positive_test_string": "Education: Bachelor of Technology in Electrical Engineering completed in 2020",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 531,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1197,
+    "pattern": "^(?:the\\s+project\\s+development\\s+process|gained\\s+hands[- ]on(?:\\s+experience)?|learned\\s+the\\s+fundamentals|improved\\s+understanding|the\\s+development\\s+process|evaluation)$",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 537,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1230,
+    "pattern": "^(?:proficient\\s+in|experienced\\s+in|expertise\\s+in|knowledge\\s+of|working\\s+with|hands[- ]on\\s+(?:with|in)?|familiar\\s+with|basic|advanced|intermediate)\\s+",
+    "flags": "i",
+    "positive_test_string": "Total Experience: 15 years in software engineering",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 539,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1236,
+    "pattern": "\\s+for\\s+business\\s+purposes?$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing for business purposes details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 540,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1239,
+    "pattern": "^relocation\\s+and\\s+cross[\\s-]border\\s+compliance$",
+    "flags": "i",
+    "positive_test_string": "Current Location: Bangalore, Karnataka",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 541,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1242,
+    "pattern": "^visa\\s+processing$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing visa processing details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 542,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1245,
+    "pattern": "^tax\\s+documents?$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing tax documents details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 543,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1248,
+    "pattern": "^international\\s+payroll\\s+process(?:ing)?$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing international payroll process details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 544,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1251,
+    "pattern": "^stakeholders?\\s+management$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing stakeholders management details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 545,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1254,
+    "pattern": "^global\\s+mobility\\s+management$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing global mobility management details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 546,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1257,
+    "pattern": "^vendor\\s+management$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing vendor management details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 547,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1260,
+    "pattern": "^immigration\\s+risk\\s+management$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing immigration risk management details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 548,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1263,
+    "pattern": "^process\\s+improvement$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing process improvement details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 549,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1268,
+    "pattern": "^[A-Z0-9\\s/+#.-]+$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 554,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1316,
+    "pattern": "^([A-Za-z0-9][A-Za-z0-9\\s&'.+/()#-]{0,50})\\s*[:\\-–—]\\s*(.+)$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 555,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1328,
+    "pattern": "^\\d+$",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 557,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1354,
+    "pattern": "`(?:^|[^a-zA-Z0-9+#.-])${escaped}(?:$|[^a-zA-Z0-9+#.-])`",
+    "flags": "i",
+    "positive_test_string": "Sample context containing escaped details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 561,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1413,
+    "pattern": "`(?:^|[^a-zA-Z0-9+#.-])${escaped}(?:$|[^a-zA-Z0-9+#.-])`",
+    "flags": "i",
+    "positive_test_string": "Sample context containing escaped details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 567,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1442,
+    "pattern": "^(?:modeling|design|simulation|analysis|engineering|testing|development)$",
+    "flags": "i",
+    "positive_test_string": "Sample context containing modeling design simulation details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 568,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1444,
+    "pattern": "`\\\\b${w1}\\\\b\\\\s*(?:,\\\\s*|\\\\s+(?:and|&)\\\\s*)[a-zA-Z0-9-]+\\\\s+${w2}\\\\b`",
+    "flags": "i",
+    "positive_test_string": "Sample context containing and details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 569,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1466,
+    "pattern": "^[a-z]",
+    "flags": "",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 570,
+    "file": "src/skillsExtractionEngine.ts",
+    "line": 1467,
+    "pattern": "`\\\\b${escaped}\\\\b`",
+    "flags": "i",
+    "positive_test_string": "Sample context containing escaped details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 576,
+    "file": "tests/resumeFieldSanitize.test.ts",
+    "line": 12,
+    "pattern": "\\s+in\\s*$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 578,
+    "file": "tests/resumeFieldSanitize.test.ts",
+    "line": 69,
+    "pattern": "\\s+in\\s*$",
+    "flags": "i",
+    "positive_test_string": "Default positive matching sample line.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  },
+  {
+    "catalog_index": 582,
+    "file": "tests/resumeParserRouter.test.ts",
+    "line": 50,
+    "pattern": "required",
+    "flags": "i",
+    "positive_test_string": "Sample context containing required details.",
+    "negative_test_string": "ZZZ_NOMATCH_123456789_XXX"
+  }
+]

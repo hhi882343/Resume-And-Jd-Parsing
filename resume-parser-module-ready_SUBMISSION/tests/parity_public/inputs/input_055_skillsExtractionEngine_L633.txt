@@ -1,0 +1,12 @@
+
+Hank Pym
+hank@example.com
+
+Technical Skills
+Python, Django, PostgreSQL
+
+Work Experience
+Lead Developer
+- Conducted code reviews for team members.
+- Maintained legacy PHP and C++ applications.
+- Deployed AWS Lambda functions with Terraform.

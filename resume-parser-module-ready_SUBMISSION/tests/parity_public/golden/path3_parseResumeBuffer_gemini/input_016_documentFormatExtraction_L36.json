@@ -1,0 +1,18 @@
+{
+  "candidateName": "Rohan Varma",
+  "email": "rohan@gmail.com",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": "Pune, Maharashtra",
+  "location": "Pune, Maharashtra",
+  "sourceFile": "input_016_documentFormatExtraction_L36.txt",
+  "parser": "metaforge",
+  "role": null
+}

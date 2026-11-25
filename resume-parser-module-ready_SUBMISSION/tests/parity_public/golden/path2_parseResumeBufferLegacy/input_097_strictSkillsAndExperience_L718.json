@@ -1,0 +1,18 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python",
+  "technologiesRaw": "Software Engineer",
+  "technologies": "Software Engineer",
+  "totalExperience": "4.5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_097_strictSkillsAndExperience_L718.txt",
+  "parser": "legacy",
+  "role": "Software Engineer"
+}

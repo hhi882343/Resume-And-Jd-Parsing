@@ -1,0 +1,18 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Machine Learning, Data Analysis",
+  "technologiesRaw": "In Python Programming, Machine Learning, and Data Analysis",
+  "technologies": "In Python Programming, Machine Learning, and Data Analysis",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_048_skillsExtractionEngine_L506.txt",
+  "parser": "legacy",
+  "role": "In Python Programming, Machine Learning, and Data Analysis"
+}

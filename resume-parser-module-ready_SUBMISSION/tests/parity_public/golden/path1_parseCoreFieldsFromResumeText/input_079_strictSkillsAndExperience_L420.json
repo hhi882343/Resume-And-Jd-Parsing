@@ -1,0 +1,17 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "CAD",
+  "technologiesRaw": "Mechanical Design Engineer",
+  "technologies": "Mechanical Design Engineer",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Mechanical Design Engineer"
+}

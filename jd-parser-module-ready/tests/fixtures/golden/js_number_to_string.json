@@ -1,0 +1,152 @@
+[
+  {
+    "id": "num-01",
+    "json_text": "5.0",
+    "expected": "5"
+  },
+  {
+    "id": "num-02",
+    "json_text": "100",
+    "expected": "100"
+  },
+  {
+    "id": "num-03",
+    "json_text": "1e2",
+    "expected": "100"
+  },
+  {
+    "id": "num-04",
+    "json_text": "1e20",
+    "expected": "100000000000000000000"
+  },
+  {
+    "id": "num-05",
+    "json_text": "1e21",
+    "expected": "1e+21"
+  },
+  {
+    "id": "num-06",
+    "json_text": "1.5e-7",
+    "expected": "1.5e-7"
+  },
+  {
+    "id": "num-07",
+    "json_text": "0.000001",
+    "expected": "0.000001"
+  },
+  {
+    "id": "num-08",
+    "json_text": "0.1",
+    "expected": "0.1"
+  },
+  {
+    "id": "num-09",
+    "json_text": "0.30000000000000004",
+    "expected": "0.30000000000000004"
+  },
+  {
+    "id": "num-10",
+    "json_text": "123456789.123456789",
+    "expected": "123456789.12345679"
+  },
+  {
+    "id": "num-11",
+    "json_text": "5e-324",
+    "expected": "5e-324"
+  },
+  {
+    "id": "num-12",
+    "json_text": "1.7976931348623157e308",
+    "expected": "1.7976931348623157e+308"
+  },
+  {
+    "id": "num-13",
+    "json_text": "9007199254740992",
+    "expected": "9007199254740992"
+  },
+  {
+    "id": "num-14",
+    "json_text": "9007199254740993",
+    "expected": "9007199254740992"
+  },
+  {
+    "id": "num-15",
+    "json_text": "12345678901234567890",
+    "expected": "12345678901234567000"
+  },
+  {
+    "id": "num-16",
+    "json_text": "-0",
+    "expected": "0"
+  },
+  {
+    "id": "num-17",
+    "json_text": "-0.0",
+    "expected": "0"
+  },
+  {
+    "id": "num-18",
+    "json_text": "1E+3",
+    "expected": "1000"
+  },
+  {
+    "id": "num-19",
+    "json_text": "0.5e1",
+    "expected": "5"
+  },
+  {
+    "id": "num-20",
+    "json_text": "1e-6",
+    "expected": "0.000001"
+  },
+  {
+    "id": "num-21",
+    "json_text": "1e-7",
+    "expected": "1e-7"
+  },
+  {
+    "id": "num-22",
+    "json_text": "1.2e21",
+    "expected": "1.2e+21"
+  },
+  {
+    "id": "num-23",
+    "json_text": "1e-5",
+    "expected": "0.00001"
+  },
+  {
+    "id": "num-24",
+    "json_text": "9.999999999999999e-7",
+    "expected": "0.000001"
+  },
+  {
+    "id": "num-25",
+    "json_text": "0.0000001",
+    "expected": "1e-7"
+  },
+  {
+    "id": "num-26",
+    "json_text": "999999999999999900000",
+    "expected": "999999999999999900000"
+  },
+  {
+    "id": "num-27",
+    "json_text": "1000000000000000000000",
+    "expected": "1e+21"
+  },
+  {
+    "id": "num-28",
+    "json_text": "-1e21",
+    "expected": "-1e+21"
+  },
+  {
+    "id": "num-29",
+    "json_text": "-0.0000005",
+    "expected": "-5e-7"
+  },
+  {
+    "id": "num-30",
+    "json_text": "0.00001",
+    "expected": "0.00001"
+  }
+]

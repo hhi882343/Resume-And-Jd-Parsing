@@ -1,0 +1,18 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": "+919876543210",
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech in Computer Science",
+  "skillsRaw": "Java, Spring Boot, React, SQL",
+  "technologiesRaw": "Java Full Stack Developer",
+  "technologies": "Java Full Stack Developer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_001_designationExtraction_L12.txt",
+  "parser": "legacy",
+  "role": "Java Full Stack Developer"
+}

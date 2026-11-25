@@ -1,0 +1,18 @@
+{
+  "candidateName": "Deepak Joshi",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "PyTorch, Scikit-learn",
+  "technologiesRaw": "Data Scientist",
+  "technologies": "Data Scientist",
+  "totalExperience": "8.5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_133_edge_conflicting_experience_ne.txt",
+  "parser": "metaforge",
+  "role": "Data Scientist"
+}

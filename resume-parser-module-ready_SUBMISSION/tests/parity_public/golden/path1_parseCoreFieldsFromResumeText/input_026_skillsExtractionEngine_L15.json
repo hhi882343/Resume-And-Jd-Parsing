@@ -1,0 +1,17 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Python, Java, TypeScript, Docker, Kubernetes, PostgreSQL, Redis",
+  "technologiesRaw": "Software Engineer",
+  "technologies": "Software Engineer",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Software Engineer"
+}

@@ -1,0 +1,18 @@
+{
+  "candidateName": "Amit Patel",
+  "email": "amit@gmail.com",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Django",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_017_documentFormatExtraction_L47.txt",
+  "parser": "metaforge",
+  "role": null
+}

@@ -1,0 +1,3 @@
+Amit Patel
+Email: amit@gmail.com
+Skills: Python, Django

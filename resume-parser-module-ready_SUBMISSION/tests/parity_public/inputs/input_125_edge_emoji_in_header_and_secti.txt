@@ -1,0 +1,8 @@
+👨‍💻 Rahul Verma
+💼 Senior Data Engineer
+📧 Email: rahul.verma@example.com
+📞 Phone: +91 9876543210
+📍 Location: Bangalore, India
+⭐ Total Experience: 5.5 years
+🛠️ Technical Skills: Python, Apache Spark, SQL, Kafka
+🎓 Highest Qualification: M.Tech in Data Science

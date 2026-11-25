@@ -1,0 +1,18 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": "5550192834",
+  "linkedinUrl": "https://www.linkedin.com/in/johndoe-dev",
+  "highestQualification": "Bachelor of Science in Computer Science, , Berkeley ( )",
+  "skillsRaw": "TypeScript, React, Node.js, Python, PostgreSQL, Docker, Kubernetes, AWS, GraphQL, Redis",
+  "technologiesRaw": "Senior Full Stack Engineer",
+  "technologies": "Senior Full Stack Engineer",
+  "totalExperience": "7 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": "San Francisco, California",
+  "location": "San Francisco, California",
+  "sourceFile": "input_118_sample_resume.txt",
+  "parser": "metaforge",
+  "role": "Senior Full Stack Engineer"
+}

@@ -1,0 +1,4 @@
+Sneha Reddy
+Email: sneha@example.com
+Key Skills: Java, Python, C++, Go, Rust, Ruby, PHP, Swift, Kotlin, Scala, TypeScript, JavaScript, SQL, HTML, CSS
+Experience: 4 years

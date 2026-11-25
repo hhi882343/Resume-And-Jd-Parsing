@@ -1,0 +1,17 @@
+{
+  "candidateName": "Michael Brown",
+  "email": null,
+  "contactNumber": "5550193322",
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech in IT",
+  "educationRaw": null,
+  "skillsRaw": "Docker, Kubernetes, AWS",
+  "technologiesRaw": "DevOps Engineer",
+  "technologies": "DevOps Engineer",
+  "totalExperienceYears": 8,
+  "totalExperienceText": "8 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "DevOps Engineer"
+}

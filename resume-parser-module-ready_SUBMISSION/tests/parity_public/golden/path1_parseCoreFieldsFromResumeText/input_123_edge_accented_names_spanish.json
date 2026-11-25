@@ -1,0 +1,17 @@
+{
+  "candidateName": "Frontend",
+  "email": "jose.gonzalez@empresa.es",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "React, Redux, Next.js",
+  "technologiesRaw": "Frontend Architect",
+  "technologies": "Frontend Architect",
+  "totalExperienceYears": 9,
+  "totalExperienceText": "9 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Frontend Architect"
+}

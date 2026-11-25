@@ -1,0 +1,18 @@
+{
+  "candidateName": "Jane Smith",
+  "email": null,
+  "contactNumber": "+919876543211",
+  "linkedinUrl": null,
+  "highestQualification": "M.Tech in Data Science",
+  "skillsRaw": "Python, SQL, Spark, Kafka",
+  "technologiesRaw": "Senior Data Engineer",
+  "technologies": "Senior Data Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_002_designationExtraction_L34.txt",
+  "parser": "legacy",
+  "role": "Senior Data Engineer"
+}

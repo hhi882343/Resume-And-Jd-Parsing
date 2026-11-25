@@ -1,0 +1,7 @@
+
+Technical Skills
+- Designed and developed automated CI/CD pipelines.
+- Responsible for microservice maintenance and database tuning.
+- Python
+- Docker
+- AWS

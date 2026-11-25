@@ -1,0 +1,18 @@
+{
+  "candidateName": "Elena Rostova",
+  "email": "elena@rostova.com",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Docker, AWS",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_139_edge_two_column_skills_layout.txt",
+  "parser": "metaforge",
+  "role": null
+}

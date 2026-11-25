@@ -1,0 +1,18 @@
+{
+  "candidateName": "Location Hyderabad",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_104_strictSkillsAndExperience_L818.txt",
+  "parser": "metaforge",
+  "role": null
+}

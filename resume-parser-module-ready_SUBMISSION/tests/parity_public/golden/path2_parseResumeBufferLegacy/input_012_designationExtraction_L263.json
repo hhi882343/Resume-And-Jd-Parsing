@@ -1,0 +1,18 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": "+919876543221",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Routing, Switching",
+  "technologiesRaw": "Network Engineer",
+  "technologies": "Network Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_012_designationExtraction_L263.txt",
+  "parser": "legacy",
+  "role": "Network Engineer"
+}

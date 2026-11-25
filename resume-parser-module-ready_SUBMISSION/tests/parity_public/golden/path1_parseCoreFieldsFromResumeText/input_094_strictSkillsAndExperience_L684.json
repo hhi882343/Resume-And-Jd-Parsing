@@ -1,0 +1,17 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": null,
+  "technologiesRaw": "Senior Full Stack Developer",
+  "technologies": "Senior Full Stack Developer",
+  "totalExperienceYears": 8,
+  "totalExperienceText": "8 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Senior Full Stack Developer"
+}

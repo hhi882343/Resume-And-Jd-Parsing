@@ -1,0 +1,17 @@
+{
+  "candidateName": "Candidate Name",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech in Computer Science",
+  "educationRaw": null,
+  "skillsRaw": "Java, Spring Boot, Microservices, Page Break ------------------",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperienceYears": 6,
+  "totalExperienceText": "6 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": null
+}

@@ -1,0 +1,5 @@
+﻿Ananya Sharma
+Full Stack Developer
+Email: ananya@example.com
+Total Experience: 4 years
+Skills: TypeScript, Node.js

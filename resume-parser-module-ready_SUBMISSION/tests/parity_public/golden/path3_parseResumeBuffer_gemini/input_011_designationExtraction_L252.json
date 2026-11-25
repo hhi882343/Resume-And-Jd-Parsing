@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": "+91 98765 43220",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Java, Spring",
+  "technologiesRaw": "Java Developer",
+  "technologies": "Java Developer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_011_designationExtraction_L252.txt",
+  "parser": "metaforge",
+  "role": "Java Developer"
+}

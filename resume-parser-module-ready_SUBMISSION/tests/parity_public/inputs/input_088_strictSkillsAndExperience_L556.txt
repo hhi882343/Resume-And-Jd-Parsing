@@ -1,0 +1,9 @@
+
+Frank Castle
+frank@example.com
+------------------- Page Break / Column Split -------------------
+Summary:
+Proficient in Java and Spring Boot with experience in microservices.
+------------------- Page Break / Column Split -------------------
+Projects:
+- Implemented real-time event streaming using Kafka and Redis.

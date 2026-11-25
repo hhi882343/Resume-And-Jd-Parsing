@@ -1,0 +1,9 @@
+
+Alice Smith
+Email: alice@example.com
+
+Technical Skills
+Python, React, PostgreSQL, Docker, AWS
+
+Experience
+Software Engineer at Acme Corp

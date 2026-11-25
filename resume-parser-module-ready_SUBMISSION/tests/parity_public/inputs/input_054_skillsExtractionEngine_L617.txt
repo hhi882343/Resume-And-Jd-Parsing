@@ -1,0 +1,9 @@
+
+Grace Hopper
+grace@example.com
+
+Technical Skills
+None / N/A
+
+Summary
+Experienced in Python programming and PostgreSQL database design.

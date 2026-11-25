@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Petrochemical and Chemical Industry",
+  "technologiesRaw": "Refinery, Petrochemical and Chemical Industry",
+  "technologies": "Refinery, Petrochemical and Chemical Industry",
+  "totalExperience": "12 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_080_strictSkillsAndExperience_L428.txt",
+  "parser": "metaforge",
+  "role": "Refinery, Petrochemical and Chemical Industry"
+}

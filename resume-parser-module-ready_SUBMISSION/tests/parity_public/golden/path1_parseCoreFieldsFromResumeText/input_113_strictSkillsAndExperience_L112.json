@@ -1,0 +1,17 @@
+{
+  "candidateName": "Alex Smith",
+  "email": null,
+  "contactNumber": "5559876543",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": null,
+  "technologiesRaw": "Data Analyst",
+  "technologies": "Data Analyst",
+  "totalExperienceYears": 4,
+  "totalExperienceText": "4 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Data Analyst"
+}

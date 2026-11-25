@@ -1,0 +1,1194 @@
+[
+  {
+    "fixtureId": "route-persisted-01-fresh-jd",
+    "description": "POST fresh JD persists run and prediction, returning persisted: true with runId and predictionId",
+    "rawJdText": "Seeking a Full Stack Python Developer in San Francisco with 4 years experience in Django and React.",
+    "status": 200,
+    "body": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Full Stack Python Developer",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "San Francisco",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "Python",
+            "Django",
+            "React"
+          ],
+          "skills": [
+            "Docker"
+          ],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Full Stack Python Developer",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Seeking a Full Stack Python Developer in San Francisco with 4 years experience in Django and React.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Full Stack Python Developer",
+          "chunkContent": "Seeking a Full Stack Python Developer in San Francisco with 4 years experience in Django and React.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Full Stack Python Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"San Francisco\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Python\",\"Django\",\"React\"],\"skills\":[\"Docker\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": [
+        {
+          "id": "<ID_3>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "fixtureId": "route-persisted-02-correction-overlay-reanalyze",
+    "description": "Re-analyzing JD with stored human correction overlays corrected fields, tags correctionApplied: true, and persists new run",
+    "rawJdText": "Need Senior DevOps Engineer in Chicago. Kubernetes, Terraform.",
+    "status": 200,
+    "body": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Principal Cloud Platform Architect",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Chicago (Hybrid 2 days)",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "Kubernetes",
+            "Terraform",
+            "ArgoCD"
+          ],
+          "skills": [
+            "AWS"
+          ],
+          "jobDescription": "",
+          "requirementTitle": "Senior DevOps Engineer",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": true,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_3>",
+          "rawJdText": "Need Senior DevOps Engineer in Chicago. Kubernetes, Terraform.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "corrected",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Need Senior DevOps Engineer in Chicago. Kubernetes, Terraform.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_4>",
+          "runId": "<ID_3>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior DevOps Engineer",
+          "chunkContent": "Need Senior DevOps Engineer in Chicago. Kubernetes, Terraform.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Senior DevOps Engineer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Chicago\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Kubernetes\",\"Terraform\"],\"skills\":[\"AWS\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior DevOps Engineer",
+          "chunkContent": "Need Senior DevOps Engineer in Chicago. Kubernetes, Terraform.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Principal Cloud Platform Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Chicago (Hybrid 2 days)\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Kubernetes\",\"Terraform\",\"ArgoCD\"],\"skills\":[\"AWS\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [
+        {
+          "id": "<ID_5>",
+          "predictionId": "<ID_4>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Principal Cloud Platform Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Chicago (Hybrid 2 days)\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Kubernetes\",\"Terraform\",\"ArgoCD\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.85625,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":0.3,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":0.8,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        }
+      ],
+      "preferencePairs": [
+        {
+          "id": "<ID_6>",
+          "predictionId": "<ID_4>",
+          "correctionId": "<ID_5>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Senior DevOps Engineer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Chicago\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Kubernetes\",\"Terraform\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Principal Cloud Platform Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Chicago (Hybrid 2 days)\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Kubernetes\",\"Terraform\",\"ArgoCD\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.85625,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "policyVersions": [
+        {
+          "id": "<ID_7>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "fixtureId": "route-persisted-03-multi-role",
+    "description": "Multi-role JD persists 1 run and multiple predictions with individual predictionIds",
+    "rawJdText": "Role 1: Data Engineer. Role 2: ML Engineer.",
+    "status": 200,
+    "body": {
+      "totalRequirements": 2,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Role Title",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "Python"
+          ],
+          "skills": [
+            "Python"
+          ],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Data Engineer",
+          "roleIndex": 1,
+          "totalRoles": 2,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        },
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Role Title",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "Python"
+          ],
+          "skills": [
+            "Python"
+          ],
+          "jobDescription": "Not specified",
+          "requirementTitle": "ML Engineer",
+          "roleIndex": 2,
+          "totalRoles": 2,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_3>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Role 1: Data Engineer. Role 2: ML Engineer.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 2,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Data Engineer",
+          "chunkContent": "Role 1: Data Engineer",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Role Title\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Python\"],\"skills\":[\"Python\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_3>",
+          "runId": "<ID_1>",
+          "roleIndex": 2,
+          "chunkTitle": "ML Engineer",
+          "chunkContent": "Role 2: ML Engineer",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Role Title\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Python\"],\"skills\":[\"Python\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": [
+        {
+          "id": "<ID_4>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "fixtureId": "route-persisted-04-empty-jd",
+    "description": "Empty JD returns 400 Bad Request and touches no database tables",
+    "rawJdText": "",
+    "status": 400,
+    "body": {
+      "error": "Job description text is required"
+    },
+    "dbState": {
+      "runs": [],
+      "predictions": [],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": []
+    }
+  },
+  {
+    "fixtureId": "route-persisted-05-correction-role-2-only",
+    "description": "Multi-role JD with correction stored for role 2 only: role 1 has correctionApplied=false, role 2 has correctionApplied=true",
+    "rawJdText": "Role 1: Frontend. Role 2: Backend.",
+    "status": 200,
+    "body": {
+      "totalRequirements": 2,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Role Title",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "TypeScript"
+          ],
+          "skills": [
+            "TypeScript"
+          ],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Frontend",
+          "roleIndex": 1,
+          "totalRoles": 2,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        },
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Staff Backend Architect",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "Go",
+            "gRPC",
+            "PostgreSQL"
+          ],
+          "skills": [
+            "TypeScript"
+          ],
+          "jobDescription": "",
+          "requirementTitle": "Backend",
+          "roleIndex": 2,
+          "totalRoles": 2,
+          "extractionSource": "gemini",
+          "correctionApplied": true,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_3>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_4>",
+          "rawJdText": "Role 1: Frontend. Role 2: Backend.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 2,
+          "status": "corrected",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Role 1: Frontend. Role 2: Backend.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 2,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_5>",
+          "runId": "<ID_4>",
+          "roleIndex": 1,
+          "chunkTitle": "Frontend",
+          "chunkContent": "Role 1: Frontend",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Role Title\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"TypeScript\"],\"skills\":[\"TypeScript\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_6>",
+          "runId": "<ID_4>",
+          "roleIndex": 2,
+          "chunkTitle": "Backend",
+          "chunkContent": "Role 2: Backend",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Role Title\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"TypeScript\"],\"skills\":[\"TypeScript\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Frontend",
+          "chunkContent": "Role 1: Frontend",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Role Title\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"TypeScript\"],\"skills\":[\"TypeScript\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_3>",
+          "runId": "<ID_1>",
+          "roleIndex": 2,
+          "chunkTitle": "Backend",
+          "chunkContent": "Role 2: Backend",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Staff Backend Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Go\",\"gRPC\",\"PostgreSQL\"],\"skills\":[\"TypeScript\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [
+        {
+          "id": "<ID_7>",
+          "predictionId": "<ID_6>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Staff Backend Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Go\",\"gRPC\",\"PostgreSQL\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.8333333333333334,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":1,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":0,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        }
+      ],
+      "preferencePairs": [
+        {
+          "id": "<ID_8>",
+          "predictionId": "<ID_6>",
+          "correctionId": "<ID_7>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Role Title\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"TypeScript\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Staff Backend Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Go\",\"gRPC\",\"PostgreSQL\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.8333333333333334,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "policyVersions": [
+        {
+          "id": "<ID_9>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "fixtureId": "route-persisted-06-bom-nbsp-padding-reuse",
+    "description": "JD with BOM and NBSP padding persists and successfully applies human correction on re-analysis",
+    "rawJdText": "﻿  Urgent requirement for Cloud Architect in Seattle.  \n",
+    "status": 200,
+    "body": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Cloud Architect",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Seattle",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "AWS"
+          ],
+          "skills": [
+            "AWS"
+          ],
+          "jobDescription": "Not specified",
+          "requirementTitle": "Cloud Architect",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_3>",
+          "rawJdText": "Urgent requirement for Cloud Architect in Seattle.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "accepted",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Urgent requirement for Cloud Architect in Seattle.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_4>",
+          "runId": "<ID_3>",
+          "roleIndex": 1,
+          "chunkTitle": "Cloud Architect",
+          "chunkContent": "Urgent requirement for Cloud Architect in Seattle.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Cloud Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Seattle\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"AWS\"],\"skills\":[\"AWS\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Cloud Architect",
+          "chunkContent": "Urgent requirement for Cloud Architect in Seattle.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Cloud Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Seattle\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"AWS\"],\"skills\":[\"AWS\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": [
+        {
+          "id": "<ID_5>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "fixtureId": "route-persisted-07-reanalyze-after-accepted",
+    "description": "Re-analysis after an accepted run (score 1.0): run was accepted but has no correction rows, so correctionApplied remains false",
+    "rawJdText": "Need QA Lead in Boston.",
+    "status": 200,
+    "body": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "QA Lead",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Boston",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "Selenium"
+          ],
+          "skills": [
+            "Selenium"
+          ],
+          "jobDescription": "Not specified",
+          "requirementTitle": "QA Lead",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": false,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_3>",
+          "rawJdText": "Need QA Lead in Boston.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "accepted",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Need QA Lead in Boston.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_4>",
+          "runId": "<ID_3>",
+          "roleIndex": 1,
+          "chunkTitle": "QA Lead",
+          "chunkContent": "Need QA Lead in Boston.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"QA Lead\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Boston\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Selenium\"],\"skills\":[\"Selenium\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "QA Lead",
+          "chunkContent": "Need QA Lead in Boston.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"QA Lead\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Boston\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Selenium\"],\"skills\":[\"Selenium\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": [
+        {
+          "id": "<ID_5>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "fixtureId": "route-persisted-08-limit-5-runs",
+    "description": "JD analyzed 6+ times: getLatestCorrectionsForJd takes 5 newest runs and inspects them in descending order",
+    "rawJdText": "Senior Rust Developer in Austin.",
+    "status": 200,
+    "body": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Principal Rust Systems Architect",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Austin",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "Rust"
+          ],
+          "skills": [
+            "Rust"
+          ],
+          "jobDescription": "",
+          "requirementTitle": "Senior Rust Developer",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": true,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_3>",
+          "rawJdText": "Senior Rust Developer in Austin.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "corrected",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_4>",
+          "rawJdText": "Senior Rust Developer in Austin.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_5>",
+          "rawJdText": "Senior Rust Developer in Austin.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_6>",
+          "rawJdText": "Senior Rust Developer in Austin.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_7>",
+          "rawJdText": "Senior Rust Developer in Austin.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_8>",
+          "rawJdText": "Senior Rust Developer in Austin.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Senior Rust Developer in Austin.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_9>",
+          "runId": "<ID_3>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior Rust Developer",
+          "chunkContent": "Senior Rust Developer in Austin.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Senior Rust Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rust\"],\"skills\":[\"Rust\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_10>",
+          "runId": "<ID_4>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior Rust Developer",
+          "chunkContent": "Senior Rust Developer in Austin.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Principal Rust Systems Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rust\"],\"skills\":[\"Rust\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_11>",
+          "runId": "<ID_5>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior Rust Developer",
+          "chunkContent": "Senior Rust Developer in Austin.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Principal Rust Systems Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rust\"],\"skills\":[\"Rust\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_12>",
+          "runId": "<ID_6>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior Rust Developer",
+          "chunkContent": "Senior Rust Developer in Austin.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Principal Rust Systems Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rust\"],\"skills\":[\"Rust\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_13>",
+          "runId": "<ID_7>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior Rust Developer",
+          "chunkContent": "Senior Rust Developer in Austin.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Principal Rust Systems Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rust\"],\"skills\":[\"Rust\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_14>",
+          "runId": "<ID_8>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior Rust Developer",
+          "chunkContent": "Senior Rust Developer in Austin.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Principal Rust Systems Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rust\"],\"skills\":[\"Rust\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior Rust Developer",
+          "chunkContent": "Senior Rust Developer in Austin.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Principal Rust Systems Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rust\"],\"skills\":[\"Rust\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [
+        {
+          "id": "<ID_15>",
+          "predictionId": "<ID_9>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Principal Rust Systems Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":1,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":1,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        }
+      ],
+      "preferencePairs": [
+        {
+          "id": "<ID_16>",
+          "predictionId": "<ID_9>",
+          "correctionId": "<ID_15>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Senior Rust Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Principal Rust Systems Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "policyVersions": [
+        {
+          "id": "<ID_17>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "fixtureId": "route-persisted-09-two-distinct-jds",
+    "description": "Two distinct JDs with separate corrections: JD A re-analysis overlays JD A correction without cross-talk",
+    "rawJdText": "Role A: Ruby on Rails Developer in Denver.",
+    "status": 200,
+    "body": {
+      "totalRequirements": 1,
+      "requirements": [
+        {
+          "requirementId": "<REQ_ID>",
+          "jobTitle": "Senior Rails Guru",
+          "isInferredTitle": false,
+          "clientLeadPocFrom": "Not specified",
+          "clientPocFromCc": "Not specified",
+          "internalPocTo": "Not specified",
+          "requirementFrom": "Not specified",
+          "demandReceivedDate": "Not specified",
+          "closedDate": "Not specified",
+          "openSince": "Not specified",
+          "typeOfDemand": "Not specified",
+          "jobStatus": "Unassigned",
+          "priority": "Not specified",
+          "relevantExperience": "Not specified",
+          "overallExperience": "Not specified",
+          "qualificationCriteria": "Not specified",
+          "employmentType": "Not specified",
+          "workMode": "Not specified",
+          "workTimings": "Not specified",
+          "location": "Not specified",
+          "numberOfPositions": "Not specified",
+          "budgetCurrency": "Not specified",
+          "monthlyBudget": "Not specified",
+          "annualBudget": "Not specified",
+          "noticePeriod": "Not specified",
+          "sla": "Not specified",
+          "mandatorySkills": [
+            "Rails"
+          ],
+          "skills": [
+            "Rails"
+          ],
+          "jobDescription": "",
+          "requirementTitle": "Ruby",
+          "roleIndex": 1,
+          "totalRoles": 1,
+          "extractionSource": "gemini",
+          "correctionApplied": true,
+          "runId": "<ID_1>",
+          "predictionId": "<ID_2>",
+          "policyVersion": "gemini-bootstrap"
+        }
+      ],
+      "persisted": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_3>",
+          "rawJdText": "Role A: Ruby on Rails Developer in Denver.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "corrected",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_4>",
+          "rawJdText": "Role B: Go Distributed Systems in San Jose.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "corrected",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Role A: Ruby on Rails Developer in Denver.",
+          "modelUsed": "gemini",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": "<LATENCY>",
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_5>",
+          "runId": "<ID_3>",
+          "roleIndex": 1,
+          "chunkTitle": "Ruby",
+          "chunkContent": "Role A: Ruby on Rails Developer in Denver.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Ruby Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rails\"],\"skills\":[\"Rails\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_6>",
+          "runId": "<ID_4>",
+          "roleIndex": 1,
+          "chunkTitle": "Go",
+          "chunkContent": "Role B: Go Distributed Systems in San Jose.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Go Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Go\"],\"skills\":[\"Go\"],\"jobDescription\":\"Not specified\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Ruby",
+          "chunkContent": "Role A: Ruby on Rails Developer in Denver.",
+          "predictedJson": "{\"requirementId\":\"<REQ_ID>\",\"jobTitle\":\"Senior Rails Guru\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Rails\"],\"skills\":[\"Rails\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [
+        {
+          "id": "<ID_7>",
+          "predictionId": "<ID_5>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Senior Rails Guru\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":1,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":1,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_8>",
+          "predictionId": "<ID_6>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Principal Go Systems Engineer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":1,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":1,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        }
+      ],
+      "preferencePairs": [
+        {
+          "id": "<ID_9>",
+          "predictionId": "<ID_5>",
+          "correctionId": "<ID_7>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Ruby Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Senior Rails Guru\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_10>",
+          "predictionId": "<ID_6>",
+          "correctionId": "<ID_8>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Go Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Principal Go Systems Engineer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "policyVersions": [
+        {
+          "id": "<ID_11>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  }
+]

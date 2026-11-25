@@ -1,0 +1,5 @@
+
+Skills                          Professional Experience
+Python, Docker, AWS             Senior Engineer at TechCo
+React, TypeScript               Built scalable backend microservices
+PostgreSQL                      Managed engineering teams

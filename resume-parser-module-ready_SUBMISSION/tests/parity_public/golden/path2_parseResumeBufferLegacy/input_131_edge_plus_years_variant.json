@@ -1,0 +1,18 @@
+{
+  "candidateName": "Pooja Hegde",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Java, Spring Boot, Microservices",
+  "technologiesRaw": "Java Architect",
+  "technologies": "Java Architect",
+  "totalExperience": "7+ years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_131_edge_plus_years_variant.txt",
+  "parser": "legacy",
+  "role": "Java Architect"
+}

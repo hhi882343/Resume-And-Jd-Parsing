@@ -1,0 +1,18 @@
+{
+  "candidateName": null,
+  "email": "arun@ml.org",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "TensorFlow, PyTorch, Python",
+  "technologiesRaw": "Senior Machine Learning Engineer",
+  "technologies": "Senior Machine Learning Engineer",
+  "totalExperience": "5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_142_edge_isolated_role_in_headline.txt",
+  "parser": "legacy",
+  "role": "Senior Machine Learning Engineer"
+}

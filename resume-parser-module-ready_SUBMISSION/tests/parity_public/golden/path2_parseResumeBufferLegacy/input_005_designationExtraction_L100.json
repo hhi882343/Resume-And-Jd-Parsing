@@ -1,0 +1,18 @@
+{
+  "candidateName": "Lokesh A",
+  "email": null,
+  "contactNumber": "+919876543214",
+  "linkedinUrl": null,
+  "highestQualification": "B.E. in Information Technology",
+  "skillsRaw": "Routing, Switching, TCP/IP",
+  "technologiesRaw": "Network Engineer",
+  "technologies": "Network Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_005_designationExtraction_L100.txt",
+  "parser": "legacy",
+  "role": "Network Engineer"
+}

@@ -1,0 +1,9 @@
+
+Sarah Green
+sarah.green@example.com
++1 555-444-5555
+
+Experience
+Web Developer at Innovate LLC
+- Developed full-stack web applications using Python, Django and PostgreSQL.
+- Responsible for daily operations and client communications.

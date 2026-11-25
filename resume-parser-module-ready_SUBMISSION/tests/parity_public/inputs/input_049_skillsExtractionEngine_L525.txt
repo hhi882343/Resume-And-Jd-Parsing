@@ -1,0 +1,7 @@
+
+Jane Doe
+jane@example.com
+
+Work Experience
+Backend Developer at Beta LLC
+- Developed REST APIs using Python and Flask and integrated PostgreSQL.

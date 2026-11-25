@@ -1,0 +1,13 @@
+Ananya Sharma
+ananya.sharma@gmail.com
++91 9876543210
+https://linkedin.com/in/ananyasharma
+
+Professional Summary
+Full Stack Developer with 4 years of experience building modern web apps.
+
+Technical Skills
+TypeScript, React, Node.js, PostgreSQL, Docker
+
+Education
+B.Tech in Computer Science from NIT Trichy (2018 - 2022)

@@ -1,0 +1,7 @@
+Kiran Rao
+Principal Engineer
+Email: kiran@example.com
+Professional Summary: Senior Engineer with 8 years of experience.
+Work History:
+Software Engineer (2018 - 2024): 6 years of experience.
+Skills: Python, FastAPI

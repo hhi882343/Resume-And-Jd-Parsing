@@ -1,0 +1,5 @@
+Amitav Sanyal
+Fresh Graduate
+Email: amitav@college.edu
+Education: B.Tech in Computer Science (2022 - 2026)
+Skills: C, C++, Data Structures

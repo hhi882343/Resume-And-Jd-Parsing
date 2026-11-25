@@ -1,0 +1,27 @@
+
+Shiva Boda
+shivaboda@example.com
++91 9876543210
+
+Technical Skills:
+- Python
+- SQL (MS SQL Server)
+
+Internship
+AI & Machine Learning Intern
+- The project development process
+- Gained hands-on experience
+- Evaluation
+- Pandas, Scikit-learn
+
+Certifications
+- AI & Machine Learning — Edunet Foundation
+- ServiceNow Micro-Certification
+- SQL Certification — Intellipaat
+- Python Fundamentals — Great Learning
+
+Strengths
+Quick Learner, Problem Solving, Teamwork, Communication
+
+Languages
+Telugu, Hindi, English

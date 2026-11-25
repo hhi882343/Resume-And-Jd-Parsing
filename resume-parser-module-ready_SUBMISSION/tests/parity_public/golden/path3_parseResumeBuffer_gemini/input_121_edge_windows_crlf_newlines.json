@@ -1,0 +1,18 @@
+{
+  "candidateName": "Michael Brown",
+  "email": null,
+  "contactNumber": "5550193322",
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech in IT",
+  "skillsRaw": "Docker, Kubernetes, AWS",
+  "technologiesRaw": "DevOps Engineer",
+  "technologies": "DevOps Engineer",
+  "totalExperience": "8 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_121_edge_windows_crlf_newlines.txt",
+  "parser": "metaforge",
+  "role": "DevOps Engineer"
+}

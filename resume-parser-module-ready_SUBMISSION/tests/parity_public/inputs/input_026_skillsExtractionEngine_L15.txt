@@ -1,0 +1,9 @@
+
+John Doe
+Software Engineer
+
+Skills
+Python, Java, TypeScript, Docker, Kubernetes, PostgreSQL, Redis
+
+Experience
+Senior Developer at Acme Corp

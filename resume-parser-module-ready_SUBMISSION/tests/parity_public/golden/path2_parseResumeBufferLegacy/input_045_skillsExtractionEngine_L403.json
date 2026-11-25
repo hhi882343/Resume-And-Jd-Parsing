@@ -1,0 +1,18 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": "5551234567",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Docker, AWS, React, PostgreSQL",
+  "technologiesRaw": "Full Stack Engineer",
+  "technologies": "Full Stack Engineer",
+  "totalExperience": "5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_045_skillsExtractionEngine_L403.txt",
+  "parser": "legacy",
+  "role": "Full Stack Engineer"
+}

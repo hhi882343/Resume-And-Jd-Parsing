@@ -1,0 +1,4 @@
+Daniel Craig
+Email: daniel@example.com
+Professional Experience:
+Worked extensively with React and Node.js to build cloud applications at MI6 Solutions for 5 years.

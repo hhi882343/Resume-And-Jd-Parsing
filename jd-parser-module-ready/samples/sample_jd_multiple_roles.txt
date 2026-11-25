@@ -1,0 +1,30 @@
+From: Resource Manager <rm@globalit.com>
+To: Account Team <accounts@partner.com>
+Subject: Urgent Multiple Requirements - Hyderabad
+
+Dear Team,
+
+Please share profiles for the following two positions urgently:
+
+Position 1: Lead React Frontend Engineer
+Location: Hyderabad
+Experience: 7-10 years
+Positions: 3
+Budget: 28-32 LPA
+Skills: React, TypeScript, Next.js, Redux Toolkit, Tailwind CSS, Jest, Webpack.
+Responsibilities: Architect scalable frontend components, optimize web vitals, mentor junior engineers.
+
+Position 2: Cloud DevOps Specialist
+Location: Hyderabad / Remote
+Experience: 4-6 years
+Positions: 2
+Budget: 18-22 LPA
+Skills: Terraform, AWS, Docker, Kubernetes, Jenkins, Python scripting, Prometheus, Grafana.
+Responsibilities: Manage multi-account cloud environments, automate deployment pipelines, maintain infrastructure as code.
+
+Notice Period: 15-30 days max.
+
+Thanks & Regards,
+Resource Management Group
+Global IT Services
+

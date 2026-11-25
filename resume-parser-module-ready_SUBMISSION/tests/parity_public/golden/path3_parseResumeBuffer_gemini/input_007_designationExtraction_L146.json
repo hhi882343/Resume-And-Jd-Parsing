@@ -1,0 +1,18 @@
+{
+  "candidateName": "Pooja Nair",
+  "email": null,
+  "contactNumber": "+91 98765 43216",
+  "linkedinUrl": null,
+  "highestQualification": "B.Sc in Statistics",
+  "skillsRaw": "Python, SQL, Machine Learning, Pandas, NumPy",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_007_designationExtraction_L146.txt",
+  "parser": "metaforge",
+  "role": null
+}

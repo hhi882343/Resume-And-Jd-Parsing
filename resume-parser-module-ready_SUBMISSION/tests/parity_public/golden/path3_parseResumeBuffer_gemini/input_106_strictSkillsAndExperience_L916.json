@@ -1,0 +1,18 @@
+{
+  "candidateName": "Alex Morgan",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Flask, PostgreSQL",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_106_strictSkillsAndExperience_L916.txt",
+  "parser": "metaforge",
+  "role": null
+}

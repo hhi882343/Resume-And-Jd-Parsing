@@ -1,0 +1,9 @@
+
+Jane Smith
+Full Stack Developer
+
+| Skills |
+| Python, TypeScript, Docker, React |
+
+Experience
+Full Stack Engineer at Global Corp

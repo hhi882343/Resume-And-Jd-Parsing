@@ -1,0 +1,18 @@
+{
+  "candidateName": "Arthur Pendelton",
+  "email": "arthur@oxford.uk",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.Sc",
+  "skillsRaw": "Python, MATLAB",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_136_edge_abbreviation_hons_in_degr.txt",
+  "parser": "legacy",
+  "role": null
+}

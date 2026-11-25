@@ -1,0 +1,18 @@
+{
+  "candidateName": "David Miller",
+  "email": "david@miller.io",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Ruby On Rails, React",
+  "technologiesRaw": "Product Engineer",
+  "technologies": "Product Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_130_edge_ongoing_lowercase_range.txt",
+  "parser": "metaforge",
+  "role": "Product Engineer"
+}

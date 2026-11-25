@@ -1,0 +1,4 @@
+Elena Rostova
+Email: elena@rostova.com
+Technical Skills              Experience
+Python, Docker, AWS          6 years overall

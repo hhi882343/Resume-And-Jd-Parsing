@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate Name",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech",
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_082_strictSkillsAndExperience_L444.txt",
+  "parser": "metaforge",
+  "role": null
+}

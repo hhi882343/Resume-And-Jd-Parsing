@@ -1,0 +1,18 @@
+{
+  "candidateName": "Frank Ocean",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "React, Node.js, REST APIs, Microservices",
+  "technologiesRaw": "Full Stack Developer",
+  "technologies": "Full Stack Developer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_053_skillsExtractionEngine_L597.txt",
+  "parser": "metaforge",
+  "role": "Full Stack Developer"
+}

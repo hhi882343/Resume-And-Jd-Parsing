@@ -1,0 +1,703 @@
+[
+  {
+    "scenarioId": "scenario-01-save-analysis-run-single",
+    "description": "Save analysis run with single role",
+    "result": {
+      "runId": "<ID_1>",
+      "predictionIds": [
+        "<ID_2>"
+      ]
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Looking for Senior React Developer in New York. 5+ years experience.",
+          "modelUsed": "gemini-2.5-flash-lite",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": 345,
+          "chunkCount": 1,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Senior React Developer",
+          "chunkContent": "Looking for Senior React Developer in New York. 5+ years experience.",
+          "predictedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Senior React Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"5+ years\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"New York\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"React\",\"JavaScript\"],\"skills\":[\"CSS\",\"HTML\"],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": [
+        {
+          "id": "<ID_3>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini-2.5-flash-lite",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "scenario-02-save-analysis-run-multi",
+    "description": "Save analysis run with multiple roles (2 roles)",
+    "result": {
+      "runId": "<ID_1>",
+      "predictionIds": [
+        "<ID_2>",
+        "<ID_3>"
+      ]
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Hiring: Role 1 - Backend Engineer. Role 2 - Frontend Engineer.",
+          "modelUsed": "gemini-2.5-flash-lite",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": 560,
+          "chunkCount": 2,
+          "status": "success",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Backend Engineer",
+          "chunkContent": "Role 1 - Backend Engineer",
+          "predictedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Backend Engineer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Node.js\",\"Python\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_3>",
+          "runId": "<ID_1>",
+          "roleIndex": 2,
+          "chunkTitle": "Frontend Engineer",
+          "chunkContent": "Role 2 - Frontend Engineer",
+          "predictedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Frontend Engineer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"React\",\"TypeScript\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": [
+        {
+          "id": "<ID_4>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini-2.5-flash-lite",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "scenario-03-save-analysis-run-empty-roles",
+    "description": "Save analysis run with empty roles list returns null and touches no tables",
+    "result": null,
+    "dbState": {
+      "runs": [],
+      "predictions": [],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": []
+    }
+  },
+  {
+    "scenarioId": "scenario-04-correction-meaningful-diff",
+    "description": "Correction with meaningful diff (< 0.98) creates Correction, PreferencePair, and updates run status to corrected",
+    "result": {
+      "saved": true,
+      "runId": "<ID_1>",
+      "predictionId": "<ID_2>",
+      "correctionId": "<ID_3>",
+      "rewardScore": 0.7708333333333334,
+      "fieldRewards": {
+        "jobTitle": 0,
+        "location": 0,
+        "numberOfPositions": 1,
+        "annualBudget": 1,
+        "monthlyBudget": 1,
+        "workMode": 1,
+        "workTimings": 1,
+        "overallExperience": 1,
+        "clientLeadPocFrom": 1,
+        "internalPocTo": 1,
+        "requirementFrom": 1,
+        "demandReceivedDate": 1,
+        "mandatorySkills": 0,
+        "skills": 1,
+        "employmentType": 1,
+        "priority": 1,
+        "qualificationCriteria": 1,
+        "noticePeriod": 1,
+        "budgetCurrency": 1,
+        "typeOfDemand": 1,
+        "relevantExperience": 1,
+        "clientPocFromCc": 1,
+        "sla": 1,
+        "jobStatus": 1,
+        "closedDate": 1,
+        "openSince": 1,
+        "jobDescription": 1
+      },
+      "preferencePairCreated": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Java Developer JD text",
+          "modelUsed": "gemini-2.5-flash-lite",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": null,
+          "chunkCount": 1,
+          "status": "corrected",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": null,
+          "chunkContent": null,
+          "predictedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Java Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin, TX\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Java\",\"Spring\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [
+        {
+          "id": "<ID_3>",
+          "predictionId": "<ID_2>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Senior Lead Java Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Dallas, TX\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Java 17\",\"Spring Boot\",\"Kafka\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.7708333333333334,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":0,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":0,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        }
+      ],
+      "preferencePairs": [
+        {
+          "id": "<ID_4>",
+          "predictionId": "<ID_2>",
+          "correctionId": "<ID_3>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Java Developer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Austin, TX\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Java\",\"Spring\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Senior Lead Java Architect\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Dallas, TX\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Java 17\",\"Spring Boot\",\"Kafka\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.7708333333333334,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "policyVersions": [
+        {
+          "id": "<ID_5>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini-2.5-flash-lite",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "scenario-05-correction-identical-accepted",
+    "description": "Identical correction (score 1.0) marks run accepted, creates no correction or preference pair",
+    "result": {
+      "saved": false,
+      "rewardScore": 1,
+      "fieldRewards": {
+        "jobTitle": 1,
+        "location": 1,
+        "numberOfPositions": 1,
+        "annualBudget": 1,
+        "monthlyBudget": 1,
+        "workMode": 1,
+        "workTimings": 1,
+        "overallExperience": 1,
+        "clientLeadPocFrom": 1,
+        "internalPocTo": 1,
+        "requirementFrom": 1,
+        "demandReceivedDate": 1,
+        "mandatorySkills": 1,
+        "skills": 1,
+        "employmentType": 1,
+        "priority": 1,
+        "qualificationCriteria": 1,
+        "noticePeriod": 1,
+        "budgetCurrency": 1,
+        "typeOfDemand": 1,
+        "relevantExperience": 1,
+        "clientPocFromCc": 1,
+        "sla": 1,
+        "jobStatus": 1,
+        "closedDate": 1,
+        "openSince": 1,
+        "jobDescription": 1
+      },
+      "preferencePairCreated": false,
+      "runId": "<ID_1>",
+      "predictionId": "<ID_2>"
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Python Engineer JD",
+          "modelUsed": "gemini-2.5-flash-lite",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": null,
+          "chunkCount": 1,
+          "status": "accepted",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": null,
+          "chunkContent": null,
+          "predictedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Python Engineer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[\"Python\",\"FastAPI\"],\"skills\":[],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": [
+        {
+          "id": "<ID_3>",
+          "version": "gemini-bootstrap",
+          "baseModel": "gemini-2.5-flash-lite",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "scenario-06-correction-boundary-098",
+    "description": "Exact boundary 0.98 score (1): score < 0.98 is false so no preference pair created",
+    "rewardScore": 1,
+    "result": {
+      "saved": false,
+      "rewardScore": 1,
+      "fieldRewards": {
+        "jobTitle": 1,
+        "location": 1,
+        "numberOfPositions": 1,
+        "annualBudget": 1,
+        "monthlyBudget": 1,
+        "workMode": 1,
+        "workTimings": 1,
+        "overallExperience": 1,
+        "clientLeadPocFrom": 1,
+        "internalPocTo": 1,
+        "requirementFrom": 1,
+        "demandReceivedDate": 1,
+        "mandatorySkills": 1,
+        "skills": 1,
+        "employmentType": 1,
+        "priority": 1,
+        "qualificationCriteria": 1,
+        "noticePeriod": 1,
+        "budgetCurrency": 1,
+        "typeOfDemand": 1,
+        "relevantExperience": 1,
+        "clientPocFromCc": 1,
+        "sla": 1,
+        "jobStatus": 1,
+        "closedDate": 1,
+        "openSince": 1,
+        "jobDescription": 1
+      },
+      "preferencePairCreated": false,
+      "runId": "<ID_1>",
+      "predictionId": "<ID_2>"
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Boundary JD",
+          "modelUsed": null,
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": null,
+          "chunkCount": 1,
+          "status": "accepted",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": null,
+          "chunkContent": null,
+          "predictedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Engineer\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [],
+      "preferencePairs": [],
+      "policyVersions": [
+        {
+          "id": "<ID_3>",
+          "version": "gemini-bootstrap",
+          "baseModel": "unknown",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "scenario-07-correction-fallback-no-prediction-id",
+    "description": "Correction saved without prior prediction creates run, prediction, correction, and preference pair",
+    "result": {
+      "saved": true,
+      "runId": "<ID_1>",
+      "predictionId": "<ID_2>",
+      "correctionId": "<ID_3>",
+      "rewardScore": 0.9166666666666666,
+      "fieldRewards": {
+        "jobTitle": 0,
+        "location": 1,
+        "numberOfPositions": 1,
+        "annualBudget": 1,
+        "monthlyBudget": 1,
+        "workMode": 1,
+        "workTimings": 1,
+        "overallExperience": 1,
+        "clientLeadPocFrom": 1,
+        "internalPocTo": 1,
+        "requirementFrom": 1,
+        "demandReceivedDate": 1,
+        "mandatorySkills": 1,
+        "skills": 1,
+        "employmentType": 1,
+        "priority": 1,
+        "qualificationCriteria": 1,
+        "noticePeriod": 1,
+        "budgetCurrency": 1,
+        "typeOfDemand": 1,
+        "relevantExperience": 1,
+        "clientPocFromCc": 1,
+        "sla": 1,
+        "jobStatus": 1,
+        "closedDate": 1,
+        "openSince": 1,
+        "jobDescription": 1
+      },
+      "preferencePairCreated": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "Unanalyzed JD direct submission",
+          "modelUsed": "human-manual",
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": null,
+          "chunkCount": 1,
+          "status": "corrected",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": "Direct Role",
+          "chunkContent": "Direct Role Content",
+          "predictedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Initial Draft\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [
+        {
+          "id": "<ID_3>",
+          "predictionId": "<ID_2>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Final Validated Title\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":1,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":1,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        }
+      ],
+      "preferencePairs": [
+        {
+          "id": "<ID_4>",
+          "predictionId": "<ID_2>",
+          "correctionId": "<ID_3>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Initial Draft\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Final Validated Title\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "policyVersions": [
+        {
+          "id": "<ID_5>",
+          "version": "gemini-bootstrap",
+          "baseModel": "human-manual",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "scenario-08-duplicate-corrections-same-prediction",
+    "description": "Multiple corrections on same predictionId create distinct Correction and PreferencePair rows",
+    "corr1": {
+      "saved": true,
+      "runId": "<ID_1>",
+      "predictionId": "<ID_2>",
+      "correctionId": "<ID_3>",
+      "rewardScore": 0.9166666666666666,
+      "fieldRewards": {
+        "jobTitle": 0,
+        "location": 1,
+        "numberOfPositions": 1,
+        "annualBudget": 1,
+        "monthlyBudget": 1,
+        "workMode": 1,
+        "workTimings": 1,
+        "overallExperience": 1,
+        "clientLeadPocFrom": 1,
+        "internalPocTo": 1,
+        "requirementFrom": 1,
+        "demandReceivedDate": 1,
+        "mandatorySkills": 1,
+        "skills": 1,
+        "employmentType": 1,
+        "priority": 1,
+        "qualificationCriteria": 1,
+        "noticePeriod": 1,
+        "budgetCurrency": 1,
+        "typeOfDemand": 1,
+        "relevantExperience": 1,
+        "clientPocFromCc": 1,
+        "sla": 1,
+        "jobStatus": 1,
+        "closedDate": 1,
+        "openSince": 1,
+        "jobDescription": 1
+      },
+      "preferencePairCreated": true
+    },
+    "corr2": {
+      "saved": true,
+      "runId": "<ID_1>",
+      "predictionId": "<ID_2>",
+      "correctionId": "<ID_4>",
+      "rewardScore": 0.9166666666666666,
+      "fieldRewards": {
+        "jobTitle": 0,
+        "location": 1,
+        "numberOfPositions": 1,
+        "annualBudget": 1,
+        "monthlyBudget": 1,
+        "workMode": 1,
+        "workTimings": 1,
+        "overallExperience": 1,
+        "clientLeadPocFrom": 1,
+        "internalPocTo": 1,
+        "requirementFrom": 1,
+        "demandReceivedDate": 1,
+        "mandatorySkills": 1,
+        "skills": 1,
+        "employmentType": 1,
+        "priority": 1,
+        "qualificationCriteria": 1,
+        "noticePeriod": 1,
+        "budgetCurrency": 1,
+        "typeOfDemand": 1,
+        "relevantExperience": 1,
+        "clientPocFromCc": 1,
+        "sla": 1,
+        "jobStatus": 1,
+        "closedDate": 1,
+        "openSince": 1,
+        "jobDescription": 1
+      },
+      "preferencePairCreated": true
+    },
+    "dbState": {
+      "runs": [
+        {
+          "id": "<ID_1>",
+          "rawJdText": "JD for duplicate correction test",
+          "modelUsed": null,
+          "policyVersion": "gemini-bootstrap",
+          "latencyMs": null,
+          "chunkCount": 1,
+          "status": "corrected",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "<ID_2>",
+          "runId": "<ID_1>",
+          "roleIndex": 1,
+          "chunkTitle": null,
+          "chunkContent": null,
+          "predictedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Dev v1\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "corrections": [
+        {
+          "id": "<ID_3>",
+          "predictionId": "<ID_2>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Dev v2\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":1,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":1,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_4>",
+          "predictionId": "<ID_2>",
+          "correctedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Dev v3\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "fieldRewards": "{\"jobTitle\":0,\"location\":1,\"numberOfPositions\":1,\"annualBudget\":1,\"monthlyBudget\":1,\"workMode\":1,\"workTimings\":1,\"overallExperience\":1,\"clientLeadPocFrom\":1,\"internalPocTo\":1,\"requirementFrom\":1,\"demandReceivedDate\":1,\"mandatorySkills\":1,\"skills\":1,\"employmentType\":1,\"priority\":1,\"qualificationCriteria\":1,\"noticePeriod\":1,\"budgetCurrency\":1,\"typeOfDemand\":1,\"relevantExperience\":1,\"clientPocFromCc\":1,\"sla\":1,\"jobStatus\":1,\"closedDate\":1,\"openSince\":1,\"jobDescription\":1}",
+          "correctedAt": "<TIMESTAMP>"
+        }
+      ],
+      "preferencePairs": [
+        {
+          "id": "<ID_5>",
+          "predictionId": "<ID_2>",
+          "correctionId": "<ID_3>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Dev v1\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Dev v2\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "createdAt": "<TIMESTAMP>"
+        },
+        {
+          "id": "<ID_6>",
+          "predictionId": "<ID_2>",
+          "correctionId": "<ID_4>",
+          "rejectedJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Dev v1\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "chosenJson": "{\"requirementId\":\"Not specified\",\"jobTitle\":\"Dev v3\",\"clientLeadPocFrom\":\"Not specified\",\"clientPocFromCc\":\"Not specified\",\"internalPocTo\":\"Not specified\",\"requirementFrom\":\"Not specified\",\"demandReceivedDate\":\"Not specified\",\"closedDate\":\"Not specified\",\"openSince\":\"Not specified\",\"typeOfDemand\":\"Not specified\",\"jobStatus\":\"Unassigned\",\"priority\":\"Not specified\",\"relevantExperience\":\"Not specified\",\"overallExperience\":\"Not specified\",\"qualificationCriteria\":\"Not specified\",\"employmentType\":\"Not specified\",\"workMode\":\"Not specified\",\"workTimings\":\"Not specified\",\"location\":\"Not specified\",\"numberOfPositions\":\"Not specified\",\"budgetCurrency\":\"Not specified\",\"monthlyBudget\":\"Not specified\",\"annualBudget\":\"Not specified\",\"noticePeriod\":\"Not specified\",\"sla\":\"Not specified\",\"mandatorySkills\":[],\"skills\":[],\"jobDescription\":\"\"}",
+          "rewardScore": 0.9166666666666666,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ],
+      "policyVersions": [
+        {
+          "id": "<ID_7>",
+          "version": "gemini-bootstrap",
+          "baseModel": "unknown",
+          "avgReward": null,
+          "deployedAt": null,
+          "createdAt": "<TIMESTAMP>"
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "scenario-09-correction-retrieval-newest-wins",
+    "description": "getLatestCorrectionsForJd returns the newest correction for roleIndex across runs",
+    "retrieved": {
+      "1": {
+        "requirementId": "Not specified",
+        "jobTitle": "Correction Run 2 (Newest)",
+        "clientLeadPocFrom": "Not specified",
+        "clientPocFromCc": "Not specified",
+        "internalPocTo": "Not specified",
+        "requirementFrom": "Not specified",
+        "demandReceivedDate": "Not specified",
+        "closedDate": "Not specified",
+        "openSince": "Not specified",
+        "typeOfDemand": "Not specified",
+        "jobStatus": "Unassigned",
+        "priority": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "qualificationCriteria": "Not specified",
+        "employmentType": "Not specified",
+        "workMode": "Not specified",
+        "workTimings": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "budgetCurrency": "Not specified",
+        "monthlyBudget": "Not specified",
+        "annualBudget": "Not specified",
+        "noticePeriod": "Not specified",
+        "sla": "Not specified",
+        "mandatorySkills": [],
+        "skills": [],
+        "jobDescription": ""
+      }
+    }
+  },
+  {
+    "scenarioId": "scenario-10-correction-retrieval-status-filter",
+    "description": "getLatestCorrectionsForJd ignores runs with status 'success' (only 'corrected' and 'accepted')",
+    "retrieved": {}
+  },
+  {
+    "scenarioId": "scenario-11-feedback-stats-empty",
+    "description": "getFeedbackStats on empty database returns all 0 counts, avgReward null, dpoReady false",
+    "stats": {
+      "totalAnalysisRuns": 0,
+      "totalPredictions": 0,
+      "totalCorrections": 0,
+      "totalPreferencePairs": 0,
+      "avgReward": null,
+      "policyVersion": "gemini-bootstrap",
+      "dpoReady": false
+    }
+  },
+  {
+    "scenarioId": "scenario-12-feedback-stats-populated",
+    "description": "getFeedbackStats returns accurate aggregates and averages rewards strictly where rewardScore < 0.999",
+    "stats": {
+      "totalAnalysisRuns": 1,
+      "totalPredictions": 2,
+      "totalCorrections": 1,
+      "totalPreferencePairs": 1,
+      "avgReward": 0.9375,
+      "policyVersion": "gemini-bootstrap",
+      "dpoReady": false
+    }
+  },
+  {
+    "scenarioId": "scenario-13-feedback-stats-dpo-ready-50",
+    "description": "getFeedbackStats sets dpoReady true when preferencePairs >= 50",
+    "totalPairs": 50,
+    "dpoReady": true
+  },
+  {
+    "scenarioId": "scenario-14-dpo-export-format-and-fallback",
+    "description": "DPO export orders by createdAt asc, formats prompt with chunkContent or fallback rawJdText, and appends trailing newline",
+    "exportedJsonl": "{\"prompt\":\"Extract structured requirement data from this JD:\\n\\nChunk content for Role A\",\"rejected\":\"{\\\"requirementId\\\":\\\"Not specified\\\",\\\"jobTitle\\\":\\\"Pred A\\\",\\\"clientLeadPocFrom\\\":\\\"Not specified\\\",\\\"clientPocFromCc\\\":\\\"Not specified\\\",\\\"internalPocTo\\\":\\\"Not specified\\\",\\\"requirementFrom\\\":\\\"Not specified\\\",\\\"demandReceivedDate\\\":\\\"Not specified\\\",\\\"closedDate\\\":\\\"Not specified\\\",\\\"openSince\\\":\\\"Not specified\\\",\\\"typeOfDemand\\\":\\\"Not specified\\\",\\\"jobStatus\\\":\\\"Unassigned\\\",\\\"priority\\\":\\\"Not specified\\\",\\\"relevantExperience\\\":\\\"Not specified\\\",\\\"overallExperience\\\":\\\"Not specified\\\",\\\"qualificationCriteria\\\":\\\"Not specified\\\",\\\"employmentType\\\":\\\"Not specified\\\",\\\"workMode\\\":\\\"Not specified\\\",\\\"workTimings\\\":\\\"Not specified\\\",\\\"location\\\":\\\"Not specified\\\",\\\"numberOfPositions\\\":\\\"Not specified\\\",\\\"budgetCurrency\\\":\\\"Not specified\\\",\\\"monthlyBudget\\\":\\\"Not specified\\\",\\\"annualBudget\\\":\\\"Not specified\\\",\\\"noticePeriod\\\":\\\"Not specified\\\",\\\"sla\\\":\\\"Not specified\\\",\\\"mandatorySkills\\\":[],\\\"skills\\\":[],\\\"jobDescription\\\":\\\"\\\"}\",\"chosen\":\"{\\\"requirementId\\\":\\\"Not specified\\\",\\\"jobTitle\\\":\\\"Chosen A\\\",\\\"clientLeadPocFrom\\\":\\\"Not specified\\\",\\\"clientPocFromCc\\\":\\\"Not specified\\\",\\\"internalPocTo\\\":\\\"Not specified\\\",\\\"requirementFrom\\\":\\\"Not specified\\\",\\\"demandReceivedDate\\\":\\\"Not specified\\\",\\\"closedDate\\\":\\\"Not specified\\\",\\\"openSince\\\":\\\"Not specified\\\",\\\"typeOfDemand\\\":\\\"Not specified\\\",\\\"jobStatus\\\":\\\"Unassigned\\\",\\\"priority\\\":\\\"Not specified\\\",\\\"relevantExperience\\\":\\\"Not specified\\\",\\\"overallExperience\\\":\\\"Not specified\\\",\\\"qualificationCriteria\\\":\\\"Not specified\\\",\\\"employmentType\\\":\\\"Not specified\\\",\\\"workMode\\\":\\\"Not specified\\\",\\\"workTimings\\\":\\\"Not specified\\\",\\\"location\\\":\\\"Not specified\\\",\\\"numberOfPositions\\\":\\\"Not specified\\\",\\\"budgetCurrency\\\":\\\"Not specified\\\",\\\"monthlyBudget\\\":\\\"Not specified\\\",\\\"annualBudget\\\":\\\"Not specified\\\",\\\"noticePeriod\\\":\\\"Not specified\\\",\\\"sla\\\":\\\"Not specified\\\",\\\"mandatorySkills\\\":[],\\\"skills\\\":[],\\\"jobDescription\\\":\\\"\\\"}\",\"reward_score\":0.9166666666666666,\"prediction_id\":\"2085be35-ab24-43d2-84ab-d990fdac4ebd\"}\n{\"prompt\":\"Extract structured requirement data from this JD:\\n\\nFull raw JD text for export\",\"rejected\":\"{\\\"requirementId\\\":\\\"Not specified\\\",\\\"jobTitle\\\":\\\"Pred B\\\",\\\"clientLeadPocFrom\\\":\\\"Not specified\\\",\\\"clientPocFromCc\\\":\\\"Not specified\\\",\\\"internalPocTo\\\":\\\"Not specified\\\",\\\"requirementFrom\\\":\\\"Not specified\\\",\\\"demandReceivedDate\\\":\\\"Not specified\\\",\\\"closedDate\\\":\\\"Not specified\\\",\\\"openSince\\\":\\\"Not specified\\\",\\\"typeOfDemand\\\":\\\"Not specified\\\",\\\"jobStatus\\\":\\\"Unassigned\\\",\\\"priority\\\":\\\"Not specified\\\",\\\"relevantExperience\\\":\\\"Not specified\\\",\\\"overallExperience\\\":\\\"Not specified\\\",\\\"qualificationCriteria\\\":\\\"Not specified\\\",\\\"employmentType\\\":\\\"Not specified\\\",\\\"workMode\\\":\\\"Not specified\\\",\\\"workTimings\\\":\\\"Not specified\\\",\\\"location\\\":\\\"Not specified\\\",\\\"numberOfPositions\\\":\\\"Not specified\\\",\\\"budgetCurrency\\\":\\\"Not specified\\\",\\\"monthlyBudget\\\":\\\"Not specified\\\",\\\"annualBudget\\\":\\\"Not specified\\\",\\\"noticePeriod\\\":\\\"Not specified\\\",\\\"sla\\\":\\\"Not specified\\\",\\\"mandatorySkills\\\":[],\\\"skills\\\":[],\\\"jobDescription\\\":\\\"\\\"}\",\"chosen\":\"{\\\"requirementId\\\":\\\"Not specified\\\",\\\"jobTitle\\\":\\\"Chosen B\\\",\\\"clientLeadPocFrom\\\":\\\"Not specified\\\",\\\"clientPocFromCc\\\":\\\"Not specified\\\",\\\"internalPocTo\\\":\\\"Not specified\\\",\\\"requirementFrom\\\":\\\"Not specified\\\",\\\"demandReceivedDate\\\":\\\"Not specified\\\",\\\"closedDate\\\":\\\"Not specified\\\",\\\"openSince\\\":\\\"Not specified\\\",\\\"typeOfDemand\\\":\\\"Not specified\\\",\\\"jobStatus\\\":\\\"Unassigned\\\",\\\"priority\\\":\\\"Not specified\\\",\\\"relevantExperience\\\":\\\"Not specified\\\",\\\"overallExperience\\\":\\\"Not specified\\\",\\\"qualificationCriteria\\\":\\\"Not specified\\\",\\\"employmentType\\\":\\\"Not specified\\\",\\\"workMode\\\":\\\"Not specified\\\",\\\"workTimings\\\":\\\"Not specified\\\",\\\"location\\\":\\\"Not specified\\\",\\\"numberOfPositions\\\":\\\"Not specified\\\",\\\"budgetCurrency\\\":\\\"Not specified\\\",\\\"monthlyBudget\\\":\\\"Not specified\\\",\\\"annualBudget\\\":\\\"Not specified\\\",\\\"noticePeriod\\\":\\\"Not specified\\\",\\\"sla\\\":\\\"Not specified\\\",\\\"mandatorySkills\\\":[],\\\"skills\\\":[],\\\"jobDescription\\\":\\\"\\\"}\",\"reward_score\":0.9166666666666666,\"prediction_id\":\"ab4a5e9c-d712-4709-96f2-b19afd818f3c\"}\n",
+    "pairCount": 2
+  },
+  {
+    "scenarioId": "scenario-15-dpo-export-empty",
+    "description": "DPO export with 0 pairs produces empty string without trailing newline",
+    "exported": "",
+    "pairCount": 0
+  }
+]

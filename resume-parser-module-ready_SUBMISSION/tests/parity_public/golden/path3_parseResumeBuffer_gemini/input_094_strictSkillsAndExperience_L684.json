@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": "Senior Full Stack Developer",
+  "technologies": "Senior Full Stack Developer",
+  "totalExperience": "8 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_094_strictSkillsAndExperience_L684.txt",
+  "parser": "metaforge",
+  "role": "Senior Full Stack Developer"
+}

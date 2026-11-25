@@ -1,0 +1,18 @@
+{
+  "candidateName": "Frank Castle",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Java, Spring Boot, Microservices, Kafka, Redis",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_088_strictSkillsAndExperience_L556.txt",
+  "parser": "legacy",
+  "role": null
+}

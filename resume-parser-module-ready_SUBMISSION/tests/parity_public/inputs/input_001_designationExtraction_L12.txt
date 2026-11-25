@@ -1,0 +1,11 @@
+John Doe
+john.doe@example.com
++91 9876543210
+
+Professional Summary: Experienced Java Full Stack Developer with expertise in Spring Boot and React.
+
+Technical Skills
+Java, Spring Boot, React, SQL
+
+Education
+B.Tech in Computer Science

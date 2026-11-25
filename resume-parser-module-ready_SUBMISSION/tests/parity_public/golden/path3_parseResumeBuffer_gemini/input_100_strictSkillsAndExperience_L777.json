@@ -1,0 +1,18 @@
+{
+  "candidateName": "Experience History",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "8 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_100_strictSkillsAndExperience_L777.txt",
+  "parser": "metaforge",
+  "role": null
+}

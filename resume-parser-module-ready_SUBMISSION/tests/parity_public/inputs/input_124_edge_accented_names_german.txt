@@ -1,0 +1,6 @@
+Müller Schmidt
+Cloud Consultant
+Email: mueller.schmidt@berlin.de
+Location: Berlin, Germany
+Total Experience: 7 years
+Technical Skills: Terraform, GCP, Kubernetes

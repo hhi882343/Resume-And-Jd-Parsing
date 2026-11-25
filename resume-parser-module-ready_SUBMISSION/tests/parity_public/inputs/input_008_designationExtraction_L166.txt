@@ -1,0 +1,15 @@
+Suresh Reddy
+suresh.reddy@example.com
++91 9876543217
+
+Professional Summary
+Java Developer with 5 years experience
+
+Work Experience
+Previous Role: Python Developer at ABC Corp
+
+Technical Skills
+Java, Python, SQL
+
+Education
+B.Tech in Information Technology

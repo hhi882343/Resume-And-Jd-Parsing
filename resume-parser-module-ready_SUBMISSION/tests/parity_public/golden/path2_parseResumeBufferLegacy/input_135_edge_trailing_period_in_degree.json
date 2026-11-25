@@ -1,0 +1,18 @@
+{
+  "candidateName": "Priya Nair",
+  "email": "priya@gmail.com",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech. in Information Technology",
+  "skillsRaw": "Java, Spring",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": "Infosys",
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_135_edge_trailing_period_in_degree.txt",
+  "parser": "legacy",
+  "role": null
+}

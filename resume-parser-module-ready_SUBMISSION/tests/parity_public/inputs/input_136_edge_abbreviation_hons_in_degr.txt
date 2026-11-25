@@ -1,0 +1,4 @@
+Arthur Pendelton
+Email: arthur@oxford.uk
+Education: B.Sc. (Hons) in Mathematics. Graduated with first class.
+Skills: Python, R, MATLAB

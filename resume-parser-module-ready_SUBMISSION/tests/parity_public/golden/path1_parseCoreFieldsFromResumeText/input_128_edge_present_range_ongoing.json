@@ -1,0 +1,17 @@
+{
+  "candidateName": "Sarah Jenkins",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Go, GRPC, Kubernetes",
+  "technologiesRaw": "Staff Engineer",
+  "technologies": "Staff Engineer",
+  "totalExperienceYears": 10,
+  "totalExperienceText": "10 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Staff Engineer"
+}

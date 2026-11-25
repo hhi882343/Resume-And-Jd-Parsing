@@ -1,0 +1,17 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": "+919876543221",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Routing, Switching",
+  "technologiesRaw": "Network Engineer",
+  "technologies": "Network Engineer",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Network Engineer"
+}

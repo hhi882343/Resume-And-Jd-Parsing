@@ -1,0 +1,6 @@
+
+Candidate Name: Mark Code
+Summary
+• Proficient in Go and Kubernetes
+▪ Developed web applications with Vue.js and MongoDB
+* Implemented authentication using JWT

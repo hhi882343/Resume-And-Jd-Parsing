@@ -1,0 +1,14 @@
+Kunal Deshmukh
+kunal.deshmukh@gmail.com
++91 9876543210
+Current Location: Pune, Maharashtra
+https://linkedin.com/in/kunaldeshmukh
+
+Professional Summary
+Senior Cloud Engineer with 7 years of experience in enterprise systems.
+
+Technical Skills
+AWS, Terraform, Kubernetes, Docker, Python, Bash, CI/CD, Ansible, Prometheus, Grafana, Linux
+
+Education
+B.E. in Information Technology from Pune University (2014 - 2018)

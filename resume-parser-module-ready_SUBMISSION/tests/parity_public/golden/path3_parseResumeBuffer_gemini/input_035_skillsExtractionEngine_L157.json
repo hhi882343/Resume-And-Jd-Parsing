@@ -1,0 +1,18 @@
+{
+  "candidateName": "Education Projects",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Docker, Kubernetes, Terraform, AWS, Go",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_035_skillsExtractionEngine_L157.txt",
+  "parser": "metaforge",
+  "role": null
+}

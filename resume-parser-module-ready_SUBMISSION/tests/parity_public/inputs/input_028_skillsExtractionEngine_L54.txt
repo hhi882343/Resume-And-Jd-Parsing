@@ -1,0 +1,6 @@
+
+Core Skills
+• Python
+- Docker
+* Kubernetes
+• PostgreSQL

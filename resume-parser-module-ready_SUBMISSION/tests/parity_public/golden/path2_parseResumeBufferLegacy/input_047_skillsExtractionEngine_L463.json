@@ -1,0 +1,18 @@
+{
+  "candidateName": "Bob",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, Pandas, NumPy",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_047_skillsExtractionEngine_L463.txt",
+  "parser": "legacy",
+  "role": null
+}

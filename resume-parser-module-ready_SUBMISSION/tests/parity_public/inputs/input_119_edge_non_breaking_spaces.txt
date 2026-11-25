@@ -1,0 +1,5 @@
+John Doe
+Software Engineer
+Email: john@example.com
+Experience: 5 years
+Technical Skills: Python, JavaScript

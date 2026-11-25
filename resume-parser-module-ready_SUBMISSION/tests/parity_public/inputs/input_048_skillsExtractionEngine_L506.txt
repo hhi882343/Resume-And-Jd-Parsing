@@ -1,0 +1,9 @@
+
+John Doe
+john@example.com
+
+Professional Summary
+Experienced in Python programming, machine learning, and data analysis.
+
+Work Experience
+Engineer at Alpha Inc

@@ -1,0 +1,14 @@
+Vikram Patel
+vikram.patel@example.com
++91 9876543215
+
+Experience
+Company XYZ (2020 - Present)
+Designation: QA Automation Engineer
+Responsibilities: writing Selenium tests
+
+Technical Skills
+Selenium, Java, TestNG
+
+Education
+B.Tech in Computer Science

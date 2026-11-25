@@ -1,0 +1,18 @@
+{
+  "candidateName": "Suresh Reddy",
+  "email": null,
+  "contactNumber": "+91 98765 43217",
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech in Information Technology",
+  "skillsRaw": "Java, Python, SQL",
+  "technologiesRaw": "Java Developer",
+  "technologies": "Java Developer",
+  "totalExperience": "5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_008_designationExtraction_L166.txt",
+  "parser": "metaforge",
+  "role": "Java Developer"
+}

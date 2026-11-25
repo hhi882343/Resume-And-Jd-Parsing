@@ -1,0 +1,173 @@
+[
+  {
+    "timezone": "UTC",
+    "frozen_instant": "2026-10-30T20:00:00Z",
+    "frozen_epoch_ms": 1793390400000,
+    "local_date": "2026-10-30",
+    "requirement_id_prefix": "REQ-2026-10-30-",
+    "formats": [
+      {
+        "demand_date": "2026-05-15",
+        "clean_date": "2026-05-15",
+        "parsed_epoch_ms": 1778803200000,
+        "open_since": "2026-05-15 (168 days)"
+      },
+      {
+        "demand_date": "May 15, 2026",
+        "clean_date": "May 15 2026",
+        "parsed_epoch_ms": 1778803200000,
+        "open_since": "May 15, 2026 (168 days)"
+      },
+      {
+        "demand_date": "15 May 2026",
+        "clean_date": "15 May 2026",
+        "parsed_epoch_ms": 1778803200000,
+        "open_since": "15 May 2026 (168 days)"
+      },
+      {
+        "demand_date": "05/15/2026",
+        "clean_date": "05/15/2026",
+        "parsed_epoch_ms": 1778803200000,
+        "open_since": "05/15/2026 (168 days)"
+      },
+      {
+        "demand_date": "Thursday, May 15, 2026 10:30",
+        "clean_date": "Thursday May 15 2026 10:30",
+        "parsed_epoch_ms": 1778841000000,
+        "open_since": "Thursday, May 15 (168 days)"
+      },
+      {
+        "demand_date": "2026-05-15T10:30:00",
+        "clean_date": "2026-05-15T10:30:00",
+        "parsed_epoch_ms": 1778841000000,
+        "open_since": "2026-05-15T10:30:00 (168 days)"
+      },
+      {
+        "demand_date": "2026-05-15T10:30:00Z",
+        "clean_date": "2026-05-15T10:30:00Z",
+        "parsed_epoch_ms": 1778841000000,
+        "open_since": "2026-05-15T10:30:00Z (168 days)"
+      },
+      {
+        "demand_date": "Sent: Thursday, May 15, 2026 10:30 AM",
+        "clean_date": "Sent: Thursday May 15 2026 10:30 AM",
+        "parsed_epoch_ms": 1778841000000,
+        "open_since": "Sent: Thursday, May 15 (168 days)"
+      }
+    ]
+  },
+  {
+    "timezone": "Asia/Kolkata",
+    "frozen_instant": "2026-10-30T20:00:00Z",
+    "frozen_epoch_ms": 1793390400000,
+    "local_date": "2026-10-31",
+    "requirement_id_prefix": "REQ-2026-10-31-",
+    "formats": [
+      {
+        "demand_date": "2026-05-15",
+        "clean_date": "2026-05-15",
+        "parsed_epoch_ms": 1778803200000,
+        "open_since": "2026-05-15 (168 days)"
+      },
+      {
+        "demand_date": "May 15, 2026",
+        "clean_date": "May 15 2026",
+        "parsed_epoch_ms": 1778783400000,
+        "open_since": "May 15, 2026 (169 days)"
+      },
+      {
+        "demand_date": "15 May 2026",
+        "clean_date": "15 May 2026",
+        "parsed_epoch_ms": 1778783400000,
+        "open_since": "15 May 2026 (169 days)"
+      },
+      {
+        "demand_date": "05/15/2026",
+        "clean_date": "05/15/2026",
+        "parsed_epoch_ms": 1778783400000,
+        "open_since": "05/15/2026 (169 days)"
+      },
+      {
+        "demand_date": "Thursday, May 15, 2026 10:30",
+        "clean_date": "Thursday May 15 2026 10:30",
+        "parsed_epoch_ms": 1778821200000,
+        "open_since": "Thursday, May 15 (168 days)"
+      },
+      {
+        "demand_date": "2026-05-15T10:30:00",
+        "clean_date": "2026-05-15T10:30:00",
+        "parsed_epoch_ms": 1778821200000,
+        "open_since": "2026-05-15T10:30:00 (168 days)"
+      },
+      {
+        "demand_date": "2026-05-15T10:30:00Z",
+        "clean_date": "2026-05-15T10:30:00Z",
+        "parsed_epoch_ms": 1778841000000,
+        "open_since": "2026-05-15T10:30:00Z (168 days)"
+      },
+      {
+        "demand_date": "Sent: Thursday, May 15, 2026 10:30 AM",
+        "clean_date": "Sent: Thursday May 15 2026 10:30 AM",
+        "parsed_epoch_ms": 1778821200000,
+        "open_since": "Sent: Thursday, May 15 (168 days)"
+      }
+    ]
+  },
+  {
+    "timezone": "America/Los_Angeles",
+    "frozen_instant": "2026-10-30T20:00:00Z",
+    "frozen_epoch_ms": 1793390400000,
+    "local_date": "2026-10-30",
+    "requirement_id_prefix": "REQ-2026-10-30-",
+    "formats": [
+      {
+        "demand_date": "2026-05-15",
+        "clean_date": "2026-05-15",
+        "parsed_epoch_ms": 1778803200000,
+        "open_since": "2026-05-15 (168 days)"
+      },
+      {
+        "demand_date": "May 15, 2026",
+        "clean_date": "May 15 2026",
+        "parsed_epoch_ms": 1778828400000,
+        "open_since": "May 15, 2026 (168 days)"
+      },
+      {
+        "demand_date": "15 May 2026",
+        "clean_date": "15 May 2026",
+        "parsed_epoch_ms": 1778828400000,
+        "open_since": "15 May 2026 (168 days)"
+      },
+      {
+        "demand_date": "05/15/2026",
+        "clean_date": "05/15/2026",
+        "parsed_epoch_ms": 1778828400000,
+        "open_since": "05/15/2026 (168 days)"
+      },
+      {
+        "demand_date": "Thursday, May 15, 2026 10:30",
+        "clean_date": "Thursday May 15 2026 10:30",
+        "parsed_epoch_ms": 1778866200000,
+        "open_since": "Thursday, May 15 (168 days)"
+      },
+      {
+        "demand_date": "2026-05-15T10:30:00",
+        "clean_date": "2026-05-15T10:30:00",
+        "parsed_epoch_ms": 1778866200000,
+        "open_since": "2026-05-15T10:30:00 (168 days)"
+      },
+      {
+        "demand_date": "2026-05-15T10:30:00Z",
+        "clean_date": "2026-05-15T10:30:00Z",
+        "parsed_epoch_ms": 1778841000000,
+        "open_since": "2026-05-15T10:30:00Z (168 days)"
+      },
+      {
+        "demand_date": "Sent: Thursday, May 15, 2026 10:30 AM",
+        "clean_date": "Sent: Thursday May 15 2026 10:30 AM",
+        "parsed_epoch_ms": 1778866200000,
+        "open_since": "Sent: Thursday, May 15 (168 days)"
+      }
+    ]
+  }
+]

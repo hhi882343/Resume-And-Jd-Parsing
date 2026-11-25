@@ -1,0 +1,10 @@
+
+Candidate Name
+candidate@example.com
+Education: B.Tech in Computer Science, 2016
+-------------------- Page Break --------------------
+Technical Skills: Java, Spring Boot, Microservices
+-------------------- Page Break --------------------
+Work Experience
+Total Experience: 6 years
+Senior Developer at Tech Corp

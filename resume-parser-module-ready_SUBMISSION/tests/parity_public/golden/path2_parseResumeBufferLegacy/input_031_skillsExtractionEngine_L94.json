@@ -1,0 +1,18 @@
+{
+  "candidateName": "Jane Smith",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, TypeScript, Docker, React",
+  "technologiesRaw": "Full Stack Developer",
+  "technologies": "Full Stack Developer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_031_skillsExtractionEngine_L94.txt",
+  "parser": "legacy",
+  "role": "Full Stack Developer"
+}

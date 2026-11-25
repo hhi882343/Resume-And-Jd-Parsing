@@ -1,0 +1,18 @@
+{
+  "candidateName": "Jane Doe",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "REST APIs, Python, Flask, PostgreSQL",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_049_skillsExtractionEngine_L525.txt",
+  "parser": "legacy",
+  "role": null
+}

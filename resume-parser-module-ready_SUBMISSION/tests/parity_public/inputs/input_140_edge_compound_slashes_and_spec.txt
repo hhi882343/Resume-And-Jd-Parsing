@@ -1,0 +1,4 @@
+Gaurav Sen
+Email: gaurav@example.com
+Technical Skills: CI/CD, PL/SQL, TCP/IP, C++, .NET Core, Node.js
+Experience: 5 years

@@ -1,0 +1,3 @@
+
+Technical Skills
+Python, Java, Docker, Kubernetes, AWS, PostgreSQL, Redis, React, TypeScript, Go, C++, Rust, GraphQL, Ruby

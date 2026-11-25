@@ -1,0 +1,18 @@
+{
+  "candidateName": "Ananya Sharma",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "TypeScript, Node.js",
+  "technologiesRaw": "Full Stack Developer",
+  "technologies": "Full Stack Developer",
+  "totalExperience": "4 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_120_edge_byte_order_mark_bom.txt",
+  "parser": "legacy",
+  "role": "Full Stack Developer"
+}

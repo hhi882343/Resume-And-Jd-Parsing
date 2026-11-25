@@ -1,0 +1,18 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, React, Docker",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_033_skillsExtractionEngine_L131.txt",
+  "parser": "legacy",
+  "role": null
+}

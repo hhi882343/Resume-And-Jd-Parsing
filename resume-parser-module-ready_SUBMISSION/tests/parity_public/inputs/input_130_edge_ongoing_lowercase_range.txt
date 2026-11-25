@@ -1,0 +1,6 @@
+David Miller
+Product Engineer
+Email: david@miller.io
+Employment:
+Acme Corp (2020 - ongoing)
+Skills: Ruby on Rails, React

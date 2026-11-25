@@ -1,0 +1,18 @@
+{
+  "candidateName": "Jane Tech",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "C++, Python, Linux, Git, Docker, Jenkins",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_092_strictSkillsAndExperience_L645.txt",
+  "parser": "legacy",
+  "role": null
+}

@@ -1,0 +1,12 @@
+Ravi Verma
+ravi.verma@example.com
++91 9876543218
+
+Education
+B.Tech in Computer Science
+
+Projects
+E-commerce Portal using React and Node.js
+
+Technical Skills
+JavaScript, React, Node.js, MongoDB

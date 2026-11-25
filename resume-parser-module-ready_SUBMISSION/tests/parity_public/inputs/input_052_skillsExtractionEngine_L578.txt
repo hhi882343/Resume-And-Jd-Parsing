@@ -1,0 +1,10 @@
+
+Eve Online
+eve@example.com
+
+Core Competencies
+Java, Spring Boot, MySQL
+
+Work Experience
+Senior Developer
+- Implemented microservices using Python, Docker, and Kubernetes.

@@ -1,0 +1,18 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.Tech in Mechanical Engineering",
+  "skillsRaw": "CATIA, SolidWorks",
+  "technologiesRaw": "Mechanical Design Engineer",
+  "technologies": "Mechanical Design Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_071_strictSkillsAndExperience_L290.txt",
+  "parser": "legacy",
+  "role": "Mechanical Design Engineer"
+}

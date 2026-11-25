@@ -1,0 +1,18 @@
+{
+  "candidateName": "Gaurav Sen",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "CI/CD, PL/SQL, TCP/IP, C++, Node.js",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "5 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_140_edge_compound_slashes_and_spec.txt",
+  "parser": "metaforge",
+  "role": null
+}

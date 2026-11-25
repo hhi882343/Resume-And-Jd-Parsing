@@ -1,0 +1,18 @@
+{
+  "candidateName": "Deepak Singh",
+  "email": null,
+  "contactNumber": "+91 98765 43219",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "AWS, Docker, Kubernetes, Terraform",
+  "technologiesRaw": "DevOps Engineer",
+  "technologies": "DevOps Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_010_designationExtraction_L215.txt",
+  "parser": "metaforge",
+  "role": "DevOps Engineer"
+}

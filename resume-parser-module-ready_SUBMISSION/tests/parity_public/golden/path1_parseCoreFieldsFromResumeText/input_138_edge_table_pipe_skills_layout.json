@@ -1,0 +1,17 @@
+{
+  "candidateName": "Marcus Vance",
+  "email": "marcus@vance.net",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Go, Python, C#, PostgreSQL, MongoDB",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperienceYears": 6,
+  "totalExperienceText": "6 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": null
+}

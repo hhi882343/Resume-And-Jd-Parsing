@@ -1,0 +1,18 @@
+{
+  "candidateName": "Chris Green",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "Associate",
+  "skillsRaw": "Customer Service, Problem Resolution, Team Coordination",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_050_skillsExtractionEngine_L543.txt",
+  "parser": "legacy",
+  "role": null
+}

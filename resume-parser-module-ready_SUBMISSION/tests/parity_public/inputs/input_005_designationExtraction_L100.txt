@@ -1,0 +1,10 @@
+LOKESH A
+Network Engineer
+lokesh.a@example.com
++91 9876543214
+
+Technical Skills
+Routing, Switching, TCP/IP
+
+Education
+B.E. in Information Technology

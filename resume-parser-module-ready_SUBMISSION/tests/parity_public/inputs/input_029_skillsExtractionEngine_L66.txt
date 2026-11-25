@@ -1,0 +1,7 @@
+
+Technical Skills
+o Python
+o Docker
+o MongoDB
+o Oracle Database
+o Node.js

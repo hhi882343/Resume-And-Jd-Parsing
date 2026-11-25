@@ -1,0 +1,18 @@
+{
+  "candidateName": "John Doe",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.S. in Computer Science",
+  "skillsRaw": "REST APIs, Microservices, Python, Go, AWS, Docker, Terraform",
+  "technologiesRaw": "Software Engineer",
+  "technologies": "Software Engineer",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_037_skillsExtractionEngine_L199.txt",
+  "parser": "metaforge",
+  "role": "Software Engineer"
+}

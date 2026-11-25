@@ -1,0 +1,18 @@
+{
+  "candidateName": "Sneha Reddy",
+  "email": null,
+  "contactNumber": "+91 91234 56781",
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Python, SQL, Tableau, Pandas",
+  "technologiesRaw": "Python Data Analyst",
+  "technologies": "Python Data Analyst",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_025_resumeParserRouter_L121.txt",
+  "parser": "metaforge",
+  "role": "Python Data Analyst"
+}

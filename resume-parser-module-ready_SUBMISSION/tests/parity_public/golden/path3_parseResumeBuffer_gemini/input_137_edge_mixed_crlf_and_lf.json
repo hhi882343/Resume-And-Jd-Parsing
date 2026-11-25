@@ -1,0 +1,18 @@
+{
+  "candidateName": "Candidate",
+  "email": "alex@rivera.dev",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Rust, WebAssembly",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_137_edge_mixed_crlf_and_lf.txt",
+  "parser": "metaforge",
+  "role": null
+}

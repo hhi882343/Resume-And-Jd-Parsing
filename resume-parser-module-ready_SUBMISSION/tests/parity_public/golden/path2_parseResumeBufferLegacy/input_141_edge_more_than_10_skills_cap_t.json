@@ -1,0 +1,18 @@
+{
+  "candidateName": "Sneha Reddy",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Java, Python, C++, Go, Rust, Ruby, PHP, Swift, Kotlin, Scala",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "4 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_141_edge_more_than_10_skills_cap_t.txt",
+  "parser": "legacy",
+  "role": null
+}

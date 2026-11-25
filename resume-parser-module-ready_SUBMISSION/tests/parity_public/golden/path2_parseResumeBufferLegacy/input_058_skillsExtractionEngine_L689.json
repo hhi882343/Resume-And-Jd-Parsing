@@ -1,0 +1,18 @@
+{
+  "candidateName": "Kelly Clarkson",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "Associate",
+  "skillsRaw": null,
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_058_skillsExtractionEngine_L689.txt",
+  "parser": "legacy",
+  "role": null
+}

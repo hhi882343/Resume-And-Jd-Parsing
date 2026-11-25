@@ -1,0 +1,49 @@
+[
+  {
+    "requirementId": "req_1730100000_1",
+    "roleIndex": 1,
+    "totalRoles": 1,
+    "extractionSource": "gemini",
+    "clientLeadPocFrom": "Talent Acquisition <recruiter@techcorp.com>",
+    "demandReceivedDate": "2026-10-28",
+    "internalPocTo": "Vendor Partner <partners@staffing.com>",
+    "requirementFrom": "Techcorp",
+    "jobTitle": "Senior Python Backend Developer",
+    "typeOfDemand": "Single",
+    "clientPocFromCc": "Engineering Lead <lead@techcorp.com>",
+    "priority": "HIGH",
+    "numberOfPositions": 2,
+    "location": "Bangalore",
+    "experience": "5-8 years",
+    "relevantExperience": "5-8 years",
+    "qualification": "B.Tech/B.E in Computer Science or related field",
+    "monthlyBudget": "Not specified",
+    "annualBudget": "22-26 LPA",
+    "budgetCurrency": "INR",
+    "workMode": "Hybrid",
+    "employmentType": "Full Time",
+    "noticePeriod": "Immediate to 30 days",
+    "workTimings": "Not specified",
+    "sla": "Not specified",
+    "primarySkillSet": "Python, FastAPI, Django, PostgreSQL, Redis, SQLAlchemy",
+    "secondarySkillSet": "Docker, Kubernetes, AWS, ECS, S3, RDS, CI/CD, GitHub Actions",
+    "jobDescription": "Strong hands-on experience with Python 3.10+, FastAPI, and Django. Solid experience in designing RESTful APIs and microservices. Experience with PostgreSQL, Redis, and SQLAlchemy. Working knowledge of Docker, Kubernetes, and AWS (ECS, S3, RDS).",
+    "technicalSkills": [
+      { "name": "Python", "rating": "5" },
+      { "name": "FastAPI", "rating": "4" },
+      { "name": "Django", "rating": "4" },
+      { "name": "PostgreSQL", "rating": "4" },
+      { "name": "Redis", "rating": "3" },
+      { "name": "SQLAlchemy", "rating": "3" },
+      { "name": "Docker", "rating": "3" },
+      { "name": "Kubernetes", "rating": "3" },
+      { "name": "AWS", "rating": "3" }
+    ],
+    "emailHeaders": {
+      "from": [{ "name": "Talent Acquisition", "email": "recruiter@techcorp.com" }],
+      "to": [{ "name": "Vendor Partner", "email": "partners@staffing.com" }],
+      "cc": [{ "name": "Engineering Lead", "email": "lead@techcorp.com" }]
+    }
+  }
+]
+

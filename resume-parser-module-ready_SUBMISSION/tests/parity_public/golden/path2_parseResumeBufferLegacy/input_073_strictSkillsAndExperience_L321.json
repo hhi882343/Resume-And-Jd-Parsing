@@ -1,0 +1,18 @@
+{
+  "candidateName": null,
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": "B.E. in Electrical Engineering",
+  "skillsRaw": null,
+  "technologiesRaw": "Semiconductor Capital Equipment, Battery Energy Storage Systems",
+  "technologies": "Semiconductor Capital Equipment, Battery Energy Storage Systems",
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_073_strictSkillsAndExperience_L321.txt",
+  "parser": "legacy",
+  "role": "Semiconductor Capital Equipment, Battery Energy Storage Systems"
+}

@@ -1,0 +1,7 @@
+
+John Doe
+john.doe@example.com
++91 9876543210
+
+Education
+B.Tech in Computer Science

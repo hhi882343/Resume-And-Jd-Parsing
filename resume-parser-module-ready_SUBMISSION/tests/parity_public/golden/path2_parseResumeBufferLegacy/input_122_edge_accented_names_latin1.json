@@ -1,0 +1,18 @@
+{
+  "candidateName": "Backend",
+  "email": "rene.francois@example.fr",
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Go, PostgreSQL, Docker",
+  "technologiesRaw": "Backend Developer",
+  "technologies": "Backend Developer",
+  "totalExperience": "6 years",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": "Paris, France",
+  "location": "Paris, France",
+  "sourceFile": "input_122_edge_accented_names_latin1.txt",
+  "parser": "legacy",
+  "role": "Backend Developer"
+}

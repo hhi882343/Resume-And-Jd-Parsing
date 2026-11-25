@@ -1,0 +1,17 @@
+{
+  "candidateName": "Ivy League",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Python, Docker",
+  "technologiesRaw": "Senior Software Engineer at Google",
+  "technologies": "Senior Software Engineer at Google",
+  "totalExperienceYears": null,
+  "totalExperienceText": "",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Senior Software Engineer at Google"
+}

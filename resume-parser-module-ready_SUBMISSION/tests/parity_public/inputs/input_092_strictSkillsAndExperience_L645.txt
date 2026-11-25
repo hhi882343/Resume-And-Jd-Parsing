@@ -1,0 +1,9 @@
+
+Candidate Name: Jane Tech
+Email: jane@example.com
+
+| Technical Skills |
+| C++ | Python | Linux | Git | Docker | Jenkins |
+
+Professional Experience:
+Engineer at Corp

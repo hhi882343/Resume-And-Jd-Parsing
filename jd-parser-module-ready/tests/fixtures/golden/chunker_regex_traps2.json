@@ -1,0 +1,694 @@
+[
+  {
+    "id": "trap2-01-kelvin-k-and-long-s",
+    "description": "Keywords with U+017F (ſubject) and U+212A (Kelvin Location) testing ASCII case folding",
+    "input": {
+      "raw_text": "From: recruiter@corp.com\nTo: talent@agency.org\nſubject: Software Engineer @ Chicago\nSent: May 10, 2026\n\nKelvin Location: Chicago, IL\nOpenings: 2\n"
+    },
+    "expected_output": {
+      "email_headers": "From: recruiter@corp.com\nSent: May 10, 2026\nTo: talent@agency.org",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@corp.com\nTo: talent@agency.org\nſubject: Software Engineer @ Chicago\nSent: May 10, 2026\n\nKelvin Location: Chicago, IL\nOpenings: 2\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@corp.com\nSent: May 10, 2026\nTo: talent@agency.org\n\nFrom: recruiter@corp.com\nTo: talent@agency.org\nſubject: Software Engineer @ Chicago\nSent: May 10, 2026\n\nKelvin Location: Chicago, IL\nOpenings: 2\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "recruiter@corp.com",
+        "clientPocFromCc": "recruiter@corp.com",
+        "requirementFrom": "CORP",
+        "internalPocTo": "corp.com, agency.org",
+        "demandReceivedDate": "May 10, 2026",
+        "location": "Chicago, IL"
+      },
+      "regex_augmented": {
+        "jobTitle": "Not specified",
+        "clientLeadPocFrom": "recruiter@corp.com",
+        "clientPocFromCc": "recruiter@corp.com",
+        "internalPocTo": "corp.com, agency.org",
+        "requirementFrom": "CORP",
+        "demandReceivedDate": "May 10, 2026",
+        "location": "Chicago, IL",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-02-trailing-newline-at-title-end",
+    "description": "Trailing newlines testing $ vs \\Z anchor behavior across title and headers",
+    "input": {
+      "raw_text": "From: lead@hire.io\nTo: pool@team.net\nSubject: Requirement #5\n\nSent: 15 Aug 2026\n\nOpenings: 1\n"
+    },
+    "expected_output": {
+      "email_headers": "From: lead@hire.io\nSent: 15 Aug 2026\nTo: pool@team.net\nSubject: Requirement #5",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 0,
+      "split_chunks": [],
+      "post_processed_chunks_count": 0,
+      "post_processed_chunks": [],
+      "common_metadata": {
+        "clientLeadPocFrom": "lead@hire.io",
+        "clientPocFromCc": "lead@hire.io",
+        "requirementFrom": "HIRE",
+        "internalPocTo": "hire.io, team.net",
+        "jobTitle": "Requirement #5",
+        "numberOfPositions": "2026",
+        "typeOfDemand": "Multiple"
+      },
+      "regex_augmented": {
+        "jobTitle": "Requirement #5",
+        "clientLeadPocFrom": "lead@hire.io",
+        "clientPocFromCc": "lead@hire.io",
+        "internalPocTo": "hire.io, team.net",
+        "requirementFrom": "HIRE",
+        "demandReceivedDate": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "2026",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-03-cr-only-multicity-line",
+    "description": "CR-only multi-city line testing \\n requirement in city line regex",
+    "input": {
+      "raw_text": "From: lead@hiring.com\rTo: hr@agency.com\rSubject: Multiple Cities Role\r\rNew York, Boston, Chicago\rHybrid\r"
+    },
+    "expected_output": {
+      "email_headers": "From: lead@hiring.com\nTo: hr@agency.com\nSubject: Multiple Cities Role",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: lead@hiring.com\rTo: hr@agency.com\rSubject: Multiple Cities Role\r\rNew York, Boston, Chicago\rHybrid\r",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: lead@hiring.com\rTo: hr@agency.com\rSubject: Multiple Cities Role\r\rNew York, Boston, Chicago\rHybrid\r",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "lead@hiring.com",
+        "clientPocFromCc": "lead@hiring.com",
+        "requirementFrom": "HIRING",
+        "internalPocTo": "hr@agency.com",
+        "jobTitle": "Multiple Cities Role"
+      },
+      "regex_augmented": {
+        "jobTitle": "Multiple Cities Role",
+        "clientLeadPocFrom": "lead@hiring.com",
+        "clientPocFromCc": "lead@hiring.com",
+        "internalPocTo": "hr@agency.com",
+        "requirementFrom": "HIRING",
+        "demandReceivedDate": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-04-u2028-multicity-line",
+    "description": "Line separator \\u2028 multi-city line testing literal \\n matching",
+    "input": {
+      "raw_text": "From: lead@hiring.com To: hr@agency.com Subject: Line Separator Cities  Seattle, Portland, San Francisco On-site "
+    },
+    "expected_output": {
+      "email_headers": "From: lead@hiring.com\nTo: hr@agency.com\nSubject: Line Separator Cities",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: lead@hiring.com To: hr@agency.com Subject: Line Separator Cities  Seattle, Portland, San Francisco On-site ",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: lead@hiring.com To: hr@agency.com Subject: Line Separator Cities  Seattle, Portland, San Francisco On-site ",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "lead@hiring.com",
+        "clientPocFromCc": "lead@hiring.com",
+        "requirementFrom": "HIRING",
+        "internalPocTo": "hr@agency.com",
+        "jobTitle": "Line Separator Cities",
+        "workMode": "On-site"
+      },
+      "regex_augmented": {
+        "jobTitle": "Line Separator Cities",
+        "clientLeadPocFrom": "lead@hiring.com",
+        "clientPocFromCc": "lead@hiring.com",
+        "internalPocTo": "hr@agency.com",
+        "requirementFrom": "HIRING",
+        "demandReceivedDate": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "On-site",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-05-type-of-hire-upper-case",
+    "description": "All-uppercase TYPE OF HIRE label and PERMANENT value",
+    "input": {
+      "raw_text": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: Lead Java Developer\nSent: 01 Jul 2026\n\nTYPE OF HIRE: PERMANENT\nOpenings: 1\n"
+    },
+    "expected_output": {
+      "email_headers": "From: recruiter@domain.com\nSent: 01 Jul 2026\nTo: vendor@agency.org\nSubject: Lead Java Developer",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: Lead Java Developer\nSent: 01 Jul 2026\n\nTYPE OF HIRE: PERMANENT\nOpenings: 1\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: Lead Java Developer\nSent: 01 Jul 2026\n\nTYPE OF HIRE: PERMANENT\nOpenings: 1\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "recruiter@domain.com",
+        "clientPocFromCc": "recruiter@domain.com",
+        "requirementFrom": "DOMAIN",
+        "internalPocTo": "domain.com, agency.org",
+        "jobTitle": "Lead Java Developer",
+        "employmentType": "PERMANENT"
+      },
+      "regex_augmented": {
+        "jobTitle": "Lead Java Developer",
+        "clientLeadPocFrom": "recruiter@domain.com",
+        "clientPocFromCc": "recruiter@domain.com",
+        "internalPocTo": "domain.com, agency.org",
+        "requirementFrom": "DOMAIN",
+        "demandReceivedDate": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "PERMANENT",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-06-type-of-hire-lower-case",
+    "description": "All-lowercase type of hire label and fte value",
+    "input": {
+      "raw_text": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: DevOps Lead\nSent: 02 Jul 2026\n\ntype of hire - fte\nOpenings: 2\n"
+    },
+    "expected_output": {
+      "email_headers": "From: recruiter@domain.com\nSent: 02 Jul 2026\nTo: vendor@agency.org\nSubject: DevOps Lead",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: DevOps Lead\nSent: 02 Jul 2026\n\ntype of hire - fte\nOpenings: 2\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: DevOps Lead\nSent: 02 Jul 2026\n\ntype of hire - fte\nOpenings: 2\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "recruiter@domain.com",
+        "clientPocFromCc": "recruiter@domain.com",
+        "requirementFrom": "DOMAIN",
+        "internalPocTo": "domain.com, agency.org",
+        "jobTitle": "DevOps Lead",
+        "employmentType": "fte"
+      },
+      "regex_augmented": {
+        "jobTitle": "DevOps Lead",
+        "clientLeadPocFrom": "recruiter@domain.com",
+        "clientPocFromCc": "recruiter@domain.com",
+        "internalPocTo": "domain.com, agency.org",
+        "requirementFrom": "DOMAIN",
+        "demandReceivedDate": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "fte",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-07-type-of-hire-mixed-case",
+    "description": "Mixed-case tYpE oF hIrE label and sUb-cOn value",
+    "input": {
+      "raw_text": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: Cloud Consultant\nSent: 03 Jul 2026\n\ntYpE oF hIrE : sUb-cOn\nOpenings: 3\n"
+    },
+    "expected_output": {
+      "email_headers": "From: recruiter@domain.com\nSent: 03 Jul 2026\nTo: vendor@agency.org\nSubject: Cloud Consultant",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: Cloud Consultant\nSent: 03 Jul 2026\n\ntYpE oF hIrE : sUb-cOn\nOpenings: 3\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@domain.com\nTo: vendor@agency.org\nSubject: Cloud Consultant\nSent: 03 Jul 2026\n\ntYpE oF hIrE : sUb-cOn\nOpenings: 3\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "recruiter@domain.com",
+        "clientPocFromCc": "recruiter@domain.com",
+        "requirementFrom": "DOMAIN",
+        "internalPocTo": "domain.com, agency.org",
+        "jobTitle": "Cloud Consultant",
+        "employmentType": "sUb-cOn"
+      },
+      "regex_augmented": {
+        "jobTitle": "Cloud Consultant",
+        "clientLeadPocFrom": "recruiter@domain.com",
+        "clientPocFromCc": "recruiter@domain.com",
+        "internalPocTo": "domain.com, agency.org",
+        "requirementFrom": "DOMAIN",
+        "demandReceivedDate": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "sUb-cOn",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-08-nbsp-bom-in-overall-exp",
+    "description": "Non-breaking spaces (\\u00a0) and BOM (\\ufeff) inside overall experience",
+    "input": {
+      "raw_text": "From: talent@tech.io\nTo: team@consulting.org\nSubject: Senior SRE\nSent: 10 Jan 2026\n\nOverall exp - ﻿7 to 10 years\nHybrid mode (3 days a week)\n"
+    },
+    "expected_output": {
+      "email_headers": "From: talent@tech.io\nSent: 10 Jan 2026\nTo: team@consulting.org\nSubject: Senior SRE",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: talent@tech.io\nTo: team@consulting.org\nSubject: Senior SRE\nSent: 10 Jan 2026\n\nOverall exp - ﻿7 to 10 years\nHybrid mode (3 days a week)\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: talent@tech.io\nTo: team@consulting.org\nSubject: Senior SRE\nSent: 10 Jan 2026\n\nOverall exp - ﻿7 to 10 years\nHybrid mode (3 days a week)\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "talent@tech.io",
+        "clientPocFromCc": "talent@tech.io",
+        "requirementFrom": "TECH",
+        "internalPocTo": "tech.io, consulting.org",
+        "jobTitle": "Senior SRE",
+        "overallExperience": "7 to 10 years",
+        "workMode": "Hybrid (3 days a week)",
+        "relevantExperience": "Mid Senior"
+      },
+      "regex_augmented": {
+        "jobTitle": "Senior SRE",
+        "clientLeadPocFrom": "talent@tech.io",
+        "clientPocFromCc": "talent@tech.io",
+        "internalPocTo": "tech.io, consulting.org",
+        "requirementFrom": "TECH",
+        "demandReceivedDate": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Mid Senior",
+        "overallExperience": "7 to 10 years",
+        "workMode": "Hybrid (3 days a week)",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-09-nbsp-in-position-focus",
+    "description": "Non-breaking spaces (\\u00a0) inside Position-focus variant headings",
+    "input": {
+      "raw_text": "From: recruiter@enterprise.com\nSubject: SAP Multi Lead @ Dallas\n\nPosition 1 to be focused SAP FI Banking\n\nPosition 2 to be focused SAP CO Product Costing\n"
+    },
+    "expected_output": {
+      "email_headers": "From: recruiter@enterprise.com\nSubject: SAP Multi Lead @ Dallas",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@enterprise.com\nSubject: SAP Multi Lead @ Dallas\n\nPosition 1 to be focused SAP FI Banking\n\nPosition 2 to be focused SAP CO Product Costing\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@enterprise.com\nSubject: SAP Multi Lead @ Dallas\n\nPosition 1 to be focused SAP FI Banking\n\nPosition 2 to be focused SAP CO Product Costing\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "recruiter@enterprise.com",
+        "clientPocFromCc": "recruiter@enterprise.com",
+        "requirementFrom": "ENTERPRISE",
+        "jobTitle": "SAP Multi Lead",
+        "location": "Dallas",
+        "internalPocTo": "enterprise.com"
+      },
+      "regex_augmented": {
+        "jobTitle": "SAP Multi Lead",
+        "clientLeadPocFrom": "recruiter@enterprise.com",
+        "clientPocFromCc": "recruiter@enterprise.com",
+        "internalPocTo": "enterprise.com",
+        "requirementFrom": "ENTERPRISE",
+        "demandReceivedDate": "Not specified",
+        "location": "Dallas",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-10-non-ascii-digits-headcount",
+    "description": "Arabic and Devanagari numerals alongside ASCII digits testing ASCII \\d bounds",
+    "input": {
+      "raw_text": "From: global@recruiting.org\nTo: partner@hr.com\nSubject: International Engineer\nSent: 05 Jun 2026\n\nOpenings: ۳ openings\nHeadcount: ५\nResources Required: 4\n"
+    },
+    "expected_output": {
+      "email_headers": "From: global@recruiting.org\nSent: 05 Jun 2026\nTo: partner@hr.com\nSubject: International Engineer",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: global@recruiting.org\nTo: partner@hr.com\nSubject: International Engineer\nSent: 05 Jun 2026\n\nOpenings: ۳ openings\nHeadcount: ५\nResources Required: 4\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: global@recruiting.org\nTo: partner@hr.com\nSubject: International Engineer\nSent: 05 Jun 2026\n\nOpenings: ۳ openings\nHeadcount: ५\nResources Required: 4\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "global@recruiting.org",
+        "clientPocFromCc": "global@recruiting.org",
+        "requirementFrom": "RECRUITING",
+        "internalPocTo": "recruiting.org, hr.com",
+        "jobTitle": "International Engineer",
+        "numberOfPositions": "2026",
+        "typeOfDemand": "Multiple"
+      },
+      "regex_augmented": {
+        "jobTitle": "International Engineer",
+        "clientLeadPocFrom": "global@recruiting.org",
+        "clientPocFromCc": "global@recruiting.org",
+        "internalPocTo": "recruiting.org, hr.com",
+        "requirementFrom": "RECRUITING",
+        "demandReceivedDate": "Not specified",
+        "location": "Not specified",
+        "numberOfPositions": "2026",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-11-crlf-all-newline-lookahead-fields",
+    "description": "CRLF line endings on timings, qualification, experience, and bill rate",
+    "input": {
+      "raw_text": "From: recruiter@windows-hire.com\r\nTo: candidate@talent.org\r\nSubject: Fullstack Lead @ Austin\r\nSent: 20 Mar 2026\r\n\r\nwork timings - 9am - 5pm CST\r\nqualification - Master of Science\r\nexperience - 8+ years\r\nbill rate per month - 200000\r\n"
+    },
+    "expected_output": {
+      "email_headers": "From: recruiter@windows-hire.com\nSent: 20 Mar 2026\nTo: candidate@talent.org\nSubject: Fullstack Lead @ Austin",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@windows-hire.com\r\nTo: candidate@talent.org\r\nSubject: Fullstack Lead @ Austin\r\nSent: 20 Mar 2026\r\n\r\nwork timings - 9am - 5pm CST\r\nqualification - Master of Science\r\nexperience - 8+ years\r\nbill rate per month - 200000\r\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@windows-hire.com\r\nTo: candidate@talent.org\r\nSubject: Fullstack Lead @ Austin\r\nSent: 20 Mar 2026\r\n\r\nwork timings - 9am - 5pm CST\r\nqualification - Master of Science\r\nexperience - 8+ years\r\nbill rate per month - 200000\r\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "recruiter@windows-hire.com",
+        "clientPocFromCc": "recruiter@windows-hire.com",
+        "requirementFrom": "WINDOWS HIRE",
+        "internalPocTo": "talent.org",
+        "jobTitle": "Fullstack Lead",
+        "location": "Austin"
+      },
+      "regex_augmented": {
+        "jobTitle": "Fullstack Lead",
+        "clientLeadPocFrom": "recruiter@windows-hire.com",
+        "clientPocFromCc": "recruiter@windows-hire.com",
+        "internalPocTo": "talent.org",
+        "requirementFrom": "WINDOWS HIRE",
+        "demandReceivedDate": "Not specified",
+        "location": "Austin",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "Not specified",
+        "budgetCurrency": "Not specified",
+        "relevantExperience": "Not specified",
+        "overallExperience": "Not specified",
+        "workMode": "Not specified",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "Not specified",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  },
+  {
+    "id": "trap2-12-lf-all-newline-lookahead-fields",
+    "description": "LF line endings on timings, qualification, experience, and bill rate",
+    "input": {
+      "raw_text": "From: recruiter@linux-hire.com\nTo: candidate@talent.org\nSubject: Backend Lead @ Austin\nSent: 20 Mar 2026\n\nwork timings - 9am - 5pm CST\nqualification - Master of Science\nexperience - 8+ years\nbill rate per month - 200000\n"
+    },
+    "expected_output": {
+      "email_headers": "From: recruiter@linux-hire.com\nSent: 20 Mar 2026\nTo: candidate@talent.org\nSubject: Backend Lead @ Austin",
+      "position_focus_variants_count": 0,
+      "position_focus_variants": [],
+      "split_chunks_count": 1,
+      "split_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@linux-hire.com\nTo: candidate@talent.org\nSubject: Backend Lead @ Austin\nSent: 20 Mar 2026\n\nwork timings - 9am - 5pm CST\nqualification - Master of Science\nexperience - 8+ years\nbill rate per month - 200000\n",
+          "numberOfPositions": null
+        }
+      ],
+      "post_processed_chunks_count": 1,
+      "post_processed_chunks": [
+        {
+          "title": "Single Requirement",
+          "content": "From: recruiter@linux-hire.com\nTo: candidate@talent.org\nSubject: Backend Lead @ Austin\nSent: 20 Mar 2026\n\nwork timings - 9am - 5pm CST\nqualification - Master of Science\nexperience - 8+ years\nbill rate per month - 200000\n",
+          "numberOfPositions": null
+        }
+      ],
+      "common_metadata": {
+        "clientLeadPocFrom": "recruiter@linux-hire.com",
+        "clientPocFromCc": "recruiter@linux-hire.com",
+        "requirementFrom": "LINUX HIRE",
+        "internalPocTo": "talent.org",
+        "jobTitle": "Backend Lead",
+        "location": "Austin",
+        "workTimings": "9am - 5pm CST",
+        "qualificationCriteria": "Master of Science",
+        "overallExperience": "8+ years",
+        "monthlyBudget": "200000",
+        "budgetCurrency": "INR"
+      },
+      "regex_augmented": {
+        "jobTitle": "Backend Lead",
+        "clientLeadPocFrom": "recruiter@linux-hire.com",
+        "clientPocFromCc": "recruiter@linux-hire.com",
+        "internalPocTo": "talent.org",
+        "requirementFrom": "LINUX HIRE",
+        "demandReceivedDate": "Not specified",
+        "location": "Austin",
+        "numberOfPositions": "Not specified",
+        "annualBudget": "Not specified",
+        "monthlyBudget": "200000",
+        "budgetCurrency": "INR",
+        "relevantExperience": "Not specified",
+        "overallExperience": "8+ years",
+        "workMode": "Not specified",
+        "employmentType": "Not specified",
+        "priority": "Not specified",
+        "workTimings": "9am - 5pm CST",
+        "noticePeriod": "Not specified",
+        "mandatorySkills": [],
+        "skills": []
+      }
+    }
+  }
+]

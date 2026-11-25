@@ -1,0 +1,394 @@
+[
+  {
+    "id": "num-nan",
+    "description": "NaN stringifies to null",
+    "type": "number_tagged",
+    "input": "NaN",
+    "expected_output": "null"
+  },
+  {
+    "id": "num-infinity",
+    "description": "Infinity stringifies to null",
+    "type": "number_tagged",
+    "input": "Infinity",
+    "expected_output": "null"
+  },
+  {
+    "id": "num-neg-infinity",
+    "description": "-Infinity stringifies to null",
+    "type": "number_tagged",
+    "input": "-Infinity",
+    "expected_output": "null"
+  },
+  {
+    "id": "num-neg-zero",
+    "description": "-0 stringifies to 0",
+    "type": "number_tagged",
+    "input": "-0",
+    "expected_output": "0"
+  },
+  {
+    "id": "num-pos-zero",
+    "description": "0 stringifies to 0",
+    "type": "number_tagged",
+    "input": "0",
+    "expected_output": "0"
+  },
+  {
+    "id": "num-int",
+    "description": "Positive integer",
+    "type": "json_value",
+    "input": 42,
+    "expected_output": "42"
+  },
+  {
+    "id": "num-neg-int",
+    "description": "Negative integer",
+    "type": "json_value",
+    "input": -17,
+    "expected_output": "-17"
+  },
+  {
+    "id": "num-float-whole",
+    "description": "Float with zero fraction 1.0 -> 1",
+    "type": "json_value",
+    "input": 1,
+    "expected_output": "1"
+  },
+  {
+    "id": "num-float-whole-100",
+    "description": "Float with zero fraction 100.0 -> 100",
+    "type": "json_value",
+    "input": 100,
+    "expected_output": "100"
+  },
+  {
+    "id": "num-float-fraction",
+    "description": "Float with decimal fraction",
+    "type": "json_value",
+    "input": 3.14159,
+    "expected_output": "3.14159"
+  },
+  {
+    "id": "num-float-neg-fraction",
+    "description": "Negative float with fraction",
+    "type": "json_value",
+    "input": -0.75,
+    "expected_output": "-0.75"
+  },
+  {
+    "id": "num-exp-large",
+    "description": "Large number scientific notation",
+    "type": "json_value",
+    "input": 1e+21,
+    "expected_output": "1e+21"
+  },
+  {
+    "id": "num-exp-small",
+    "description": "Small number scientific notation",
+    "type": "json_value",
+    "input": 1e-7,
+    "expected_output": "1e-7"
+  },
+  {
+    "id": "bool-true",
+    "description": "Boolean true",
+    "type": "json_value",
+    "input": true,
+    "expected_output": "true"
+  },
+  {
+    "id": "bool-false",
+    "description": "Boolean false",
+    "type": "json_value",
+    "input": false,
+    "expected_output": "false"
+  },
+  {
+    "id": "null-val",
+    "description": "Null value",
+    "type": "json_value",
+    "input": null,
+    "expected_output": "null"
+  },
+  {
+    "id": "ctrl-0000-null",
+    "description": "U+0000 NUL control character",
+    "type": "string_code_units",
+    "input": [
+      0
+    ],
+    "expected_output": "\"\\u0000\""
+  },
+  {
+    "id": "ctrl-0001-soh",
+    "description": "U+0001 SOH control character",
+    "type": "string_code_units",
+    "input": [
+      1
+    ],
+    "expected_output": "\"\\u0001\""
+  },
+  {
+    "id": "ctrl-0008-bs",
+    "description": "U+0008 Backspace short escape \\b",
+    "type": "string_code_units",
+    "input": [
+      8
+    ],
+    "expected_output": "\"\\b\""
+  },
+  {
+    "id": "ctrl-0009-tab",
+    "description": "U+0009 Horizontal Tab short escape \\t",
+    "type": "string_code_units",
+    "input": [
+      9
+    ],
+    "expected_output": "\"\\t\""
+  },
+  {
+    "id": "ctrl-000a-lf",
+    "description": "U+000A Line Feed short escape \\n",
+    "type": "string_code_units",
+    "input": [
+      10
+    ],
+    "expected_output": "\"\\n\""
+  },
+  {
+    "id": "ctrl-000c-ff",
+    "description": "U+000C Form Feed short escape \\f",
+    "type": "string_code_units",
+    "input": [
+      12
+    ],
+    "expected_output": "\"\\f\""
+  },
+  {
+    "id": "ctrl-000d-cr",
+    "description": "U+000D Carriage Return short escape \\r",
+    "type": "string_code_units",
+    "input": [
+      13
+    ],
+    "expected_output": "\"\\r\""
+  },
+  {
+    "id": "ctrl-001f-us",
+    "description": "U+001F Unit Separator control character",
+    "type": "string_code_units",
+    "input": [
+      31
+    ],
+    "expected_output": "\"\\u001f\""
+  },
+  {
+    "id": "char-007f-del",
+    "description": "U+007F DEL character is not escaped",
+    "type": "string_code_units",
+    "input": [
+      127
+    ],
+    "expected_output": "\"\""
+  },
+  {
+    "id": "char-2028-ls",
+    "description": "U+2028 Line Separator is not escaped",
+    "type": "string_code_units",
+    "input": [
+      8232
+    ],
+    "expected_output": "\" \""
+  },
+  {
+    "id": "char-2029-ps",
+    "description": "U+2029 Paragraph Separator is not escaped",
+    "type": "string_code_units",
+    "input": [
+      8233
+    ],
+    "expected_output": "\" \""
+  },
+  {
+    "id": "char-quote",
+    "description": "Double quote escaped as \\\"",
+    "type": "string_code_units",
+    "input": [
+      34
+    ],
+    "expected_output": "\"\\\"\""
+  },
+  {
+    "id": "char-backslash",
+    "description": "Backslash escaped as \\\\",
+    "type": "string_code_units",
+    "input": [
+      92
+    ],
+    "expected_output": "\"\\\\\""
+  },
+  {
+    "id": "str-quotes-and-slashes",
+    "description": "Mixed quotes and backslashes",
+    "type": "string_code_units",
+    "input": [
+      67,
+      58,
+      92,
+      92,
+      116,
+      101,
+      115,
+      116,
+      34,
+      104,
+      105,
+      34
+    ],
+    "expected_output": "\"C:\\\\\\\\test\\\"hi\\\"\""
+  },
+  {
+    "id": "str-german",
+    "description": "German umlauts and eszett",
+    "type": "json_value",
+    "input": "München Straße über",
+    "expected_output": "\"München Straße über\""
+  },
+  {
+    "id": "str-hindi",
+    "description": "Hindi Devanagari script",
+    "type": "json_value",
+    "input": "नमस्ते दुनिया कौशल",
+    "expected_output": "\"नमस्ते दुनिया कौशल\""
+  },
+  {
+    "id": "str-accents",
+    "description": "Accented French and Spanish",
+    "type": "json_value",
+    "input": "Café résumé señor",
+    "expected_output": "\"Café résumé señor\""
+  },
+  {
+    "id": "surr-lone-lead-d800",
+    "description": "Lone lead surrogate U+D800",
+    "type": "string_code_units",
+    "input": [
+      55296
+    ],
+    "expected_output": "\"\\ud800\""
+  },
+  {
+    "id": "surr-lone-lead-d83d",
+    "description": "Lone lead surrogate U+D83D without trail",
+    "type": "string_code_units",
+    "input": [
+      55357,
+      32,
+      97
+    ],
+    "expected_output": "\"\\ud83d a\""
+  },
+  {
+    "id": "surr-lone-trail-de80",
+    "description": "Lone trail surrogate U+DE80 without lead",
+    "type": "string_code_units",
+    "input": [
+      98,
+      32,
+      56960
+    ],
+    "expected_output": "\"b \\ude80\""
+  },
+  {
+    "id": "surr-lone-trail-dfff",
+    "description": "Lone trail surrogate U+DFFF",
+    "type": "string_code_units",
+    "input": [
+      57343
+    ],
+    "expected_output": "\"\\udfff\""
+  },
+  {
+    "id": "surr-valid-pair-rocket",
+    "description": "Valid surrogate pair 🚀 is unescaped UTF-8",
+    "type": "string_code_units",
+    "input": [
+      55357,
+      56960
+    ],
+    "expected_output": "\"🚀\""
+  },
+  {
+    "id": "surr-valid-pair-tada",
+    "description": "Valid surrogate pair 🎉 is unescaped UTF-8",
+    "type": "string_code_units",
+    "input": [
+      55356,
+      57225
+    ],
+    "expected_output": "\"🎉\""
+  },
+  {
+    "id": "container-empty-obj",
+    "description": "Empty object",
+    "type": "json_value",
+    "input": {},
+    "expected_output": "{}"
+  },
+  {
+    "id": "container-empty-arr",
+    "description": "Empty array",
+    "type": "json_value",
+    "input": [],
+    "expected_output": "[]"
+  },
+  {
+    "id": "container-flat-arr",
+    "description": "Flat array with mixed types",
+    "type": "json_value",
+    "input": [
+      1,
+      "text",
+      true,
+      false,
+      null
+    ],
+    "expected_output": "[1,\"text\",true,false,null]"
+  },
+  {
+    "id": "container-key-order",
+    "description": "Object with explicit key order",
+    "type": "json_value",
+    "input": {
+      "zeta": 1,
+      "alpha": "first",
+      "beta": 2,
+      "gamma": false
+    },
+    "expected_output": "{\"zeta\":1,\"alpha\":\"first\",\"beta\":2,\"gamma\":false}"
+  },
+  {
+    "id": "container-nested",
+    "description": "Complex nested containers",
+    "type": "json_value",
+    "input": {
+      "jobTitle": "Senior Staff Architect 🚀",
+      "location": "München   Remote",
+      "overallExperience": "10+ years",
+      "mandatorySkills": [
+        "Python",
+        "हिंदी",
+        "Docker"
+      ],
+      "fieldScores": {
+        "jobTitle": 1,
+        "skills": 0.85,
+        "location": 0
+      },
+      "flag": true,
+      "notes": null
+    },
+    "expected_output": "{\"jobTitle\":\"Senior Staff Architect 🚀\",\"location\":\"München   Remote\",\"overallExperience\":\"10+ years\",\"mandatorySkills\":[\"Python\",\"हिंदी\",\"Docker\"],\"fieldScores\":{\"jobTitle\":1,\"skills\":0.85,\"location\":0},\"flag\":true,\"notes\":null}"
+  }
+]

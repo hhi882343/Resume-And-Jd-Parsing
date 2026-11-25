@@ -1,0 +1,10 @@
+
+Bob Johnson
+bob@example.com
+
+Professional Summary
+Experienced Software Engineer skilled in Python, Flask, and PostgreSQL with a background in designing REST APIs.
+
+Work Experience
+Engineer at Globex
+- Worked on backend systems.

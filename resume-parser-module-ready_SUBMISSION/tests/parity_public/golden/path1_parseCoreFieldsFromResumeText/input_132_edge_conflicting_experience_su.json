@@ -1,0 +1,17 @@
+{
+  "candidateName": "Kiran Rao",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "educationRaw": null,
+  "skillsRaw": "Python, FastAPI",
+  "technologiesRaw": "Principal Engineer",
+  "technologies": "Principal Engineer",
+  "totalExperienceYears": 8,
+  "totalExperienceText": "8 years",
+  "relevantExperience": null,
+  "currentCompany": null,
+  "currentLocation": null,
+  "role": "Principal Engineer"
+}

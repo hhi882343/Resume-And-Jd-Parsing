@@ -1,0 +1,18 @@
+{
+  "candidateName": "Taylor",
+  "email": null,
+  "contactNumber": null,
+  "linkedinUrl": null,
+  "highestQualification": null,
+  "skillsRaw": "Data Preprocessing, Model Evaluation, Python, Scikit-learn",
+  "technologiesRaw": null,
+  "technologies": null,
+  "totalExperience": "",
+  "relevantExperience": null,
+  "currentEmployer": null,
+  "currentLocation": null,
+  "location": null,
+  "sourceFile": "input_110_strictSkillsAndExperience_L100.txt",
+  "parser": "legacy",
+  "role": null
+}

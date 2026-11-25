@@ -1,0 +1,8 @@
+
+David Miller
+david@example.com
+
+Work Experience
+Frontend Developer at Tech Corp (2021 - Present)
+- Experienced in designing responsive interfaces using React and Tailwind CSS.
+- Developed REST APIs and integrated GraphQL endpoints.

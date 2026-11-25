@@ -1,0 +1,181 @@
+{
+  "GET_HEALTH_UPPERCASE": {
+    "statusCode": 200,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "131",
+      "etag": "W/\"83-hXZ43ZBSXRhcAphHmt8IyPUw8ks\""
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": null,
+      "mode": "hybrid-ai-with-fallback"
+    }
+  },
+  "GET_HEALTH_TRAILING_SLASH": {
+    "statusCode": 200,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "131",
+      "etag": "W/\"83-hXZ43ZBSXRhcAphHmt8IyPUw8ks\""
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": null,
+      "mode": "hybrid-ai-with-fallback"
+    }
+  },
+  "POST_API_RESUME_PARSE_MIXED_CASE": {
+    "statusCode": 400,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "81",
+      "etag": "W/\"51-YBHMOkIvofSP17+Ds8HiK9/CtsU\""
+    },
+    "body": {
+      "success": false,
+      "message": "Resume file is required under form field \"resume\""
+    }
+  },
+  "OPTIONS_PREFLIGHT": {
+    "statusCode": 204,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+      "vary": "Access-Control-Request-Headers",
+      "access-control-allow-headers": "content-type",
+      "content-length": "0"
+    },
+    "body": ""
+  },
+  "GET_HEALTH_INITIAL": {
+    "statusCode": 200,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "131",
+      "etag": "W/\"83-hXZ43ZBSXRhcAphHmt8IyPUw8ks\""
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": null,
+      "mode": "hybrid-ai-with-fallback"
+    }
+  },
+  "GET_HEALTH_AFTER_429_SUSPENSION": {
+    "statusCode": 200,
+    "headers": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "211",
+      "etag": "W/\"d3-lfaV/WfWNtMarsrysl0tWhRAQgk\""
+    },
+    "body": {
+      "status": "ok",
+      "service": "resume-parser-module",
+      "aiParserAvailable": true,
+      "aiSuspendedNotice": "Gemini API quota or rate limit reached — using keyword parser for remaining resumes.",
+      "mode": "local-deterministic"
+    }
+  },
+  "wrong_field": {
+    "statusCode": 500,
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "access-control-allow-origin": "*"
+    },
+    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Internal Server Error</pre>\n</body>\n</html>\n"
+  },
+  "two_files_to_single_parse": {
+    "statusCode": 500,
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "access-control-allow-origin": "*"
+    },
+    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Internal Server Error</pre>\n</body>\n</html>\n"
+  },
+  "zero_byte_file": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "access-control-allow-origin": "*"
+    },
+    "body": {
+      "success": true,
+      "message": "Resume parsed successfully",
+      "data": {
+        "candidateName": null,
+        "email": null,
+        "contactNumber": null,
+        "linkedinUrl": null,
+        "highestQualification": null,
+        "skillsRaw": null,
+        "technologiesRaw": null,
+        "technologies": null,
+        "totalExperience": "",
+        "relevantExperience": null,
+        "currentEmployer": null,
+        "currentLocation": null,
+        "location": null,
+        "sourceFile": "empty.txt",
+        "parser": "metaforge",
+        "role": null
+      }
+    }
+  },
+  "HEAD_health": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "access-control-allow-origin": "*"
+    },
+    "body": ""
+  },
+  "HEAD_parse": {
+    "statusCode": 404,
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "access-control-allow-origin": "*"
+    },
+    "body": ""
+  },
+  "GET_unknown_path_404": {
+    "statusCode": 404,
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "access-control-allow-origin": "*"
+    },
+    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /unknown/path</pre>\n</body>\n</html>\n"
+  },
+  "invalid_json_body": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "access-control-allow-origin": "*"
+    },
+    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Bad Request</pre>\n</body>\n</html>\n"
+  },
+  "malformed_multipart": {
+    "statusCode": 500,
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "access-control-allow-origin": "*"
+    },
+    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Internal Server Error</pre>\n</body>\n</html>\n"
+  }
+}

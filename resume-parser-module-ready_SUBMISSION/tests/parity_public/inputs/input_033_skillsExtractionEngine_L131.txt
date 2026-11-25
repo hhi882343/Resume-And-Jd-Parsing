@@ -1,0 +1,4 @@
+
+| Skills | Python, React, Docker |
+| Experience | 5 years developing software at Google using Java and C++ |
+| Education | BS Computer Science |

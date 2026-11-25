@@ -1,0 +1,10 @@
+
+Frank Ocean
+frank@example.com
+
+Career Summary
+Full stack developer with hands-on experience in React and Node.js.
+
+Work Experience
+Engineer at Delta Corp
+- Built REST APIs and microservices.
